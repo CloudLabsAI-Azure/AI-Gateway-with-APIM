@@ -2,12 +2,13 @@
 
 ### Lab Overview
 
-This lab demonstrates how to use Azure API Management (APIM) to load balance requests across multiple Azure AI Foundry model endpoints. You will configure a backend pool with priority and weight-based routing to ensure reliable, scalable AI traffic management. The lab simulates throttling and automatic failover between regional endpoints using APIM’s built-in retry logic.
+In this exercise, you will learn how to efficiently distribute AI requests across multiple Azure OpenAI (AOAI) backends to ensure high availability and balanced traffic, route requests to the appropriate AI models based on user or application requirements, and implement session affinity to maintain consistent, coherent responses for multi-turn interactions with AI agents. This will give you practical experience in managing scalable, reliable, and context-aware AI deployments.
 
 By the end, you will visualize how APIM intelligently distributes load across AI services for optimal performance and resilience.
 
-
 ## Task 1: Configure load balancing across AOAI resource pools
+
+In this task, you will learn how to distribute incoming AI requests across multiple Azure OpenAI (AOAI) endpoints deployed in different regions. You will configure Azure API Management (APIM) to intelligently route traffic, ensuring high availability, efficient utilization of resources, and seamless failover when one endpoint reaches capacity or becomes unavailable.
 
 1. Open Visual Studio Code using the desktop shortcut in the labvm.
 
@@ -93,7 +94,7 @@ By the end, you will visualize how APIM intelligently distributes load across AI
     
 ## Task 2: Set up model routing for directing requests to different models
 
-In this task, you’ll configure APIM to route requests to different AI models automatically. You’ll test that each model request reaches the correct backend and observe how model routing works across regions.
+This task focuses on directing requests to specific AI models based on parameters such as model type or workload. You will configure APIM to route each request to the correct backend AI model and test the responses, gaining an understanding of how model routing can optimize performance, resource usage, and cost efficiency.
 
 1. In Visual Studio Code, from the left navigation pane, select **Explorer**, then expand **model-routing (1)** click on **model-routing.ipynb (2)**.
 
