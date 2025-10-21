@@ -124,3 +124,7 @@ At the end, all resource identifiers and API keys are available for testing the 
     ![](./media/API-gateway-image21.png)
 
    >**Note**: At the end, model responses and backend regions are printed to confirm deployment and load balancing.
+
+## Task 3: Implement session affinity to keep responses consistent for agent interactions (In Progress)
+
+> Session Affinity, also known as sticky sessions, is a technique used in load-balanced systems to ensure that all requests from a specific user or session are consistently routed to the same backend server or model instance.
