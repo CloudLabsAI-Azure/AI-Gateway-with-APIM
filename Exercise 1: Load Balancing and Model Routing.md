@@ -91,3 +91,36 @@ By the end, you will visualize how APIM intelligently distributes load across AI
 
     ![](./media/API-gateway-image15.png)
     
+## Task 2: Set up model routing for directing requests to different models
+
+In this task, you’ll configure APIM to route requests to different AI models automatically. You’ll test that each model request reaches the correct backend and observe how model routing works across regions.
+
+1. In Visual Studio Code, from the left navigation pane, select **Explorer**, then expand **model-routing (1)** click on **model-routing.ipynb (2)**.
+
+   ![](./media/API-gateway-image16.png)
+
+1. Run the cell **0️⃣ Initialize Notebook Variables**. Sets up all deployment variables, model configs, APIM settings, and inference API info.
+At the end, all parameters are ready in memory, no resources are created yet.
+
+   ![](./media/API-gateway-image17.png)
+
+2. Run the cell **1️⃣ Verify Azure CLI and Subscription**. Checks that Azure CLI is connected and retrieves current user, tenant, and subscription info.
+At the end, you know the deployment will run in the correct subscription.
+
+   ![](./media/API-gateway-image18.png)
+   
+4. Run the cell **2️⃣ Create Deployment using Bicep**. Creates the resource group if needed, writes params.json, and deploys resources using Bicep.
+At the end, APIM, AI services, and model routing are provisioned (or an error is returned).
+
+   ![](./media/API-gateway-image19.png)
+   
+6. Run the cell **3️⃣ Get Deployment Outputs**. Fetches outputs like APIM URLs, subscription keys, and workspace IDs from the deployment.
+At the end, all resource identifiers and API keys are available for testing the deployed services.
+
+    ![](./media/API-gateway-image20.png)
+   
+8. Run the cell **🧪 Test the API using Azure OpenAI Python SDK**. Connects to APIM and sends messages to multiple models to verify routing and responses.
+
+    ![](./media/API-gateway-image21.png)
+
+   >**Note**: At the end, model responses and backend regions are printed to confirm deployment and load balancing.
