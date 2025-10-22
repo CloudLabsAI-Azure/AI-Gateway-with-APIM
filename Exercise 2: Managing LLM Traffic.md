@@ -2,10 +2,11 @@
 
 ## Lab Overview
 
-Learn to monitor and control LLM usage through token metrics and rate limiting to optimize costs and performance.
-
+This Exercise demonstrates how to capture token usage metrics and apply token rate limiting policies for Azure AI Foundry endpoints through Azure API Management (APIM). You will learn to monitor token consumption, visualize trends, and prevent spikes in usage by configuring the azure-openai-token-limit policy.
 
 ## Task 1: Capture token usage metrics from AI Gateway traffic. 
+
+In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models and subscriptions, and prepare the environment for testing. You will then capture, analyze, and visualize token usage metrics to monitor API consumption patterns.
 
 1. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **token-metrics-emitting. (3)**, and finally click on **token-metrics-emitting.ipynb (4)**.
 
@@ -57,6 +58,8 @@ https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/token-metrics-emittin
 
 ## Task 2: Apply rate limiting policies to control token consumption. 
 
+In this task, you will deploy APIM, AI Foundry endpoints, and model subscriptions, and configure token rate limiting policies. You will test API requests, monitor token usage, and verify that the rate limiting enforces consumption limits correctly.
+
 https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/token-rate-limiting/README.MD
 
 1. In Visual Studio Code, from the left navigation pane, select **token-rate-limiting (2)**, and click on **token-rate-limiting.ipynb (2)**.
@@ -96,3 +99,7 @@ https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/token-rate-limiting/R
    ![](./media/API-gateway-image45.png)
 
    ![](./media/API-gateway-image46.png)
+
+## Summary
+
+In these labs, you will deploy Azure API Management and AI Foundry endpoints with models and subscriptions, then capture and monitor token usage metrics. You will also apply token rate limiting policies to control API consumption, test the endpoints, and analyze results to ensure proper enforcement of usage limits.
