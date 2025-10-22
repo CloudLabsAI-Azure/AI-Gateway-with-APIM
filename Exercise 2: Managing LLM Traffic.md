@@ -7,6 +7,10 @@ Learn to monitor and control LLM usage through token metrics and rate limiting t
 
 ## Task 1: Capture token usage metrics from AI Gateway traffic. 
 
+1. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **token-metrics-emitting. (3)**, and finally click on **token-metrics-emitting.ipynb (4)**.
+
+     ![](./media/API-gateway-image22.png)
+   
 1. Navigate to **0️⃣ Initialize notebook variables** cell and click on **Run**. Prepare the environment, define resources, models, and subscriptions so everything is ready for deployment.
 
    ![](./media/API-gateway-image23.png)
@@ -49,20 +53,46 @@ Learn to monitor and control LLM usage through token metrics and rate limiting t
 10. Open the Application Insights resource, navigate to the Metrics blade, then select the defined namespace (openai). Choose the metric "Total Tokens" with a Sum aggregation. Then, apply splitting by 'Subscription Id' to view values for each dimension.
 
 
-
-
-
-
-
-
-
-
-
-
 https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/token-metrics-emitting/token-metrics-emitting.ipynb
-
-
 
 ## Task 2: Apply rate limiting policies to control token consumption. 
 
 https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/token-rate-limiting/README.MD
+
+1. In Visual Studio Code, from the left navigation pane, select **token-rate-limiting (2)**, and click on **token-rate-limiting.ipynb (2)**.
+
+1. Navigate to **0️⃣ Initialize Notebook Variables**. Click on **Run** this set up all lab variables, including resource group, location, AI services, models, APIM SKU, subscriptions, API paths, and utility functions. Prepares the environment for deployment.
+
+   ![](./media/API-gateway-image36.png)
+   
+1. **1️⃣ Verify Azure CLI and Subscription**. Check that Azure CLI is installed and connected. Retrieve and display current user, tenant ID, and subscription ID to confirm correct access.
+   
+   ![](./media/API-gateway-image37.png)
+
+2. **2️⃣ Create Deployment Using Bicep**. Deploy APIM, AI Foundry endpoints, and model subscriptions using Bicep. Automates resource provisioning and writes parameters to params.json.
+
+   ![](./media/API-gateway-image38.png)
+
+   ![](./media/API-gateway-image39.png)
+
+3. **3️⃣ Get Deployment Outputs**. Retrieve APIM Service ID, API Gateway URL, subscription keys, and other deployment outputs. These values are required for testing and API calls.
+  
+   ![](./media/API-gateway-image40.png)
+
+4. 🧪 Test API Using Direct HTTP Calls. Send repeated requests to the deployed AI endpoint using Python requests. Monitor response time, status codes, and token usage to verify token limiting behavior.
+
+   ![](./media/API-gateway-image41.png)
+
+   ![](./media/API-gateway-image42.png)
+
+5. 🔍 Analyze Token Rate Limiting Results. Convert API run results into a DataFrame and plot tokens per request. Helps visualize rate limiting and identify when 429 errors occur.
+
+   ![](./media/API-gateway-image43.png)
+
+   ![](./media/API-gateway-image44.png)
+
+6. 🧪 Test the API Using Azure OpenAI Python SDK. Send requests using the Azure OpenAI SDK to confirm retries and proper handling of token limits. Observes consistent behavior across SDK calls.
+
+   ![](./media/API-gateway-image45.png)
+
+   ![](./media/API-gateway-image46.png)
