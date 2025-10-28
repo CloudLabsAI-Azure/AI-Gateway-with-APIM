@@ -6,11 +6,21 @@ In this exercise, you will learn how to efficiently distribute AI requests acros
 
 By the end, you will visualize how APIM intelligently distributes load across AI services for optimal performance and resilience.
 
+## Lab Objectives
+
+- Task 1: Configure load balancing across AOAI resource pools
+
+- Task 2:
+
+- Task 3:
+
 ## Task 1: Configure load balancing across AOAI resource pools
 
 In this task, you will learn how to distribute incoming AI requests across multiple Azure OpenAI (AOAI) endpoints deployed in different regions. You will configure Azure API Management (APIM) to intelligently route traffic, ensuring high availability, efficient utilization of resources, and seamless failover when one endpoint reaches capacity or becomes unavailable.
 
-1. Open Visual Studio Code using the desktop shortcut in the labvm.
+1. Open **Visual Studio Code** using the desktop shortcut in the labvm.
+
+   ![](./media/e1t1p1.png)
 
 2. Click on **File (1)** and select **Open Folder (2)**.
 
@@ -22,7 +32,7 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
    ![](./media/API-gateway-image2.png)
 
-4. From the top menu, click the **… (1)** (ellipsis) button, then select **Terminal → New Terminal (2) (3)**.
+4. From the top menu, click the **Ellipsis (…) (1)**  button, then select **Terminal (2) → New Terminal (3)**.
 
     ![](./media/API-gateway-image4.png)
    
@@ -46,7 +56,7 @@ In this task, you will learn how to distribute incoming AI requests across multi
    pip install -r requirements.txt
    ```
 
-   > This installs all Python packages needed for the lab inside the virtual environment, leaving your system Python untouched.
+   >**Note:** This installs all Python packages needed for the lab inside the virtual environment, leaving your system Python untouched.
 
 5. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **backend-pool-load-balancing (3)**, and finally click on **backend-pool-load-balancing.ipynb (4)**.
 
