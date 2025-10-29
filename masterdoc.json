@@ -1,1 +1,24 @@
-
+[
+  {
+    "Name": "AI-Gateway-with-APIM",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/security-copilot/main/LabFile/Getting-started.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/security-copilot/main/LabFile/Exercise_01.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/security-copilot/main/LabFile/Exercise_02.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/security-copilot/main/LabFile/Exercise_03.md",
+        "Order": 4
+      }
+    ]
+  }
+]
