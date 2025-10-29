@@ -6,202 +6,27 @@ Objective: Implement content safety measures to screen user inputs and AI output
 ## Task 1: Review content safety capabilities and configuration in AI Foundry
 
 
-> Azure AI Content Safety is an AI service that detects harmful user-generated and AI-generated content in applications and services. Azure AI Content Safety includes APIs that help you detect and prevent the output of harmful content.
 
+> **Azure AI Content Safety detects** harmful user-generated and AI-generated content in applications and services. The features in Azure AI Content Safety can help make sure that product reviews, forum posts, and images align with Contoso Camping Store's content guidelines.
 
-    In this task, you will use Azure AI Foundry to moderate both images and text by detecting inappropriate, harmful, or sensitive content. You will leverage AI models to analyze and filter content according to predefined moderation policies, helping ensure compliance, user safety, and responsible AI use within your application.
+   - Azure AI Content Safety offers a suite of features for monitoring and moderating content in real time:
 
-1. In the **Azure AI Foundry** portal, click on **Guardrails + controls (1)** under the **Protect and govern** section on the left menu. Then click the **Try it out (2)** tab at the top.
+       - **Text moderation:** Detects and filters out harmful content in text, such as hate speech, violence, or inappropriate language.
 
-     ![](./media/4-7-25-l6-1.png)     
+       - **Image moderation:** Analyzes images to identify and block content that might be considered unsafe or offensive.
 
-2. Scroll down, under **Filter image content (1)** option, select **Moderate image content (2)**.
+       - **Multimodal content analysis:** Works across various types of content to help ensure a comprehensive strategy for content safety.
 
-     ![](./media/dee2.png)
+       - **Groundedness detection:** Detects and blocks incorrect information in model outputs. It helps ensure that the text responses of large language models are factual and accurate, based on the provided source materials.
 
-3. On **Moderate image content** select **Run a simple test (1)** tab, and review the options. Note we have three sets of content:  **Safe content**, **self-harm content**, and **AI-generated sexual content**. **(2)**
+       - **Prompt shields:** Analyze large language model (LLM) inputs to detect user prompt attacks and document attacks.
 
-     ![](./media/d40.png)
+       - **Protected material detection:** Identifies and blocks outputs that could potentially violate copyrights. It scans for matches against an index of third-party text content, including songs, news articles, recipes, and selected web content.
 
-## Safe content
+These features are built on AI models that can detect a wide range of potential risks, threats, and quality problems. Identifying these problems helps you ensure a safe and inclusive environment for all users of the Contoso Camping Store website.
 
-1. Before starting, select the below **Azure AI services**, and proceed with the lab using these Azure AI services.
+https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-azure-ai-content-safety-studio/7-exercise-groundedness-detection
 
-     ![](./media/ex2.png)
-
-1. Now let's use our image and test, then check the result. On the **Run a simple test** tab, select **Safe content (1)** then click on **Browse for a file (2)**
-
-     ![](./media/image-61.png)
-
-1. Within **file explorer** navigate to `C:\LabFiles\Model-Evaluation-and-Model-Tunning\Labs\data\image_sample_dataset` **(1)** press **Enter**, then select **family-builds-campfire.jpg (2)** and click on **Open (3)**. 
-
-     ![](./media/dee4.png)
-
-1. Review the image and click on **Run test**.
-
-    ![](./media/image-68.png)
-   
-1. Review the result. As expected, this image content is **Allowed**, and the Severity level is Safe across all categories. 
-
-    ![](./media/image-69.png)
-
-   >**Note:** So far, we’ve tested image content for singular isolated images. However, if we have a bulk dataset of image content, we could test the bulk dataset at once and receive metrics based on the model’s performance.
-
-## Self-harmed content
-
-We should also anticipate customers potentially posting harmful image content. To ensure that we account for such a scenario, let’s test the detection of harmful image content.
-
-1. Select **Self harmed content (1)** and click on **Browse for a file (2)**.
-
-    ![](./media/d42.png)
-
-1. Within **file explorer** navigate to `C:\LabFiles\Model-Evaluation-and-Model-Tunning\Labs\data\image_sample_dataset` **(1)** then select the **bear-attack-blood.JPG (2)** file and then click on **Open (3)**.
-
-    ![](./media/dee9.png)
-
-1. Set all Threshold levels to **Medium (1)** and then select **Run test (2)**.
-
-    ![](./media/selfharm1.png)
-
-    >**Note:** Rightfully so, the content is blocked and was rejected by the Violence filter, which has a Severity level of Medium.
-
-     ![](./media/selfharm2.png)
-
-## Task 1.1: Run a bulk test
-
-So far, we’ve tested image content for singular isolated images. However, if we have a bulk dataset of image content, we could test the bulk dataset at once and receive metrics based on the model’s performance.
-
-1. On **Moderate image content** select **Run a bulk test (1)** tab then click on **Browse for a file (2)**.
-
-     ![](./media/dee12-1.png)
-
-1. Within file explorer navigate to `C:\LabFiles\Model-Evaluation-and-Model-Tunning\Labs\data` **(1)** press **Enter**. Select **image_sample_dataset.zip (2)** folder and click on **Open (3)**. 
-
-    ![](./media/dee13.png)
-   
-1. Under Test section, review **Dataset preview (1)** then select **Configure filters** tab review **Category** and **Threshold level** **(2)** then click on **Run test (3)**.
-
-     ![](./media/image-145768.png)
-
-1. Review the **result**.
-
-   ![](./media/selfharm3.png)
-
-   ![](./media/selfharm4.png)
-
-## Task 1.2: Text moderation using Moderate text content 
-
-We could leverage an AI model to detect whether the text input from our customers is harmful and later use the detection results to implement the necessary precautions.
-
-## Safe content
-
-Let’s first test some positive customer feedback.
-
-1. On the **Azure AI Foundry** portal, under **Protect and govern**, select **Guardrails + controls (1)**. Then, click the **Try it out (2)** tab, and under **Filter text content**, select **Try it out (3)** for **Moderate text content**.
-
-   ![](./media/2ndguard-1.png)
-
-1. On the **Moderate text content** page, select **Run a simple test (1)** and choose **Safe content (2)** under **Select a sample or type your own** section.
-
-   ![](./media/image-71-1.png)
-
-1. In the **Test box**, enter the following:
-
-     - **I recently used the PowerBurner Camping Stove on my camping trip, and I must say, it was fantastic! It was easy to use, and the heat control was impressive. Great product! (1)**
-
-     - Set all Threshold levels to **Medium (2)**.
-
-     - Select **Run test (3)**.
-
-       ![](./media/image-72.png)
-     
-1. Review the result.
-
-    ![](./media/image-73.png)
-
-    >**Note:** The content is **Allowed**, and the severity level is Safe across all categories. This was to be expected given the positive and unharmful sentiment of the customer’s feedback.
-
-## Harmful content
-
-But what would happen if we tested a harmful statement? Let’s test with negative customer feedback. While it's OK to dislike a product, we don't want to condone any name-calling or degrading statements.
-
-1. In the **Test box**, enter the following:
-
-    - **I recently bought a tent, and I have to say, I'm really disappointed. The tent poles seem flimsy, and the zippers are constantly getting stuck. It's not what I expected from a high-end tent. You all suck and are a sorry excuse for a brand**. **(1)**
-
-    - Set all Threshold levels to **Medium (2)**.
-
-    - Select **Run test (3)**.
-
-      ![](./media/image-75.png)
- 
-   - Although the content is **Allowed**, the Severity level for **Hate is low**. To guide our model to block such content, we’d need to adjust the Threshold level for **Hate**. A lower Threshold level would block any content that’s a low, medium, or high severity. There’s no room for exceptions!
-
-      ![](./media/dee16.png)   
-
-   - Set the Threshold level for **Hate to `Low` (1)**.
-
-   - Select **Run test (2)**.
-
-     ![](./media/dee20.png)
-    
-   - The content is now **Blocked** and was rejected by the filter in the Hate category.
-
-      ![](./media/image-77.png)
-
-## Violent content with misspelling
-
-We can’t anticipate that all text content from our customers would be free of spelling errors. Fortunately, the Moderate text content tool can detect harmful content even if the content has spelling errors. Let’s test this capability on additional customer feedback about an incident with a racon.
-
-1. Under **Run a simple test**, select the **Violent content with misspelling** sample from the available options.
-
-    ![](./media/image-74.png)
-
-1. In the **Test box**, enter the following:
-
-    - **I recently purchased a campin cooker, but we had an accident. A racon got inside, was shocked, and died. Its blood is all over the interior. How do I clean the cooker? (1)**
-
-    - Set all Threshold levels to **Medium (2)**.
-
-    - Select **Run test (3)**
-    
-      ![](./media/dee22.png)    
-    
-    - Review the result.
-
-      ![](./media/4-7-25-l6-2.png)
-
-    - Although the content is allowed, the Severity level for **Violence should be Low**. You could adjust the Threshold level for Violence to try and block such content; however, should we? Consider a scenario where the customer is asking this question in a conversation with the AI-powered customer support agent in hopes of receiving guidance on how to clean the cooker. There may be no ill intent in submitting this question, and therefore, it may be a better choice not to block such content. As the developer, consider various scenarios where such content may be OK before deciding to adjust the filter and block similar content.
-     
-## Run a bulk test
-
-So far, we’ve tested image content for singular isolated images. However, if we have a bulk dataset of image content, we could test the bulk dataset at once and receive metrics based on the model’s performance.
-
-We have a bulk dataset of images provided by customers. The dataset also includes sample harmful images to test the model’s ability to detect harmful content. Each record in the dataset includes a label to indicate whether the content is harmful. Let’s do another test round, but this time with the data set!
-
-1. Switch to the **Run a bulk test (1)** tab. Select **Browse for a file (2)**.
-
-    ![](./media/d43.png)
-
-1. Within **file explorer** navigate to `C:\LabFiles\Model-Evaluation-and-Model-Tunning\Labs\data` **(1)** press **Enter**. Select **bulk-text-moderation-dataset.csv (2)** file and **Open (3)**.
-   
-    > **Note:** The name of the CSV file may vary.
-   
-     ![](./media/dee25.png)
-     
-1. In the **Dataset preview section (1)**, browse through the Records and their corresponding Label. A 0 indicates that the content is acceptable (not harmful). A 1 indicates that the content is unacceptable (harmful content) **(2)**.
-
-     - Set all Threshold levels to **Medium (3)**.
-
-     - Select **Run test (4)**.
-   
-       ![](./media/d44.png)
-
-1. Review the result.
-
-    ![](./media/image-79.png)
-
-    ![](./media/image-80.png)
 
 
 ## Task 2: Specify content filters at request time using headers. 
