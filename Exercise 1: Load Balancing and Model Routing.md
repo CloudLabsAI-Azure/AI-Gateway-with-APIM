@@ -62,6 +62,28 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
    >**Note:** This installs all Python packages needed for the lab inside the virtual environment, leaving your system Python untouched.
 
+9. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **backend-pool-load-balancing (3)**, and finally click on **backend-pool-load-balancing.ipynb (4)**.
+
+   ![](./media/API-gateway-image3.png)
+
+6. Once you’re in the **backend-pool-load-balancing.ipynb** file, take a moment to review each session and read its description. You will see how we deploy multiple AI endpoints, configure API Management for intelligent routing, and test load balancing and failover, giving you a clear understanding of how APIM manages AI traffic across regions.
+<!---
+1. In the top-right corner, click **Select Kernel (1)**. From the drop-down menu under the search bar, choose **Python Environments... (2)**, and then select **venv (Python 3.10.0) (3)** from the list.
+
+   ![](./media/e1t1p11.png)
+
+   ![](./media/e1t1p11(1).png)
+
+1. When the prompt appears, click **Install** to add the **ipykernel** package required for running Python cells.
+
+   ![](./media/e1t1p11(2).png)
+--->
+7. Now, you will run each cell in the notebook one by one, following the instructions and observing the outputs for each step.
+
+8. Scroll down to **0️⃣ Initialize notebook variables**. Click on **Run** in this session, we set up all the necessary variables and configurations, including resource names, regions, AI endpoints, and APIM details. This prepares the notebook for deploying resources and running the lab steps.
+
+   ![](./media/API-gateway-image5.png)
+
 1. Now, run the following command to sign in to Azure from the terminal:
 
    ```
@@ -80,7 +102,7 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
 1. Enter the **password (1)** provided below, then select **Sign in (2)**.
 
-   - **Password:** <inject key="AzureAdPassword"></inject>
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
       ![](./media/e1t1p7(2).png)
 
@@ -88,31 +110,13 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
    ![](./media/e1t1p7(3).png)
 
+1. On the **Account added to this device** pop-up, click **Done**.
+
+   ![](./media/e1t1p7(3.1).png)
+
 1. Go back to the VS Code terminal and press **Enter** to choose the default subscription.
 
    ![](./media/e1t1p7(4).png)
-
-9. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **backend-pool-load-balancing (3)**, and finally click on **backend-pool-load-balancing.ipynb (4)**.
-
-   ![](./media/API-gateway-image3.png)
-
-6. Once you’re in the **backend-pool-load-balancing.ipynb** file, take a moment to review each session and read its description. You will see how we deploy multiple AI endpoints, configure API Management for intelligent routing, and test load balancing and failover, giving you a clear understanding of how APIM manages AI traffic across regions.
-
-1. In the top-right corner, click **Select Kernel (1)**. From the drop-down menu under the search bar, choose **Python Environments... (2)**, and then select **venv (Python 3.10.0) (3)** from the list.
-
-   ![](./media/e1t1p11.png)
-
-   ![](./media/e1t1p11(1).png)
-
-1. When the prompt appears, click **Install** to add the **ipykernel** package required for running Python cells.
-
-   ![](./media/e1t1p11(2).png)
-
-7. Now, you will run each cell in the notebook one by one, following the instructions and observing the outputs for each step.
-
-8. Scroll down to **0️⃣ Initialize notebook variables**. Click on **Run** in this session, we set up all the necessary variables and configurations, including resource names, regions, AI endpoints, and APIM details. This prepares the notebook for deploying resources and running the lab steps.
-
-   ![](./media/API-gateway-image5.png)
 
 9. Go to **1️⃣ Verify the Azure CLI and the connected Azure subscription**. Click on **Run**, in this session, we check that the Azure CLI is installed, up-to-date, and connected to your subscription. This ensures we can deploy and manage resources in your Azure account. Review the output.
 
@@ -120,9 +124,7 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
 10. In the **2️⃣ Create deployment using 🦾 Bicep**. Here, we use Bicep to define and deploy all necessary Azure resources, including the AI endpoints and APIM service. Running this sets up the infrastructure needed for the lab.
 
-     ![](./media/API-gateway-image7.png)
-
-     ![](./media/API-gateway-image8.png)
+     ![](./media/e1t1p17(1).png)
     
 12. **3️⃣ Get the deployment outputs**. This session retrieves key information from the deployment, such as API URLs, subscription keys, and resource IDs. We use these outputs to connect and test the AI endpoints in later steps.
 
@@ -140,13 +142,15 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
 16. **🧪 Test the API using the Azure OpenAI Python SDK**. In this session, we test the deployed AI endpoints using the Azure OpenAI Python SDK. This ensures that the API requests work correctly and responses are received, regardless of which backend region handles them.
 
-    ![](./media/API-gateway-image14.png)
-
-    ![](./media/API-gateway-image15.png)
+    ![](./media/e1t1p21.png)
     
 1. In the **Clean up resources** cell, click on **clean-up-resources notebook**.
 
    ![](./media/e1t1p19.png)
+
+1. In the new tab, **Run** the cell to clean up the resources that we have created.
+
+   ![](./media/e1t1p22.png)
 
 ## Task 2: Set up model routing for directing requests to different models
 
@@ -155,10 +159,6 @@ This task focuses on directing requests to specific AI models based on parameter
 1. In Visual Studio Code, from the left navigation pane, select **Explorer**, then expand **model-routing (1)** click on **model-routing.ipynb (2)**.
 
    ![](./media/e1t2p1.png)
-
-1. In the top-right corner, click **Select Kernel (1)**. From the drop-down menu under the search bar, select **venv (Python 3.10.0) (2)** from the list.
-
-   ![](./media/e1t2p2.png)
 
 1. Run the cell **0️⃣ Initialize Notebook Variables**. Sets up all deployment variables, model configs, APIM settings, and inference API info. At the end, all parameters are ready in memory, no resources are created yet.
 
@@ -184,6 +184,14 @@ At the end, all resource identifiers and API keys are available for testing the 
     ![](./media/API-gateway-image21.png)
 
    >**Note**: At the end, model responses and backend regions are printed to confirm deployment and load balancing.
+
+1. In the **Clean up resources** cell, click on **clean-up-resources notebook**.
+
+   ![](./media/e1t1p19.png)
+
+1. In the new tab, **Run** the cell to clean up the resources that we have created.
+
+   ![](./media/clean.png)
 
 ## Task 3: Implement session affinity to keep responses consistent for agent interactions (In Progress)
 

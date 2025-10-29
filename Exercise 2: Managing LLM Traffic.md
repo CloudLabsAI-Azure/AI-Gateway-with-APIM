@@ -1,14 +1,21 @@
 # Exercise 2: Managing LLM Traffic
 
+### Estimated Duration: Minutes
+
 ## Lab Overview
 
 This Exercise demonstrates how to capture token usage metrics and apply token rate limiting policies for Azure AI Foundry endpoints through Azure API Management (APIM). You will learn to monitor token consumption, visualize trends, and prevent spikes in usage by configuring the azure-openai-token-limit policy.
+
+## Lab Objectives
+
+- Task 1: Capture token usage metrics from AI Gateway traffic. 
+- Task 2: Apply rate limiting policies to control token consumption.
 
 ## Task 1: Capture token usage metrics from AI Gateway traffic. 
 
 In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models and subscriptions, and prepare the environment for testing. You will then capture, analyze, and visualize token usage metrics to monitor API consumption patterns.
 
-1. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **token-metrics-emitting. (3)**, and finally click on **token-metrics-emitting.ipynb (4)**.
+1. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **token-metrics-emitting (3)**, and finally click on **token-metrics-emitting.ipynb (4)**.
 
      ![](./media/API-gateway-image22.png)
    
@@ -53,6 +60,14 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
   
 10. Open the Application Insights resource, navigate to the Metrics blade, then select the defined namespace (openai). Choose the metric "Total Tokens" with a Sum aggregation. Then, apply splitting by 'Subscription Id' to view values for each dimension.
 
+1. In the **Clean up resources** cell, click on **clean-up-resources notebook**.
+
+   ![](./media/e1t1p19.png)
+
+1. In the new tab, **Run** the cell to clean up the resources that we have created.
+
+   ![](./media/e2t1-clean.png)
+
 
 https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/token-metrics-emitting/token-metrics-emitting.ipynb
 
@@ -62,7 +77,9 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 
 https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/token-rate-limiting/README.MD
 
-1. In Visual Studio Code, from the left navigation pane, select **token-rate-limiting (2)**, and click on **token-rate-limiting.ipynb (2)**.
+1. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and select **token-rate-limiting (3)**, and click on **token-rate-limiting.ipynb (4)**.
+
+   ![](./media/e2t2p1.png)
 
 1. Navigate to **0️⃣ Initialize Notebook Variables**. Click on **Run** this set up all lab variables, including resource group, location, AI services, models, APIM SKU, subscriptions, API paths, and utility functions. Prepares the environment for deployment.
 
@@ -93,6 +110,8 @@ https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/token-rate-limiting/R
    ![](./media/API-gateway-image43.png)
 
    ![](./media/API-gateway-image44.png)
+
+   >**Note:** Result you get may vary from the image above.
 
 6. 🧪 Test the API Using Azure OpenAI Python SDK. Send requests using the Azure OpenAI SDK to confirm retries and proper handling of token limits. Observes consistent behavior across SDK calls.
 
