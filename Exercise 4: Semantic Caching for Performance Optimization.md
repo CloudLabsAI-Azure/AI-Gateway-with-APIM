@@ -121,3 +121,6 @@ In this task, you will configure and test semantic caching within the AI Gateway
 
    ![](./media/API-gateway-image59.png)
 
+## Summary 
+
+In this exercise, you explored how semantic caching improves response efficiency by reusing results for similar prompts. By implementing it in the AI Gateway, you achieved faster responses, reduced costs, and a more scalable Azure OpenAI solution.
