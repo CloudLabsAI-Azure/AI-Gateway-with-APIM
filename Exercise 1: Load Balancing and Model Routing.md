@@ -1,6 +1,8 @@
 # Exercise 1: Load Balancing and Model Routing 
 
-### Lab Overview
+### Eestimated Duration: Minutes
+
+## Lab Overview
 
 In this exercise, you will learn how to efficiently distribute AI requests across multiple Azure OpenAI (AOAI) backends to ensure high availability and balanced traffic, route requests to the appropriate AI models based on user or application requirements, and implement session affinity to maintain consistent, coherent responses for multi-turn interactions with AI agents. This will give you practical experience in managing scalable, reliable, and context-aware AI deployments.
 
@@ -10,9 +12,9 @@ By the end, you will visualize how APIM intelligently distributes load across AI
 
 - Task 1: Configure load balancing across AOAI resource pools
 
-- Task 2:
+- Task 2: Set up model routing for directing requests to different models
 
-- Task 3:
+- Task 3: Implement session affinity to keep responses consistent for agent interactions
 
 ## Task 1: Configure load balancing across AOAI resource pools
 
