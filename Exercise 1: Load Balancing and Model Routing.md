@@ -26,7 +26,9 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
    ![](./media/API-gateway-image1.png)
 
-3. Navigate to **C:\LabFiles (1)**, select the **AI-Gateway (2)** folder, and click **Select Folder (3)**.
+3. Navigate to **`C:\LabFiles` (1)**, select the **AI-Gateway (2)** folder, and click **Select Folder (3)**.
+
+   ![](./media/e1t1p3.png)
 
 4. If you receive a Do you trust the authors of the files in folder warning, select the **checkbox (1)** and click **Yes, I trust the authors (2)**.
 
@@ -58,11 +60,51 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
    >**Note:** This installs all Python packages needed for the lab inside the virtual environment, leaving your system Python untouched.
 
-5. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **backend-pool-load-balancing (3)**, and finally click on **backend-pool-load-balancing.ipynb (4)**.
+1. Now, run the following command to sign in to Azure from the terminal:
+
+   ```
+   az login
+   ```
+
+1. In the **Sign in** pop-up window, under **Let's get you signed in** select **Work or school account (1)** and then click **Continue (2)**.
+
+   ![](./media/e1t1p7.png)
+
+1. Enter the **email address (1)** shown below, then select **Next (2)**.
+
+   - **Email:** <inject key="AzureAdUserEmail"></inject>
+
+      ![](./media/e1t1p7(1).png)
+
+1. Enter the **password (1)** provided below, then select **Sign in (2)**.
+
+   - **Password:** <inject key="AzureAdPassword"></inject>
+
+      ![](./media/e1t1p7(2).png)
+
+1. In the **Automatically sign in to all desktop apps and websites on this device?** pop-up, click on **No, this app only**.
+
+   ![](./media/e1t1p7(3).png)
+
+1. Go back to the VS Code terminal and press **Enter** to choose the default subscription.
+
+   ![](./media/e1t1p7(4).png)
+
+9. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **backend-pool-load-balancing (3)**, and finally click on **backend-pool-load-balancing.ipynb (4)**.
 
    ![](./media/API-gateway-image3.png)
 
 6. Once you’re in the **backend-pool-load-balancing.ipynb** file, take a moment to review each session and read its description. You will see how we deploy multiple AI endpoints, configure API Management for intelligent routing, and test load balancing and failover, giving you a clear understanding of how APIM manages AI traffic across regions.
+
+1. In the top-right corner, click **Select Kernel (1)**. From the drop-down menu under the search bar, choose **Python Environments... (2)**, and then select **venv (Python 3.10.0) (3)** from the list.
+
+   ![](./media/e1t1p11.png)
+
+   ![](./media/e1t1p11(1).png)
+
+1. When the prompt appears, click **Install** to add the **ipykernel** package required for running Python cells.
+
+   ![](./media/e1t1p11(2).png)
 
 7. Now, you will run each cell in the notebook one by one, following the instructions and observing the outputs for each step.
 
@@ -82,13 +124,11 @@ In this task, you will learn how to distribute incoming AI requests across multi
     
 12. **3️⃣ Get the deployment outputs**. This session retrieves key information from the deployment, such as API URLs, subscription keys, and resource IDs. We use these outputs to connect and test the AI endpoints in later steps.
 
-    ![](./media/API-gateway-image9.png)
+    ![](./media/e1t1p15.png)
     
 14. **🧪 Test the API using the Azure OpenAI Python SDK**. Finally, we test the deployed AI endpoints using the Python SDK to send requests, check responses, and observe which backend region served each request. This demonstrates load balancing and routing in action.
 
-    ![](./media/API-gateway-image10.png)
-
-    ![](./media/API-gateway-image11.png)
+      ![](./media/e1t1p18.png)
 
 15. **🔍 Analyze Load Balancing results**. In this session, we analyze the load balancing results to see how traffic is distributed across the AI endpoints. The priority 1 backend handles requests first, and once it reaches its limit, traffic is shared between the two priority 2 backends.
 
@@ -102,23 +142,30 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
     ![](./media/API-gateway-image15.png)
     
+1. In the **Clean up resources** cell, click on **clean-up-resources notebook**.
+
+   ![](./media/e1t1p19.png)
+
 ## Task 2: Set up model routing for directing requests to different models
 
 This task focuses on directing requests to specific AI models based on parameters such as model type or workload. You will configure APIM to route each request to the correct backend AI model and test the responses, gaining an understanding of how model routing can optimize performance, resource usage, and cost efficiency.
 
 1. In Visual Studio Code, from the left navigation pane, select **Explorer**, then expand **model-routing (1)** click on **model-routing.ipynb (2)**.
 
-   ![](./media/API-gateway-image16.png)
+   ![](./media/e1t2p1.png)
 
-1. Run the cell **0️⃣ Initialize Notebook Variables**. Sets up all deployment variables, model configs, APIM settings, and inference API info.
-At the end, all parameters are ready in memory, no resources are created yet.
+1. In the top-right corner, click **Select Kernel (1)**. From the drop-down menu under the search bar, select **venv (Python 3.10.0) (2)** from the list.
 
-   ![](./media/API-gateway-image17.png)
+   ![](./media/e1t2p2.png)
+
+1. Run the cell **0️⃣ Initialize Notebook Variables**. Sets up all deployment variables, model configs, APIM settings, and inference API info. At the end, all parameters are ready in memory, no resources are created yet.
+
+   ![](./media/e1t2p3.png)
 
 2. Run the cell **1️⃣ Verify Azure CLI and Subscription**. Checks that Azure CLI is connected and retrieves current user, tenant, and subscription info.
 At the end, you know the deployment will run in the correct subscription.
 
-   ![](./media/API-gateway-image18.png)
+   ![](./media/e1t2p4.png)
    
 4. Run the cell **2️⃣ Create Deployment using Bicep**. Creates the resource group if needed, writes params.json, and deploys resources using Bicep.
 At the end, APIM, AI services, and model routing are provisioned (or an error is returned).
