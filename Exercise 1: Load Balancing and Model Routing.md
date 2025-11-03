@@ -51,17 +51,7 @@ In this task, you will learn how to distribute incoming AI requests across multi
    ![](./media/API-gateway-image3.png)
 
 6. Once you’re in the **backend-pool-load-balancing.ipynb** file, take a moment to review each session and read its description. You will see how we deploy multiple AI endpoints, configure API Management for intelligent routing, and test load balancing and failover, giving you a clear understanding of how APIM manages AI traffic across regions.
-<!---
-1. In the top-right corner, click **Select Kernel (1)**. From the drop-down menu under the search bar, choose **Python Environments... (2)**, and then select **venv (Python 3.10.0) (3)** from the list.
 
-   ![](./media/e1t1p11.png)
-
-   ![](./media/e1t1p11(1).png)
-
-1. When the prompt appears, click **Install** to add the **ipykernel** package required for running Python cells.
-
-   ![](./media/e1t1p11(2).png)
---->
 7. Now, you will run each cell in the notebook one by one, following the instructions and observing the outputs for each step.
 
 8. Scroll down to **0️⃣ Initialize notebook variables**. Click on **Run** in this session, we set up all the necessary variables and configurations, including resource names, regions, AI endpoints, and APIM details. This prepares the notebook for deploying resources and running the lab steps.
