@@ -13,8 +13,10 @@ Explore exposing MCP servers and REST APIs securely through Azure API Management
 ## Task 1: Expose existing MCP Servers in API Management
 
 ## Task 2: Publish REST APIs as MCP tools in API Management
+https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/model-context-protocol/model-context-protocol.ipynb
+
 
 ## Task 3: Implement client authorization and secure access for MCP servers
-
+https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/mcp-client-authorization/mcp-client-authorization.ipynb
 
 https://learn.microsoft.com/en-us/azure/api-management/export-rest-mcp-server
