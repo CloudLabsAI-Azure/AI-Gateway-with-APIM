@@ -6,9 +6,9 @@ Explore exposing MCP servers and REST APIs securely through Azure API Management
 
 ## Lab Objectives
 
-- Task 1: Expose existing MCP Servers in API Management
+- Task 1: Expose existing MCP Servers in API Management (In progress)
 - Task 2: Publish REST APIs as MCP tools in API Management
-- Task 3: Implement client authorization and secure access for MCP servers
+- Task 3: Implement client authorization and secure access for MCP servers (In progress)
 
 ## Task 1: Expose existing MCP Servers in API Management
 
