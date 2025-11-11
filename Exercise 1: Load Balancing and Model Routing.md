@@ -1,6 +1,6 @@
 # Exercise 1: Load Balancing and Model Routing 
 
-### Eestimated Duration: Minutes
+### Eestimated Duration: 60 Minutes
 
 ## Lab Overview
 
@@ -54,9 +54,14 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
 7. Now, you will run each cell in the notebook one by one, following the instructions and observing the outputs for each step.
 
-8. Scroll down to **0️⃣ Initialize notebook variables**. Click on **Run** in this session, we set up all the necessary variables and configurations, including resource names, regions, AI endpoints, and APIM details. This prepares the notebook for deploying resources and running the lab steps.
+8. Scroll down to **0️⃣ Initialize notebook variables**. 
+Enter the following details:
 
-   ![](./media/API-gateway-image5.png)
+
+
+1. Click on **Run** in this session, we set up all the necessary variables and configurations, including resource names, regions, AI endpoints, and APIM details. This prepares the notebook for deploying resources and running the lab steps.
+
+   ![](./media/initvar-e1t1.png)
 
 1. Now, run the following command to sign in to Azure from the terminal:
 
@@ -100,11 +105,11 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
 10. Run the **2️⃣ Create deployment using 🦾 Bicep**. Here, we use Bicep to define and deploy all necessary Azure resources, including the AI endpoints and APIM service. Running this sets up the infrastructure needed for the lab.
 
-     ![](./media/e1t1p17(1).png)
+     ![](./media/deploy-e1t1.png)
     
 12. Run the cell **3️⃣ Get the deployment outputs**. This session retrieves key information from the deployment, such as API URLs, subscription keys, and resource IDs. We use these outputs to connect and test the AI endpoints in later steps.
 
-    ![](./media/e1t1p15.png)
+    ![](./media/outputs-e1t1.png)
     
 14. Run the cell **🧪 Test the API using the Azure OpenAI Python SDK**. Finally, we test the deployed AI endpoints using the Python SDK to send requests, check responses, and observe which backend region served each request. This demonstrates load balancing and routing in action.
 
@@ -117,14 +122,6 @@ In this task, you will learn how to distribute incoming AI requests across multi
 16. Run the cell **🧪 Test the API using the Azure OpenAI Python SDK**. In this session, we test the deployed AI endpoints using the Azure OpenAI Python SDK. This ensures that the API requests work correctly and responses are received, regardless of which backend region handles them.
 
     ![](./media/e1t1p21.png)
-    
-1. In the **Clean up resources** cell, click on **clean-up-resources notebook**.
-
-   ![](./media/e1t1p19.png)
-
-1. In the new tab, **Run** the cell to clean up the resources that we have created.
-
-   ![](./media/e1t1p22.png)
 
 ## Task 2: Set up model routing for directing requests to different models
 
@@ -136,7 +133,7 @@ This task focuses on directing requests to specific AI models based on parameter
 
 1. Run the cell **0️⃣ Initialize Notebook Variables**. Sets up all deployment variables, model configs, APIM settings, and inference API info. At the end, all parameters are ready in memory, no resources are created yet.
 
-   ![](./media/e1t2p5(1).png)
+   ![](./media/initvar-e1t2.png)
 
 2. Run the cell **1️⃣ Verify Azure CLI and Subscription**. Checks that Azure CLI is connected and retrieves current user, tenant, and subscription info.
 At the end, you know the deployment will run in the correct subscription.
@@ -146,30 +143,23 @@ At the end, you know the deployment will run in the correct subscription.
 4. Run the cell **2️⃣ Create Deployment using Bicep**. Creates the resource group if needed, writes params.json, and deploys resources using Bicep.
 At the end, APIM, AI services, and model routing are provisioned (or an error is returned).
 
-   ![](./media/e1t2p5(3).png)
+   ![](./media/deploy-e1t2.png)
    
 6. Run the cell **3️⃣ Get Deployment Outputs**. Fetches outputs like APIM URLs, subscription keys, and workspace IDs from the deployment.
 At the end, all resource identifiers and API keys are available for testing the deployed services.
 
-    ![](./media/e1t2p5(4).png)
+    ![](./media/outputs-e1t2.png)
    
 8. Run the cell **🧪 Test the API using Azure OpenAI Python SDK**. Connects to APIM and sends messages to multiple models to verify routing and responses.
 
-    ![](./media/e1t2p5(5).png)
+    ![](./media/sdk-e1t2.png)
 
    >**Note**: At the end, model responses and backend regions are printed to confirm deployment and load balancing.
 
 1. Run the cell **Responses API**. 
 
-   ![](./media/e1t2p5(6).png)
+   ![](./media/resp-e1t2.png)
 
-1. In the **Clean up resources** cell, click on **clean-up-resources notebook**.
-
-   ![](./media/e1t1p19.png)
-
-1. In the new tab, **Run** the cell to clean up the resources that we have created.
-
-   ![](./media/clean.png)
 
 ## Task 3: Implement session affinity to keep responses consistent for agent interactions (In Progress)
 
@@ -184,7 +174,11 @@ In this task, you’ll deploy and validate a multi-region Azure setup using Bice
 
 1. Scroll down to **0️⃣ Initialize notebook variables**. Click on **Run**. By running this cell, you’ll initialize key environment variables used throughout the lab. These include the resource group name and region, AI service configurations, model versions, and API Management settings. Running this cell ensures all necessary parameters are defined before deploying Azure resources and executing the following steps in the notebook.
 
+   ![](./media/initvar-e1t3.png)
+
 1. Run the **1️⃣ Verify the Azure CLI and the connected Azure subscription** cell to confirm the Azure CLI is connected and authenticated. It displays your current user, tenant ID, and subscription ID.
+
+   ![](./media/e1t3p3.png)
 
 1. Run the **2️⃣ Create deployment using 🦾 Bicep** cell to deploy all required Azure resources using a Bicep template. This cell creates the resource group (if it doesn’t exist), generates deployment parameters, and provisions two AI Foundry instances, a GPT-4o-mini model in each, an API Management instance, and a backend pool. It sets up the initial environment for the lab, which you’ll later update to enable session affinity.
 
