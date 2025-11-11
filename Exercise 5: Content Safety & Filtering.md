@@ -27,8 +27,6 @@ These features are built on AI models that can detect a wide range of potential 
 
 https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-azure-ai-content-safety-studio/7-exercise-groundedness-detection
 
-
-
 ## Task 2: Specify content filters at request time using headers. 
 
 ## Task 3: Apply content safety enforcement rules in API Management. 

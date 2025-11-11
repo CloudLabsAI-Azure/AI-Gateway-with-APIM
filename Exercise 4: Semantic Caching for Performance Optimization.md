@@ -4,8 +4,7 @@
 
 This exercise focuses on implementing semantic caching to improve the performance of applications that use Azure OpenAI. Unlike traditional caching that matches exact text, semantic caching works based on meaning, reducing latency and token usage while delivering faster AI responses.
 
-
-### Task 1: Understand semantic caching principles. 
+## Task 1: Understand semantic caching principles. 
 
 In this task, you will learn how semantic caching enhances AI performance by comparing the meaning of prompts using embeddings. When two prompts have similar meanings, the cached response is reused instead of sending a new request to the model. This process significantly speeds up responses and lowers API usage costs
 
@@ -66,7 +65,7 @@ This approach enables faster responses, lower latency, and reduced token consump
    Can you explain what Azure Cognitive Search does?
    ```
    
-Although the two prompts are worded differently, semantic caching identifies them as semantically similar and retrieves the earlier cached response — saving time and tokens.
+Although the two prompts are worded differently, semantic caching identifies them as semantically similar and retrieves the earlier cached response, saving time and tokens.
 
 
 ## Task 2: Configure semantic caching in the AI Gateway environment. 
