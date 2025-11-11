@@ -19,43 +19,45 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
      ![](./media/e2t1p1.png)
    
-1. Navigate to **0️⃣ Initialize notebook variables** cell and click on **Run**. Prepare the environment, define resources, models, and subscriptions so everything is ready for deployment.
+1. Navigate to **Initialize notebook variables** cell and click on **Run**. Prepare the environment, define resources, models, and subscriptions so everything is ready for deployment.
 
-   ![](./media/e2t1p2.png)
+   ![](./media/initvar-e2t1.png)
 
-2. Next go to **1️⃣ Verify the Azure CLI and the connected Azure subscription** and click on Run. This ensure the commands will run in the correct Azure subscription and that we have permissions to create resources.
+2. Next go to **Verify the Azure CLI and the connected Azure subscription** and click on Run. This ensure the commands will run in the correct Azure subscription and that we have permissions to create resources.
 
-   ![](./media/e2t1p3.png)
+   ![](./media/ver-e2t1.png)
    
-3. Next **2️⃣ Create deployment using 🦾 Bicep*** click on Run. This cell Automate the creation of APIM, AI Foundry endpoints, and model deployments so that the environment is consistent and reproducible.
+3. Next **Create deployment using 🦾 Bicep*** click on Run. This cell Automate the creation of APIM, AI Foundry endpoints, and model deployments so that the environment is consistent and reproducible.
 
-   ![](./media/e2t1p4.png)
+   ![](./media/deploy-e2t1.png)
 
-4. Run the cell **3️⃣ Get the deployment outputs**. This rRetrieve URLs, keys, and Application Insights names that are needed to interact with the deployed AI endpoints.
+4. Run the cell **Get the deployment outputs**. This rRetrieve URLs, keys, and Application Insights names that are needed to interact with the deployed AI endpoints.
 
-   ![](./media/e2t1p5.png)
+   ![](./media/outputsr-e2t1.png)
    
-5. Run the cell **🧪 Test the API using a direct HTTP call**. Simulate real API requests to ensure that the token metrics are emitted correctly and that the agent responds as expected.
+5. Run the cell **Test the API using a direct HTTP call**. Simulate real API requests to ensure that the token metrics are emitted correctly and that the agent responds as expected.
 
-   ![](./media/e2t1p6.png)
+   ![](./media/test-e2t1.png)
 
-6. Run the cell **🧪 Execute multiple runs for each subscription using the Azure OpenAI Python SDK**. Verify that metrics are tracked consistently across multiple subscriptions and API keys using the official Azure OpenAI SDK.
+   ![](./media/test-e2t1(1).png)
 
-   ![](./media/e2t1p7.png)
+6. Run the cell **Execute multiple runs for each subscription using the Azure OpenAI Python SDK**. Verify that metrics are tracked consistently across multiple subscriptions and API keys using the official Azure OpenAI SDK.
 
-   ![](./media/e2t1p7(1).png)
+   ![](./media/execute-e2t1.png)
 
-7. Run the cell **🔍 Analyze Application Insights custom metrics with a KQL query**, this Query and extract token usage data to monitor consumption and identify patterns.
+   ![](./media/execute-e2t1(1).png)
 
-    ![](./media/e2t1p8.png)
+7. Run the cell **Analyze Application Insights custom metrics with a KQL query**, this Query and extract token usage data to monitor consumption and identify patterns.
+
+    ![](./media/analyze-e2t1.png)
 
     >**Note:** If you get an error or the table doesn’t appear, wait a few minutes and run the cell again.
 
-8. Run the cell **🔍 Plot the custom metrics results**, this Visualize token usage over time to see trends, spikes, or anomalies.
+8. Run the cell **Plot the custom metrics results**, this Visualize token usage over time to see trends, spikes, or anomalies.
 
-    ![](./media/e2t1p9.png)
+    ![](./media/plot-e2t1.png)
 
-9. Next **🔍 See the metrics on the Azure Portal**. Validate the token consumption visually for each subscription in Application Insights for easier monitoring.
+9. Next **See the metrics on the Azure Portal**. Validate the token consumption visually for each subscription in Application Insights for easier monitoring.
     
     ![](./media/API-gateway-image34.png)
 
@@ -90,61 +92,43 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
       ![](./media/e2t1-appin(3).png)
 
-1. Go back to the VS code, and scroll down to **Clean up resources** section, and click on **clean-up-resources notebook**.
-
-   ![](./media/e1t1p19.png)
-
-1. In the new tab, **Run** the cell to clean up the resources that we have created.
-
-   ![](./media/e2t1-clean.png)
-
 ## Task 2: Apply rate limiting policies to control token consumption. 
 
 In this task, you will deploy APIM, AI Foundry endpoints, and model subscriptions, and configure token rate limiting policies. You will test API requests, monitor token usage, and verify that the rate limiting enforces consumption limits correctly.
-
-https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/token-rate-limiting/README.MD
 
 1. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and select **token-rate-limiting (3)**, and click on **token-rate-limiting.ipynb (4)**.
 
    ![](./media/e2t2p1.png)
 
-1. Navigate to **0️⃣ Initialize Notebook Variables**. Click on **Run** this set up all lab variables, including resource group, location, AI services, models, APIM SKU, subscriptions, API paths, and utility functions. Prepares the environment for deployment.
+1. Navigate to **Initialize Notebook Variables**. Click on **Run** this set up all lab variables, including resource group, location, AI services, models, APIM SKU, subscriptions, API paths, and utility functions. Prepares the environment for deployment.
 
-   ![](./media/e2t2p2.png)
+   ![](./media/initvar-e2t2.png)
    
-1. Run **1️⃣ Verify Azure CLI and Subscription**. Check that Azure CLI is installed and connected. Retrieve and display current user, tenant ID, and subscription ID to confirm correct access.
+1. Run **Verify Azure CLI and Subscription**. Check that Azure CLI is installed and connected. Retrieve and display current user, tenant ID, and subscription ID to confirm correct access.
    
-   ![](./media/API-gateway-image37.png)
+   ![](./media/ver-e2t2.png)
 
-2. Run the cell **2️⃣ Create Deployment Using Bicep**. Deploy APIM, AI Foundry endpoints, and model subscriptions using Bicep. Automates resource provisioning and writes parameters to params.json.
+2. Run the cell **Create Deployment Using Bicep**. Deploy APIM, AI Foundry endpoints, and model subscriptions using Bicep. Automates resource provisioning and writes parameters to params.json.
 
-   ![](./media/e2t2p4.png)
+   ![](./media/deploy-e2t2.png)
 
-3. Run the cell **3️⃣ Get Deployment Outputs**. Retrieve APIM Service ID, API Gateway URL, subscription keys, and other deployment outputs. These values are required for testing and API calls.
+3. Run the cell **Get Deployment Outputs**. Retrieve APIM Service ID, API Gateway URL, subscription keys, and other deployment outputs. These values are required for testing and API calls.
   
-   ![](./media/e2t2p5.png)
+   ![](./media/outputs-e2t2.png)
 
-4. Run the cell **🧪 Test API Using Direct HTTP Calls**. Send repeated requests to the deployed AI endpoint using Python requests. Monitor response time, status codes, and token usage to verify token limiting behavior.
+4. Run the cell **Test API Using Direct HTTP Calls**. Send repeated requests to the deployed AI endpoint using Python requests. Monitor response time, status codes, and token usage to verify token limiting behavior.
 
-   ![](./media/e2t2p6.png)
+   ![](./media/test-e2t2.png)
 
-5. Run the cell **🔍 Analyze Token Rate limiting results**. Convert API run results into a DataFrame and plot tokens per request. Helps visualize rate limiting and identify when 429 errors occur.
+5. Run the cell **Analyze Token Rate limiting results**. Convert API run results into a DataFrame and plot tokens per request. Helps visualize rate limiting and identify when 429 errors occur.
 
-   ![](./media/e2t2p7.png)
+   ![](./media/analyze-e2t2.png)
 
    >**Note:** Result you get may vary from the image above.
 
-6. Run the cell **🧪 Test the API Using Azure OpenAI Python SDK**. Send requests using the Azure OpenAI SDK to confirm retries and proper handling of token limits. Observes consistent behavior across SDK calls.
+6. Run the cell **Test the API Using Azure OpenAI Python SDK**. Send requests using the Azure OpenAI SDK to confirm retries and proper handling of token limits. Observes consistent behavior across SDK calls.
 
-   ![](./media/e2t2p8.png)
-
-1. Go back to the VS code, and scroll down to **Clean up resources** section, and click on **clean-up-resources notebook**.
-
-   ![](./media/e1t1p19.png)
-
-1. In the new tab, **Run** the cell to clean up the resources that we have created.
-
-   ![](./media/e2t2-clean.png)
+   ![](./media/test2-e2t2.png)
 
 ## Summary
 
