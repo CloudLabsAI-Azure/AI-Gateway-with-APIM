@@ -33,9 +33,6 @@ the following
 
 This architecture flow demonstrates the end-to-end lifecycle of operationalizing, securing, and optimizing AI services using Azure API Management. It begins with exposing Large Language Models (LLMs) and Model Context Protocol (MCP) servers through a centralized API gateway. Requests are routed efficiently using load balancing and model routing, while session affinity ensures consistent responses for agent interactions. Semantic caching reduces repeated AI requests, improving performance and lowering token consumption. Content safety and filtering policies enforce responsible AI interactions. Monitoring and telemetry track usage, token consumption, and performance metrics, while rate limiting and quotas optimize costs. Finally, secure API exposure and client authorization ensure that AI services are safely consumed, providing a scalable, cost-efficient, and compliant AI solution.
 
-## Architecture Diagram:
-
-![](../media/arch01.png)
 
 ## Explanation of Components
 
@@ -65,7 +62,7 @@ Welcome to your Operationalize and Save Cost with AI Gateway Capabilities in Azu
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![](../media/mp-01.png)
+![](./media//mp-01.png)
 
 ## Virtual Machine & Lab Guide
 
@@ -75,31 +72,31 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
- ![](../media/develop-ai-overview-3.png)
+ ![](./media/develop-ai-overview-3.png)
 
 ## Utilizing the Split Window Feature
 
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
- ![](../media/develop-ai-overview-4.png)
+ ![](./media/develop-ai-overview-4.png)
 
 ## Managing Your Virtual Machine
 
 Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
 
-   ![Manage Your Virtual Machine](../media/develop-ai-overview-5.png)
+   ![Manage Your Virtual Machine](./media/develop-ai-overview-5.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-![Zoom In/Zoom Out](../media/develop-ai-overview-2.png)  
+![Zoom In/Zoom Out](./media/develop-ai-overview-2.png)  
 
 ## Lab Validation
 
 After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-![](../media/Purview-hol-image77.png)
+![](./media/Purview-hol-image77.png)
 
 ## Steps to Proceed with MFA Setup if the "Ask Later" Option is Not Visible [Optional]
 
@@ -107,7 +104,7 @@ After completing the task, hit the **Validate** button under the Validation tab 
 
 1. If **Action required** pop-up window appears, click on **Next**.
 
-   ![](../media/dpg11.png)
+   ![](./media/dpg11.png)
 
 1. On **Start by getting the app** page, click on **Next**.
 
@@ -115,7 +112,7 @@ After completing the task, hit the **Validate** button under the Validation tab 
 
 1. In **android**, go to the play store and Search for **Microsoft Authenticator** and Tap on **Install**.
 
-   ![Install](../media/dpg12.png)
+   ![Install](./media/dpg12.png)
 
    > **Note:** For iOS, open the App Store and repeat the steps.
 
@@ -125,13 +122,13 @@ After completing the task, hit the **Validate** button under the Validation tab 
 
 1. Scan the QR code visible on the screen **(1)** and click on **Next (2)**.
 
-   ![QR code](../media/dpg13.png)
+   ![QR code](./media/dpg13.png)
 
 1. Enter the digit displayed on the Screen in the Authenticator app on your mobile and tap on **Yes**.
 
 1. Once the notification is approved, click on **Next**.
 
-   ![Approved](../media/dpg14.png)
+   ![Approved](./media/dpg14.png)
 
 1. Click on **Done**.
 
@@ -154,6 +151,5 @@ The CloudLabs support team is available 24/7, 365 days a year, via email and liv
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-   ![](../media/Purview-hol-image76.png)
 
 ### Happy Learning!!
