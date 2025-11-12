@@ -20,8 +20,7 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
      ![](./media/e2t1p1.png)
 
-8. Scroll down to **Initialize notebook variables**. 
-Enter the following details:
+8. Scroll down to **Initialize notebook variables** and enter the following details:
 
    - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -112,8 +111,7 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 
    ![](./media/e2t2p1.png)
 
-8. Scroll down to **Initialize notebook variables**. 
-Enter the following details:
+8. Scroll down to **Initialize notebook variables** and enter the following details:
 
    - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 

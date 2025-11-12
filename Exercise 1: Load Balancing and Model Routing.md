@@ -52,8 +52,7 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
 7. Now, you will run each cell in the notebook one by one, following the instructions and observing the outputs for each step.
 
-8. Scroll down to **Initialize notebook variables**. 
-Enter the following details:
+8. Scroll down to **Initialize notebook variables** and enter the following details:
 
    - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -89,7 +88,7 @@ Enter the following details:
 
       ![](./media/e1t1p7(1).png)
 
-1. Enter the **password (1)** provided below, then select **Sign in (2)**.
+1. Enter the **Temporary Access Pass (1)** provided below, then click **Sign in (2)**.
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
@@ -192,8 +191,7 @@ In this task, you’ll deploy and validate a multi-region Azure setup using Bice
 
    ![](./media/e1t3p1.png)
 
-1. Scroll down to **Initialize notebook variables**. 
-Enter the following details:
+1. Scroll down to **Initialize notebook variables** and enter the following details:
 
    - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 

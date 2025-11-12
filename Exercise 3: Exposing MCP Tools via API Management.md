@@ -1,5 +1,7 @@
 # Exercise 3: Exposing MCP Tools via API Management 
 
+### Estimated Duration: 60 Minutes
+
 ## Lab Overview
 
 Explore exposing MCP servers and REST APIs securely through Azure API Management for centralized control. 
