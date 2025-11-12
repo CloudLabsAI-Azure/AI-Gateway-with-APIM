@@ -136,6 +136,127 @@ https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-
 
 ## Task 2: Specify content filters at request time using headers
 
+1. In the AI Foundry portal, under My Assets, select **Model + endpoint**.
+
+   ![](./media/API-gateway-image62.png)
+
+2. Click on **+ Deploy Model (1)**, and from the dropdown, select **Deploy Base Model (2)**.
+
+    ![](./media/API-gateway-image64.png)
+
+3. Search for and select **GPT-35-Turbo**, then click **Confirm**.
+
+   ![](./media/API-gateway-image63.png)
+
+4. On **Deploy** **GPT-35-Turbo** page,   click on **customize**.
+
+    ![](./media/API-gateway-image65.png)
+
+5. Reduce the Tokens per Minute rate limit to **5K**, then click **Deploy**.
+
+   ![](./media/API-gateway-image66.png)
+
+6. Once deployment is completed kindly copy the **target URL** and **Key**.
+
+    ![](./media/API-gateway-image67.png)
+
+7. Open the VS code  from the top menu select **File > New file**.
+
+     ![](./media/API-gateway-image68.png)
+
+8. Paste the below code :
+
+   ```
+   import requests
+   import json
+    
+   # 1️⃣ Set your model endpoint (correct path)
+   url = <URL>
+    
+   # 2️⃣ Add your API key
+   api_key = <api_key>
+    
+   # 3️⃣ Set headers for authentication and content safety
+   headers = {
+       "Content-Type": "application/json",
+       "api-key": api_key,
+       "X-Content-Safety-Level": "high",
+       "X-Block-Unsafe": "true",
+       "X-Content-Categories": "violence,hate,sensitive"
+   }
+    
+   # 4️⃣ Create a test prompt
+   data = {
+       "model": "gpt-35-turbo",
+       "messages": [
+           {"role": "system", "content": "You are a helpful assistant."},
+           {"role": "user", "content": "Write a story about a dragon."}
+       ]
+   }
+    
+   # 5️⃣ Send POST request
+   response = requests.post(url, headers=headers, json=data)
+    
+   # 6️⃣ Print response
+   try:
+       result = response.json()
+       print(json.dumps(result, indent=2))
+   except json.JSONDecodeError:
+       print("Error decoding response:", response.text)
+   ```
+
+9. Kindly replace the URL and API key with the values you copied in the earlier step.
+
+10. Please review the code and pay attention to how we add the headers. These headers (X-Content-Safety-Level, X-Block-Unsafe, and X-Content-Categories) are used to specify content filters at the request time
+
+11. Now press **Ctrl + S** to save the file, and navigate to **C:/labfiles/AI-Gateway/lab** to save the file as **ai_request** under the **labs** folder.
+
+12. Back in VS Code, select the **ai_request.py** file, right-click, and select **Open Integrated Terminal**.
+
+13. Install the requests library (needed to make HTTP requests to the Azure OpenAI endpoint). Run these commands one by one:
+
+    ```
+    pip install requests
+    python -m pip install requests
+    py -m pip install requests
+    pip show requests
+
+    ```
+
+    **>Note:** The first three commands try different ways of installing the library depending on your Python environment.
+    **>Note:** The last command (pip show requests) confirms that the library is installed.
+    
+14. Run the script to test the request:
+
+     ```
+     python ai_request.py
+     ```   
+
+15. Check the results printed in the console.
+
+16. Understand the content filtering headers
+
+    - In the script, the following headers are added:
+
+        headers = {
+            "Content-Type": "application/json",
+            "api-key": api_key,
+            "X-Content-Safety-Level": "high",
+            "X-Block-Unsafe": "true",
+            "X-Content-Categories": "violence,hate,sensitive"
+        }
+
+
+   - X-Content-Safety-Level → Controls how strict content safety checks are.
+
+   - X-Block-Unsafe → Blocks any unsafe outputs automatically.
+
+   - X-Content-Categories → Specifies which types of content to filter (e.g., violence, hate, sensitive).
+
+   - These headers apply content filters at the request time, ensuring any output from the AI is checked for safety before it’s returned.
+
+   - You can modify the test prompt or settings in the script if you want to try different inputs or content safety filters.
+
 ## Task 3: Apply content safety enforcement rules in API Management
 
 In this task, you will configure and validate the Content Safety policy in the AI Gateway environment using Visual Studio Code and Azure API Management (APIM). You will initialize environment variables, deploy resources using Bicep, and test how the Content Safety service filters unsafe prompts before reaching the backend model.
