@@ -16,23 +16,19 @@ Objective: Implement content safety measures to screen user inputs and AI output
 
 ## Task 1: Review content safety capabilities and configuration in AI Foundry
 
-**Azure AI Content Safety detects** harmful user-generated and AI-generated content in applications and services. The features in Azure AI Content Safety can help make sure that product reviews, forum posts, and images align with Contoso Camping Store's content guidelines.
+**Azure AI Content Safety** helps detect and prevent harmful user-generated and AI-generated content in applications and services. Its features ensure that text, images, and other media align with your organization’s content safety guidelines.
 
-   - Azure AI Content Safety offers a suite of features for monitoring and moderating content in real time:
+* **Azure AI Content Safety** offers a suite of tools for monitoring and moderating content in real time:
 
-       - **Text moderation:** Detects and filters out harmful content in text, such as hate speech, violence, or inappropriate language.
+  * **Text moderation:** Detects and filters harmful or unsafe language in text, including hate speech, violence, or explicit content.
+  * **Image moderation:** Analyzes images to identify and block visual content that may be inappropriate or offensive.
+  * **Multimodal content analysis:** Evaluates combined content types (such as text and images) to provide a more complete view of potential risks.
+  * **Groundedness detection:** Ensures that AI-generated text is factually accurate and supported by trusted source materials.
+  * **Prompt shields:** Detects and mitigates prompt injection or document-based attacks that attempt to manipulate large language models (LLMs).
+  * **Protected material detection:** Identifies and blocks outputs that may contain copyrighted or third-party protected text, such as song lyrics, recipes, or articles.
 
-       - **Image moderation:** Analyzes images to identify and block content that might be considered unsafe or offensive.
+These AI-powered features help organizations detect risks, prevent the spread of harmful or misleading content, and maintain a safe, trustworthy, and inclusive environment for their users.
 
-       - **Multimodal content analysis:** Works across various types of content to help ensure a comprehensive strategy for content safety.
-
-       - **Groundedness detection:** Detects and blocks incorrect information in model outputs. It helps ensure that the text responses of large language models are factual and accurate, based on the provided source materials.
-
-       - **Prompt shields:** Analyze large language model (LLM) inputs to detect user prompt attacks and document attacks.
-
-       - **Protected material detection:** Identifies and blocks outputs that could potentially violate copyrights. It scans for matches against an index of third-party text content, including songs, news articles, recipes, and selected web content.
-
-These features are built on AI models that can detect a wide range of potential risks, threats, and quality problems. Identifying these problems helps you ensure a safe and inclusive environment for all users of the Contoso Camping Store website.
 
 1. Open the Azure Portal in the browser and sign in with the credentials provided in the **Environment** tab.
 

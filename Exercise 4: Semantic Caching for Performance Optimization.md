@@ -99,7 +99,7 @@ Enter the following details:
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-   >**Note:** Ensure that the correct name is entered in the respective section section.
+      >**Note:** Ensure that the correct name is entered in the respective section section.
 
 1. Once you execute the cell **Initialize notebook variables**, you should see the output displayed as shown in the screenshot.
 

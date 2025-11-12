@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-Explore exposing MCP servers and REST APIs securely through Azure API Management for centralized control. 
+In this exercise, you will learn how to expose Model Context Protocol (MCP) tools and servers through Azure API Management (APIM) to securely integrate AI agents with backend services. MCP allows large language models (LLMs) to interact with external tools and data sources in a structured, governed way. Through this lab, you’ll explore how to configure API Management as a central gateway for MCP-based communication, enabling features such as rate limiting, OAuth-based authentication, and secure token handling. You’ll also learn how to publish REST APIs as MCP tools, connect AI agents to MCP endpoints, and test end-to-end authorization flows with Microsoft Entra ID. By the end of this exercise, you’ll understand how to expose, secure, and manage MCP servers and REST APIs using Azure’s enterprise-grade management and security capabilities.
 
 ## Lab Objectives
 
@@ -18,20 +18,49 @@ In this task, you’ll deploy and test the Model Context Protocol (MCP) architec
 
 1. In Visual Studio Code, open the **lab (1)** folder, expand the **model-context-protocol (2)** folder, and click **model-context-protocol.ipynb (3)**.
 
+    ![](./media/e3t1p1.png)
+
 1. Once the notebook opens, take a moment to review its structure and descriptions to understand the workflow, initialization, resource deployment, server build, and validation.
 
-1. Next, scroll down to **Initialize notebook variables** and **Run** the cell.
-This step initializes environment variables used for the entire deployment. It defines resource group names, Azure region, container registry, deployment identifiers, AI Foundry configuration, and APIM settings.
+1. Scroll down to **Initialize notebook variables** and enter the following details:
+
+   - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+
+    - aiservices_config: **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+        >**Note:** Ensure that the correct name is entered in the respective section section.
+
+1. **Run** the cell **Initialize notebook variables**. This step initializes environment variables used for the entire deployment. It defines resource group names, Azure region, container registry, deployment identifiers, AI Foundry configuration, and APIM settings.
+
+    ![](./media/initvar-e3t1.png)
+
+    ![](./media/initvar-e3t1(1).png)
 
 1. Next, **run** the cell that installs or updates the Azure AI Projects package and the Agent Framework library.
 
+    ![](./media/install-e3t1.png)
+
+    
+
 1. Scroll down to **Verify the Azure CLI and the connected Azure subscription** and **Run** the cell. This command verifies that the Azure CLI is installed and authenticated to the correct subscription. It retrieves your User Email, Tenant ID, and Subscription ID to confirm that you’re working in the intended Azure environment.
+
+    ![](./media/ver-e3t1.png)
 
 1. Next, scroll to **Create deployment using 🦾 Bicep** and **Run** the cell to deploy all the resources required for the MCP setup.
 
+    ![](./media/deploy-e3t1.png)
+
 1. After the Bicep deployment completes, scroll down to **Get the deployment outputs** and **Run** the cell.
 
+    ![](./media/outputs-e3t1.png)
+
+    ![](./media/outputs-e3t1(1).png)
+
 1. Next, scroll down to **Build and deploy the MCP Servers** and **Run** the cell. This step compiles and publishes multiple MCP servers (for example, Weather, Oncall, GitHub Issues, and ServiceNow Incidents) using your Azure Container Registry.
+
+    ![](./media/build-e3t1.png)
 
 1. Next, scroll down to **Test MCP Endpoints** and **Run** the cell. This test sends requests to each deployed MCP service to verify connectivity and correct responses.
 
@@ -57,7 +86,7 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-   >**Note:** Ensure that the correct name is entered in the respective section section.
+        >**Note:** Ensure that the correct name is entered in the respective section section.
 
 1. **Run** the cell **Initialize notebook variables** to set up environment variables. This step defines your resource names, Azure region, and other configuration details required for consistent and automated deployment across subscriptions.
 
@@ -115,7 +144,7 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-    >**Note:** Ensure that the correct name is entered in the respective section section.
+        >**Note:** Ensure that the correct name is entered in the respective section section.
 
 1. **Run** the cell **Initialize notebook variables**. This step initializes the core environment variables for your deployment, including the resource group name, deployment identifiers, subscription details, and Azure region configuration.
 
@@ -149,9 +178,10 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
     ![](./media/test-e3t3.png)
 
-https://learn.microsoft.com/en-us/azure/api-management/export-rest-mcp-server
-
 ## Summary
 
+In this exercise, you implemented a complete workflow for managing and securing Model Context Protocol (MCP) integrations using Azure API Management (APIM). You began by deploying MCP servers and testing their connectivity through APIM, gaining insight into how AI agents can interact with backend systems such as GitHub, ServiceNow, and weather APIs. Next, you published REST APIs as MCP tools, enabling LLMs to discover and invoke them through the standardized MCP interface. Finally, you configured client authorization using Microsoft Entra ID (Azure AD) to ensure that only authenticated clients could access protected MCP endpoints. Throughout the lab, you validated your setup using real API calls, OAuth flows, and rate-limiting policies.
+
+By completing this exercise, you demonstrated how APIM can act as a secure, centralized hub for exposing MCP tools and managing AI-to-system communication. You now have the foundational knowledge to build secure, scalable, and compliant AI solutions that leverage MCP for connecting large language models with enterprise systems.
 
 ### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
