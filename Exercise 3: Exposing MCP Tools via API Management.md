@@ -126,6 +126,14 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
     ![](./media/place-e3t2.png)
 
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="801278ec-d303-4427-912c-b81dc6edf5c8" />
+
 ## Task 3: Implement client authorization and secure access for MCP servers
 
 In this lab, you will configure and test the Model Context Protocol (MCP) client authorization flow using Azure API Management and Microsoft Entra ID (Azure AD).
@@ -175,6 +183,13 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 1. After successfully deploying your MCP servers, scroll down to **Test the MCP Authorization Flow** and **Run** the cell. This step demonstrates the complete OAuth 2.0 authorization flow between Microsoft Entra ID, API Management, and the MCP client. The process begins with APIM acting as an OAuth client to request an authorization code from Entra ID. That code is then exchanged for an access token, which is subsequently used to access the MCP endpoint via APIM. If everything is configured correctly, you will observe a successful response from the MCP API, confirming that the client authorization flow works as expected and that tokens are being correctly validated.
 
     ![](./media/test-e3t3.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="854a01ef-200d-4ac7-a683-3af83e3d6e3b" />
 
 ## Summary
 
