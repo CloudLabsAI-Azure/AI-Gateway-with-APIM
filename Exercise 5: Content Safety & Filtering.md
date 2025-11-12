@@ -30,3 +30,43 @@ https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-
 ## Task 2: Specify content filters at request time using headers. 
 
 ## Task 3: Apply content safety enforcement rules in API Management. 
+
+In this task, you will configure and validate the Content Safety policy in the AI Gateway environment using Visual Studio Code and Azure API Management (APIM). You will initialize environment variables, deploy resources using Bicep, and test how the Content Safety service filters unsafe prompts before reaching the backend model.
+
+1. In Visual Studio Code, expand **lab (1)** folder and select **content-safety (2)**, and finally click on **content-safety.ipynb (3)**.
+
+    ![](./media/e5t3p1.png)
+
+1. Once the notebook opens, take a few minutes to review the sections and understand the sequence of steps, initialization, deployment, and testing.
+
+1. Scroll down to **Initialize notebook variables** cell and enter the following details:
+
+   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+1. Run the cell **Initialize notebook variables**. This cell imports necessary Python utilities and environment setup scripts. Configures resource names using your Azure subscription ID. Sets region, AI Foundry configuration, model details, and deployment parameters.
+
+    ![](./media/initvar-e5t3.png)
+
+    >**Note:** Ensure that the correct name is entered in each respective section.
+
+1. Next, scroll down to **Verify the Azure CLI and the connected Azure subscription** section. **Run** the cell to validate Azure CLI installation. This confirms that you are signed into the correct Azure account, display details like User Email, Tenant ID, and Subscription ID and ensures the deployment will occur in the intended Azure environment.
+
+    ![](./media/ver-e5t3.png)
+
+1. Next, go to **Create deployment using 🦾 Bicep** and **Run** the cell to automatically deploy all required resources, including Azure API Management, Azure OpenAI, and Azure AI Content Safety. The Bicep template ensures declarative and repeatable deployment of these services within the specified resource group.
+
+    ![](./media/deploy-e5t3.png)
+
+1. Once the deployment process is complete, scroll down to **Get the deployment outputs** and **Run** the cell to retrieve important information such as the APIM Service ID, Gateway URL, Content Safety Endpoint, and Subscription Key. These outputs will be used in subsequent steps to test and validate content safety behavior.
+
+    ![](./media/outputs-e5t3.png)
+
+1. Next, scroll to **Test the Content Safety** section and **Run** the cell to send test prompts through API Management. This verifies how the Content Safety policy filters unsafe input before sending it to the backend model. You will observe that safe prompts return responses successfully, while unsafe prompts are blocked with a 403 Forbidden status code.
+
+    ![](./media/content-e5t3.png)
+
+## Summary

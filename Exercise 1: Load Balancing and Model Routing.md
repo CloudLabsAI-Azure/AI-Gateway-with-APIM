@@ -54,10 +54,20 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
 7. Now, you will run each cell in the notebook one by one, following the instructions and observing the outputs for each step.
 
-8. Scroll down to **0️⃣ Initialize notebook variables**. 
+8. Scroll down to **Initialize notebook variables**. 
 Enter the following details:
 
+   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
+   - **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **foundry2-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
 1. Click on **Run** in this session, we set up all the necessary variables and configurations, including resource names, regions, AI endpoints, and APIM details. This prepares the notebook for deploying resources and running the lab steps.
 
@@ -103,7 +113,7 @@ Enter the following details:
 
     ![](./media/API-gateway-image6.png)
 
-10. Run the **Create deployment using 🦾 Bicep**. Here, we use Bicep to define and deploy all necessary Azure resources, including the AI endpoints and APIM service. Running this sets up the infrastructure needed for the lab.
+10. Run the **Create deployment using 🦾 Bicep** cell. Here, we use Bicep to define and deploy all necessary Azure resources, including the AI endpoints and APIM service. Running this sets up the infrastructure needed for the lab.
 
      ![](./media/deploy-e1t1.png)
     
@@ -131,7 +141,21 @@ This task focuses on directing requests to specific AI models based on parameter
 
    ![](./media/e1t2p1.png)
 
-1. Run the cell **Initialize Notebook Variables**. Sets up all deployment variables, model configs, APIM settings, and inference API info. At the end, all parameters are ready in memory, no resources are created yet.
+8. Scroll down to **Initialize notebook variables** and enter the following details:
+
+   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **foundry2-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+      >**Note:** Ensure that the correct foundry name is entered in the *`models_config`* section.
+
+1. Now **Run** the cell **Initialize Notebook Variables**. Sets up all deployment variables, model configs, APIM settings, and inference API info. At the end, all parameters are ready in memory, no resources are created yet.
 
    ![](./media/initvar-e1t2.png)
 
@@ -141,7 +165,7 @@ At the end, you know the deployment will run in the correct subscription.
    ![](./media/e1t2p5(2).png)
    
 4. Run the cell **Create Deployment using Bicep**. Creates the resource group if needed, writes params.json, and deploys resources using Bicep.
-At the end, APIM, AI services, and model routing are provisioned (or an error is returned).
+At the end, APIM, AI services, and model routing are provisioned.
 
    ![](./media/deploy-e1t2.png)
    
@@ -160,17 +184,28 @@ At the end, all resource identifiers and API keys are available for testing the 
 
    ![](./media/resp-e1t2.png)
 
-## Task 3: Implement session affinity to keep responses consistent for agent interactions (In Progress)
+## Task 3: Implement session affinity to keep responses consistent for agent interactions
 
 > Session Affinity, also known as sticky sessions, is a technique used in load-balanced systems to ensure that all requests from a specific user or session are consistently routed to the same backend server or model instance.
 
 In this task, you’ll deploy and validate a multi-region Azure setup using Bicep and API Management. You’ll initialize configuration variables, verify your Azure CLI connection, deploy AI Foundry instances and an API Management gateway, and then test how session affinity affects conversation continuity across backends. By the end, you’ll see how enabling cookie-based affinity ensures requests from the same client maintain consistent state across sessions.
 
-1. In Visual Studio Code, from the left navigation pane, select **Explorer**, then expand **session-awareness (1)** click on **session-awareness.ipynb (2)**.
+1. In Visual Studio Code, under **labs (1)** folder, expand **session-awareness (1)** and then click on **session-awareness.ipynb (2)**.
 
    ![](./media/e1t3p1.png)
 
-1. Scroll down to **Initialize notebook variables**. Click on **Run**. By running this cell, you’ll initialize key environment variables used throughout the lab. These include the resource group name and region, AI service configurations, model versions, and API Management settings. Running this cell ensures all necessary parameters are defined before deploying Azure resources and executing the following steps in the notebook.
+1. Scroll down to **Initialize notebook variables**. 
+Enter the following details:
+
+   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+1. Run the cell **Initialize notebook variables**. By running this cell, you’ll initialize key environment variables used throughout the lab. These include the resource group name and region, AI service configurations, model versions, and API Management settings. Running this cell ensures all necessary parameters are defined before deploying Azure resources and executing the following steps in the notebook.
 
    ![](./media/initvar-e1t3.png)
 
@@ -184,7 +219,7 @@ In this task, you’ll deploy and validate a multi-region Azure setup using Bice
 
 1. Run the **Get the deployment outputs** cell to retrieve details from the completed Bicep deployment. This cell fetches key outputs such as the API Management gateway URL, service name, subscription keys, and deployed AI Foundry instances. It verifies that all resources were successfully created and confirms readiness for testing session affinity in later steps.
 
-   ![](./media/output-e1t3.png)
+   ![](./media/outputs-e1t3.png)
 
 1. Run the **Test Session Awareness Without Affinity** cell to check how requests behave without session affinity. It sends two consecutive OpenAI API calls and logs backend regions, cookies, and response continuity to show whether sessions break across different backends.
 

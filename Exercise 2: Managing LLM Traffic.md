@@ -1,6 +1,6 @@
 # Exercise 2: Managing LLM Traffic
 
-### Estimated Duration: Minutes
+### Estimated Duration: 60 Minutes
 
 ## Lab Overview
 
@@ -9,17 +9,27 @@ This Exercise demonstrates how to capture token usage metrics and apply token ra
 ## Lab Objectives
 
 - Task 1: Capture token usage metrics from AI Gateway traffic. 
+
 - Task 2: Apply rate limiting policies to control token consumption.
 
 ## Task 1: Capture token usage metrics from AI Gateway traffic. 
 
 In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models and subscriptions, and prepare the environment for testing. You will then capture, analyze, and visualize token usage metrics to monitor API consumption patterns.
 
-1. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **labs (2)** folder and **token-metrics-emitting (3)**, and finally click on **token-metrics-emitting.ipynb (4)**.
+1. In Visual Studio Code, expand the **labs (1)** folder and then select **token-metrics-emitting (2)**, and finally click on **token-metrics-emitting.ipynb (3)**.
 
      ![](./media/e2t1p1.png)
-   
-1. Navigate to **Initialize notebook variables** cell and click on **Run**. Prepare the environment, define resources, models, and subscriptions so everything is ready for deployment.
+
+8. Scroll down to **Initialize notebook variables**. 
+Enter the following details:
+
+   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+1. Run the cell **Initialize notebook variables**. Prepare the environment, define resources, models, and subscriptions so everything is ready for deployment.
 
    ![](./media/initvar-e2t1.png)
 
@@ -27,13 +37,13 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
    ![](./media/ver-e2t1.png)
    
-3. Next **Create deployment using 🦾 Bicep*** click on Run. This cell Automate the creation of APIM, AI Foundry endpoints, and model deployments so that the environment is consistent and reproducible.
+3. Run the cell **Create deployment using 🦾 Bicep**. This cell Automate the creation of APIM, AI Foundry endpoints, and model deployments so that the environment is consistent and reproducible.
 
    ![](./media/deploy-e2t1.png)
 
 4. Run the cell **Get the deployment outputs**. This rRetrieve URLs, keys, and Application Insights names that are needed to interact with the deployed AI endpoints.
 
-   ![](./media/outputsr-e2t1.png)
+   ![](./media/outputs-e2t1.png)
    
 5. Run the cell **Test the API using a direct HTTP call**. Simulate real API requests to ensure that the token metrics are emitted correctly and that the agent responds as expected.
 
@@ -57,23 +67,25 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
     ![](./media/plot-e2t1.png)
 
+    >**Note:** The results you see may vary from the screenshot shown above.
+
 9. Next **See the metrics on the Azure Portal**. Validate the token consumption visually for each subscription in Application Insights for easier monitoring.
     
     ![](./media/API-gateway-image34.png)
 
-1. Open the Azure Portal and sign in with the credentials provided in the **Environment** tab.
+1. Open the Azure Portal in the browser and sign in with the credentials provided in the **Environment** tab.
 
 1. Click on the **Resource groups** from the homepage.
 
    ![](./media/e2t1-rg(1).png)
 
-1. Under the **Resource Manager | Resource groups** blade, **lab-token-metrics-emitting**.
+1. Under the **Resource groups** blade, select **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![](./media/e2t1-rg.png)
+   ![](./media/rg-(1).png)
 
 1. Select the **Application Insights** resource.
 
-   ![](./media/e2t1-appin.png)
+   ![](./media/rg-(2).png)
 
 1. In the left navigation pane, go to **Monitoring (1)** and then select **Metrics (2)**.
 
@@ -100,7 +112,16 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 
    ![](./media/e2t2p1.png)
 
-1. Navigate to **Initialize Notebook Variables**. Click on **Run** this set up all lab variables, including resource group, location, AI services, models, APIM SKU, subscriptions, API paths, and utility functions. Prepares the environment for deployment.
+8. Scroll down to **Initialize notebook variables**. 
+Enter the following details:
+
+   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+1. Run the cell **Initialize Notebook Variables**. This set up all lab variables, including resource group, location, AI services, models, APIM SKU, subscriptions, API paths, and utility functions. Prepares the environment for deployment.
 
    ![](./media/initvar-e2t2.png)
    
