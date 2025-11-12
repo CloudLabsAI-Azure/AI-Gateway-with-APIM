@@ -42,8 +42,6 @@ In this task, you’ll deploy and test the Model Context Protocol (MCP) architec
 
     ![](./media/install-e3t1.png)
 
-    
-
 1. Scroll down to **Verify the Azure CLI and the connected Azure subscription** and **Run** the cell. This command verifies that the Azure CLI is installed and authenticated to the correct subscription. It retrieves your User Email, Tenant ID, and Subscription ID to confirm that you’re working in the intended Azure environment.
 
     ![](./media/ver-e3t1.png)
