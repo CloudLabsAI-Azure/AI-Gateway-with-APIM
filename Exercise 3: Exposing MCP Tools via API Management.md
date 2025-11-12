@@ -1,5 +1,7 @@
 # Exercise 3: Exposing MCP Tools via API Management 
 
+### Estimated Duration: 60 Minutes
+
 ## Lab Overview
 
 Explore exposing MCP servers and REST APIs securely through Azure API Management for centralized control. 
@@ -13,10 +15,110 @@ Explore exposing MCP servers and REST APIs securely through Azure API Management
 ## Task 1: Expose existing MCP Servers in API Management
 
 ## Task 2: Publish REST APIs as MCP tools in API Management
-https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/model-context-protocol/model-context-protocol.ipynb
 
+In this task, you will deploy and test the Model Context Protocol (MCP) using Azure API Management (APIM). You will initialize environment variables, deploy the required infrastructure using Bicep, and verify MCP server connectivity using Python SDK commands.
+
+1. In Visual Studio Code, expand the **lab (1)** folder, then select **mcp-from-api (2)**, and click **mcp-from-api.ipynb (3)** to open the notebook.
+
+    ![](./media/e3t2p1.png)
+
+1. Once the notebook opens, review all the sections and their descriptions. The notebook is divided into initialization, deployment, and verification steps that guide you through the process of configuring an MCP-enabled API gateway.
+
+1. Scroll down to **Initialize notebook variables** and enter the following details:
+
+   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+1. **Run** the cell **Initialize notebook variables** to set up environment variables. This step defines your resource names, Azure region, and other configuration details required for consistent and automated deployment across subscriptions.
+
+    ![](./media/initvar-e3t2.png)
+
+1. Next, scroll down to **Create deployment using 🦾 Bicep** and **Run** the cell to deploy all required Azure resources. The Bicep template provisions services like Azure API Management, Azure OpenAI, and related components needed for the MCP setup. Wait for the deployment process to complete successfully. The cell output will show status messages confirming that the resource group, API Management instance, and supporting components were created.
+
+    ![](./media/deploy-e3t2.png)
+
+1. Next, scroll to **Get the deployment outputs** and **Run** the cell to retrieve key configuration details such as the Log Analytics Workspace ID, APIM URL, and MCP endpoint. These outputs will be used later to connect and test your MCP-enabled service.
+
+    ![](./media/outputs-e3t2.png)
+
+1. Next, scroll to **Test the connection to the MCP servers and List Tools** section and **Run** the cell to test your MCP setup. This command initiates a connection to the deployed MCP servers, validates network communication, and retrieves a list of available tools that your MCP service exposes. If the connection test is successful, the output will display the list of MCP tools, confirming that the API Management instance has been successfully transformed into an MCP-compatible service endpoint.
+
+    ![](./media/test-e3t2.png)
+
+1. **(Optional) Use the MCP Inspector for Testing and Debugging**. This step is optional and helps you visualize and debug your MCP setup using a browser-based interface.
+
+1. Next, scroll down to **Execute an Azure AI Foundry Agent using MCP Tools** and **Run** the cell to demonstrate how an Azure AI Agent can use MCP tools published via API Management. This step sets up an asynchronous connection between Azure OpenAI, MCPServerStreamableHttp, and the deployed MCP endpoints, allowing the AI Agent to invoke tools exposed through APIM. You can observe the agent interacting with MCP tools, retrieving data, or performing operations through the configured MCP service.
+
+    ![](./media/execute-e3t2.png)
+
+    ![](./media/execute-e3t2(1).png)
+
+1. Next, scroll down to **Test the rate limit on Microsoft Learn MCP pass-through** and **Run** the cell to verify that rate-limiting policies applied in API Management are functioning correctly. This test sends multiple requests through the APIM-managed MCP endpoint to ensure that requests exceeding the defined threshold are properly throttled. You’ll notice that after a certain number of requests, the API Management service returns a `429` "Too Many Requests response", confirming that the rate-limit policy is working as expected.
+
+    ![](./media/rate-e3t2.png)
+
+1. Next, scroll down to **Test the Product Catalog MCP Authorization WITHOUT a valid token** and **Run** the cell. This test attempts to call the Product Catalog MCP endpoint without authorization headers, simulating an unauthenticated client request. You should observe a 401 Unauthorized response, verifying that the security policy in policy.xml correctly blocks requests lacking valid tokens.
+
+    ![](./media/notoken-e3t2.png)
+
+1. Next, scroll down to **Test the Product Catalog MCP Authorization WITH a valid token** and **Run** the cell.This test sends a request to the same Product Catalog MCP endpoint, but this time includes a valid authorization token in the request headers. The request should succeed, returning a valid response from the backend service (e.g., product information). This demonstrates that the authorization policy is functioning correctly, allowing only authenticated users to access MCP-protected APIs.
+
+    ![](./media/product-e3t2.png)
+
+1. Next, scroll down to **Test the Place Order MCP Authorization WITH a valid token** and **Run** the cell to verify authenticated access to the order placement MCP endpoint. This step sends a valid, authorized request to the Place Order MCP API via API Management. The request includes a valid bearer token in the headers, ensuring that only authenticated users can perform order operations.
+
+    ![](./media/place-e3t2.png)
 
 ## Task 3: Implement client authorization and secure access for MCP servers
-https://github.com/Azure-Samples/AI-Gateway/blob/main/labs/mcp-client-authorization/mcp-client-authorization.ipynb
+
+In this lab, you will configure and test the Model Context Protocol (MCP) client authorization flow using Azure API Management and Microsoft Entra ID (Azure AD).
+
+1. In Visual Studio Code, expand the **lab (1)** folder, then select **mcp-client-authorization (2)**, and click **mcp-client-authorization.ipynb (3)** to open it.
+
+    ![](./media/e3t3p1.png)
+
+1. Once the notebook is open, review all the sections to understand the flow of the lab. The notebook is divided into sequential sections that include initialization, app registration, deployment, and testing.
+
+1. 1. Scroll down to **Initialize notebook variables** and enter the following details:
+
+   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+1. **Run** the cell **Initialize notebook variables**. This step initializes the core environment variables for your deployment, including the resource group name, deployment identifiers, subscription details, and Azure region configuration.
+
+    ![](./media/initvar-e3t3.png)
+
+1. After initializing the variables, scroll to **Verify the Azure CLI and the connected Azure subscription** and **Run** the cell. This cell ensures that the Azure CLI is installed and that you are signed into the correct subscription. It retrieves and displays your current user account, tenant ID, and subscription ID to verify that you are working within the intended Azure environment. Seeing these values confirms that your local setup is correctly authenticated and ready for the deployment phase.
+
+    ![](./media/ver-e3t3.png)
+
+1. Next, scroll down to **Create the App Registration in Microsoft Entra ID** and **run** the cell to automatically create an app registration. This process provisions a new application in Microsoft Entra ID, which serves as the OAuth 2.0 client in your MCP authorization flow. The script first checks whether an app registration with the specified name already exists. If it does, it retrieves the existing application; otherwise, it creates a new one. After the app registration is created or found, the script retrieves and displays the Client ID, Tenant ID, and Client Secret values that will later be used by APIM for authentication. This ensures that the MCP client can securely request and obtain tokens from Entra ID during authorization.
+
+    ![](./media/appreg-e3t3.png)
+
+1. Next, scroll to **Create deployment using 🦾 Bicep** and click **Run**. This command triggers the deployment of the infrastructure defined in your main.bicep template. During this step, a new resource group will be created if one does not already exist. The script then defines all required parameters dynamically and deploys key Azure services such as Azure API Management, Log Analytics, and supporting resources required for the MCP client authorization lab. Wait for this cell to complete before proceeding, as this deployment forms the foundation of your environment.
+
+    ![](./media/deploy-e3t3.png)
+
+1. Once the deployment is complete, scroll down to **Get the deployment outputs** and **run** the cell. This step retrieves all important configuration details from your Bicep deployment, including the APIM Gateway URL, Client Authorization Endpoint, Log Analytics Workspace ID, and any relevant identifiers or secrets. Review the displayed outputs carefully, as you will use them in subsequent steps to test the OAuth and MCP client authorization flow.
+
+    ![](./media/outputs-e3t3.png)
+
+1. Next, locate and run the cell labeled **Build and deploy the MCP Servers**. This section builds and publishes the MCP server components defined in your environment. Once executed, it deploys the MCP endpoints through API Management and ensures that these endpoints are correctly registered and accessible. By the end of this step, your MCP services should be fully deployed and ready to handle authorization requests.
+
+    ![](./media/build-e3t3.png)
+
+1. After successfully deploying your MCP servers, scroll down to **Test the MCP Authorization Flow** and **Run** the cell. This step demonstrates the complete OAuth 2.0 authorization flow between Microsoft Entra ID, API Management, and the MCP client. The process begins with APIM acting as an OAuth client to request an authorization code from Entra ID. That code is then exchanged for an access token, which is subsequently used to access the MCP endpoint via APIM. If everything is configured correctly, you will observe a successful response from the MCP API, confirming that the client authorization flow works as expected and that tokens are being correctly validated.
+
+    ![](./media/test-e3t3.png)
 
 https://learn.microsoft.com/en-us/azure/api-management/export-rest-mcp-server
+
+## Summary
+
+
+### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
