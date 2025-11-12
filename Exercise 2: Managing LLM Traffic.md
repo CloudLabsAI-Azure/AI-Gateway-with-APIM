@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-This Exercise demonstrates how to capture token usage metrics and apply token rate limiting policies for Azure AI Foundry endpoints through Azure API Management (APIM). You will learn to monitor token consumption, visualize trends, and prevent spikes in usage by configuring the azure-openai-token-limit policy.
+In this exercise, you’ll manage and optimize Large Language Model (LLM) traffic using Azure API Management (APIM) and Azure AI Foundry. You’ll first capture and analyze token usage metrics from API requests to monitor consumption trends and identify spikes in activity. Then, you’ll apply token rate limiting policies using APIM to control traffic and prevent overuse of Azure OpenAI resources. Using Visual Studio Code and Bicep templates, you’ll deploy the required infrastructure, run tests with Python SDKs, and visualize token data in Application Insights. Confirm that token usage metrics are emitted correctly and that rate-limiting policies enforce consumption limits effectively.
 
 ## Lab Objectives
 
@@ -153,4 +153,6 @@ Enter the following details:
 
 ## Summary
 
-In these labs, you will deploy Azure API Management and AI Foundry endpoints with models and subscriptions, then capture and monitor token usage metrics. You will also apply token rate limiting policies to control API consumption, test the endpoints, and analyze results to ensure proper enforcement of usage limits.
+In this exercise, you learned how to monitor and control LLM traffic through Azure API Management. You deployed APIM and AI Foundry endpoints, captured token usage metrics, and visualized consumption patterns in Application Insights. You then configured and tested token rate limiting policies to ensure that excessive requests were throttled and token quotas were enforced consistently. By the end of the lab, you verified that token metrics were accurately tracked across multiple subscriptions and that APIM effectively regulated model access, ensuring predictable usage, improved cost management, and stable performance for Azure OpenAI workloads.
+
+### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.

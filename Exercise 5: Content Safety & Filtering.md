@@ -1,13 +1,22 @@
 # Exercise 5: Content Safety & Filtering 
 
+### Estimated Duration: 60 Minutes
+
+## Lab Overview
+
 Objective: Implement content safety measures to screen user inputs and AI outputs, ensuring compliance and safe interactions. 
 
+## Lab Objectives
+
+- Task 1: Review content safety capabilities and configuration in AI Foundry
+
+- Task 2: Specify content filters at request time using headers
+
+- Task 3: Apply content safety enforcement rules in API Management 
 
 ## Task 1: Review content safety capabilities and configuration in AI Foundry
 
-
-
-> **Azure AI Content Safety detects** harmful user-generated and AI-generated content in applications and services. The features in Azure AI Content Safety can help make sure that product reviews, forum posts, and images align with Contoso Camping Store's content guidelines.
+**Azure AI Content Safety detects** harmful user-generated and AI-generated content in applications and services. The features in Azure AI Content Safety can help make sure that product reviews, forum posts, and images align with Contoso Camping Store's content guidelines.
 
    - Azure AI Content Safety offers a suite of features for monitoring and moderating content in real time:
 
@@ -27,9 +36,9 @@ These features are built on AI models that can detect a wide range of potential 
 
 https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-azure-ai-content-safety-studio/7-exercise-groundedness-detection
 
-## Task 2: Specify content filters at request time using headers. 
+## Task 2: Specify content filters at request time using headers
 
-## Task 3: Apply content safety enforcement rules in API Management. 
+## Task 3: Apply content safety enforcement rules in API Management
 
 In this task, you will configure and validate the Content Safety policy in the AI Gateway environment using Visual Studio Code and Azure API Management (APIM). You will initialize environment variables, deploy resources using Bicep, and test how the Content Safety service filters unsafe prompts before reaching the backend model.
 
@@ -70,3 +79,9 @@ In this task, you will configure and validate the Content Safety policy in the A
     ![](./media/content-e5t3.png)
 
 ## Summary
+
+
+### Conclusion
+
+
+### You have successfully completed the Hands-on lab.

@@ -1,10 +1,18 @@
 # Exercise 4: Semantic Caching for Performance Optimization 
 
+### Estimated Duration: 60 Minutes
+
 ## Lab Overview 
 
-This exercise focuses on implementing semantic caching to improve the performance of applications that use Azure OpenAI. Unlike traditional caching that matches exact text, semantic caching works based on meaning, reducing latency and token usage while delivering faster AI responses.
+In this exercise, you’ll implement semantic caching in the AI Gateway to optimize the performance of Azure OpenAI applications. You’ll configure caching based on semantic similarity rather than exact text matching, allowing the system to reuse responses for prompts with similar meanings. Using Visual Studio Code, you’ll deploy the required resources with Bicep templates, initialize environment variables, and analyze cache performance using Redis metrics and Python SDK calls. Verify that semantically similar prompts return cached results to confirm reduced latency, improved response times, and lower API token usage.
 
-## Task 1: Understand semantic caching principles. 
+## Lab Objectives
+
+- Task 1: Understand semantic caching principles
+
+- Task 2: Configure semantic caching in the AI Gateway environment
+
+## Task 1: Understand semantic caching principles
 
 In this task, you will learn how semantic caching enhances AI performance by comparing the meaning of prompts using embeddings. When two prompts have similar meanings, the cached response is reused instead of sending a new request to the model. This process significantly speeds up responses and lowers API usage costs
 
@@ -68,7 +76,7 @@ This approach enables faster responses, lower latency, and reduced token consump
 Although the two prompts are worded differently, semantic caching identifies them as semantically similar and retrieves the earlier cached response, saving time and tokens.
 
 
-## Task 2: Configure semantic caching in the AI Gateway environment. 
+## Task 2: Configure semantic caching in the AI Gateway environment
 
 In this task, you will configure and test semantic caching within the AI Gateway using Visual Studio Code. You will initialize environment variables, deploy necessary resources using Bicep, and execute Python SDK calls to observe cache behavior. By analyzing Redis metrics, you will confirm performance gains through reduced response times and increased cache hits.
 
@@ -105,6 +113,8 @@ Enter the following details:
 
     ![](./media/deploy-e4t1.png)
 
+    >**Note:** The deployment process typically takes about 10 to 15 minutes to complete.
+
 1. Run **Get the deployment outputs**. After deployment, the script retrieves and displays key outputs such as the APIM Gateway URL, subscription keys, and Redis connection information. These details are required for connecting to the API endpoint and managing cache operations in the next steps.
     
     ![](./media/outputs-e4t1.png)
@@ -127,4 +137,7 @@ Enter the following details:
 
 ## Summary 
 
-In this exercise, you explored how semantic caching improves response efficiency by reusing results for similar prompts. By implementing it in the AI Gateway, you achieved faster responses, reduced costs, and a more scalable Azure OpenAI solution.
+In this exercise, you explored how semantic caching improves the efficiency and cost-effectiveness of Azure OpenAI, based solutions by reusing results for prompts with similar meanings. You learned how embeddings allow AI systems to detect semantic similarity between queries, enabling cached responses to be served instantly rather than reprocessed by the model. By deploying semantic caching within the AI Gateway, you observed measurable improvements in response latency and cache hit rates, confirming that repeated or related queries can be served from cache rather than through new model invocations. You also reviewed Redis cache statistics to understand how cache hits, misses, and evictions reflect real-world performance optimization.
+Through this hands-on implementation, you gained practical insights into how semantic caching supports faster, more scalable, and more cost-efficient AI applications, a key optimization strategy for production-grade Azure OpenAI deployments.
+
+### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
