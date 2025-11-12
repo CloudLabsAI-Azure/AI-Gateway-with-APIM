@@ -54,17 +54,21 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
 8. Scroll down to **Initialize notebook variables** and enter the following details:
 
-   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+   - aiservices_config:
 
-   - **foundry2-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry2-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+   >**Note:** Ensure that the correct name is entered in the respective section section.
 
 1. Click on **Run** in this session, we set up all the necessary variables and configurations, including resource names, regions, AI endpoints, and APIM details. This prepares the notebook for deploying resources and running the lab steps.
 
@@ -126,6 +130,8 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
       ![](./media/e1t1p17.png)
 
+      >**Note:** The results you see may differ from the screenshot shown above.
+
 16. Run the cell **Test the API using the Azure OpenAI Python SDK**. In this session, we test the deployed AI endpoints using the Azure OpenAI Python SDK. This ensures that the API requests work correctly and responses are received, regardless of which backend region handles them.
 
     ![](./media/e1t1p21.png)
@@ -140,17 +146,32 @@ This task focuses on directing requests to specific AI models based on parameter
 
 8. Scroll down to **Initialize notebook variables** and enter the following details:
 
-   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+   - aiservices_config: 
+      - **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **foundry2-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry2-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+   - models_config: 
 
-      >**Note:** Ensure that the correct foundry name is entered in the *`models_config`* section.
+      - gpt-4.1: **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+
+      - gpt-4.1-mini: **foundry2-<inject key="DeploymentID" enableCopy="false"/>**
+
+      - gpt-4.1-nano: **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+
+      - model-router: **foundry2-<inject key="DeploymentID" enableCopy="false"/>**
+
+      - o4-mini: **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+
+      - DeepSeek-R1: **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+
+   - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+      >**Note:** Ensure that the correct name is entered in the respective section section.
 
 1. Now **Run** the cell **Initialize Notebook Variables**. Sets up all deployment variables, model configs, APIM settings, and inference API info. At the end, all parameters are ready in memory, no resources are created yet.
 
@@ -193,13 +214,17 @@ In this task, you’ll deploy and validate a multi-region Azure setup using Bice
 
 1. Scroll down to **Initialize notebook variables** and enter the following details:
 
-   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+   - aiservices_config: 
+   
+      - **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+   - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+   >**Note:** Ensure that the correct name is entered in the respective section section.
 
 1. Run the cell **Initialize notebook variables**. By running this cell, you’ll initialize key environment variables used throughout the lab. These include the resource group name and region, AI service configurations, model versions, and API Management settings. Running this cell ensures all necessary parameters are defined before deploying Azure resources and executing the following steps in the notebook.
 

@@ -93,13 +93,13 @@ In this task, you will configure and test semantic caching within the AI Gateway
 8. Scroll down to **Initialize notebook variables**. 
 Enter the following details:
 
-   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+   - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-   >**Note:** Ensure that the correct name is entered in the respective section section.
+      >**Note:** Ensure that the correct name is entered in the respective section section.
 
 1. Once you execute the cell **Initialize notebook variables**, you should see the output displayed as shown in the screenshot.
 
