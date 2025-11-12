@@ -12,14 +12,14 @@ This lab is designed to provide participants with hands-on experience in classif
 
 - **Load Balancing and Model Routing:** This lab guides participants through distributing LLM requests efficiently across multiple AI resources. Participants will learn to configure load balancing across AOAI resource pools, set up model routing to direct requests to specific models, and implement session affinity to maintain consistent AI agent interactions. 
 
-**Managing LLM Traffic**: This lab provides practical experience in monitoring and controlling LLM usage to optimize performance and reduce costs. Participants will capture token usage metrics, apply rate limiting policies, and monitor consumption patterns to prevent overuse. 
+- **Managing LLM Traffic**: This lab provides practical experience in monitoring and controlling LLM usage to optimize performance and reduce costs. Participants will capture token usage metrics, apply rate limiting policies, and monitor consumption patterns to prevent overuse. 
 
-**Exposing MCP Tools via API Management**: Participants will explore securely exposing MCP servers and REST APIs through Azure API Management. This exercise focuses on centralized control, authentication, and secure API exposure. 
+- **Exposing MCP Tools via API Management**: Participants will explore securely exposing MCP servers and REST APIs through Azure API Management. This exercise focuses on centralized control, authentication, and secure API exposure. 
 
-**Semantic Caching for Performance Optimization**: 
+- **Semantic Caching for Performance Optimization**: 
 This lab introduces participants to semantic caching to improve AI response times and reduce token consumption. Participants will learn caching principles and configure semantic caching in the AI Gateway environment. 
 
-**Content Safety & Filtering**: This exercise teaches participants to enforce content safety rules to ensure responsible AI interactions. Participants will configure filters for both inputs and outputs, apply enforcement rules, and monitor compliance.
+- **Content Safety & Filtering**: This exercise teaches participants to enforce content safety rules to ensure responsible AI interactions. Participants will configure filters for both inputs and outputs, apply enforcement rules, and monitor compliance.
 
 ## Prerequisites
 
