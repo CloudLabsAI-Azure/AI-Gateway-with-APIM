@@ -22,11 +22,13 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
 8. Scroll down to **Initialize notebook variables** and enter the following details:
 
-   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+   - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+   >**Note:** Ensure that the correct name is entered in the respective section section.
 
 1. Run the cell **Initialize notebook variables**. Prepare the environment, define resources, models, and subscriptions so everything is ready for deployment.
 
@@ -113,11 +115,11 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 
 8. Scroll down to **Initialize notebook variables** and enter the following details:
 
-   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+   - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
 1. Run the cell **Initialize Notebook Variables**. This set up all lab variables, including resource group, location, AI services, models, APIM SKU, subscriptions, API paths, and utility functions. Prepares the environment for deployment.
 

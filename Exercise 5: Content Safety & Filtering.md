@@ -34,6 +34,108 @@ Objective: Implement content safety measures to screen user inputs and AI output
 
 These features are built on AI models that can detect a wide range of potential risks, threats, and quality problems. Identifying these problems helps you ensure a safe and inclusive environment for all users of the Contoso Camping Store website.
 
+1. Open the Azure Portal in the browser and sign in with the credentials provided in the **Environment** tab.
+
+1. Click on the **Resource groups** from the homepage.
+
+   ![](./media/e2t1-rg(1).png)
+
+1. Under the **Resource groups** blade, select **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**.
+
+   ![](./media/rg-(1).png)
+
+1. Select the **foundry1-<inject key="DeploymentID" enableCopy="false"/>**.
+
+    ![](./media/e5t1p1.png)
+
+1. Now click on the **Go to Azure AI Foundry portal**.
+
+    ![](./media/e5t1p2.png)
+
+1. From the left navigation pane on the Azure AI Foundry portal, select **Guardrails+controls**.
+
+    ![](./media/e5t1p3.png)
+
+1. Click on **Try it out** under Guardrailsand controls.
+
+    ![](./media/e5t1p4.png)
+
+### Task 1.1: Text Moderation
+
+1. Click **Try it out** in the **Moderate text content** tool, located under the **Filter text content** section.
+
+    ![](./media/e5t1p5.png)
+
+1. Scroll down to the **Test** section, and paste the prompt **(1)** given below, and click on **Run test (2)**.
+
+    ```
+    I recently used the PowerBurner Camping Stove on my camping trip, and I must say, it was fantastic! It was easy to use, and the heat control was impressive. Great product!
+    ```
+
+    ![](./media/e5t1p6.png)
+
+1. To view the results, scroll down to the **View Results** section. As shown, the prompt above is allowed.
+
+    ![](./media/e5t1p7.png)
+
+1. You can also try different prompts and adjust the threshold level to **Low**, **Medium**, or **High** from the **Configure Filters** section located next to the **Test** section.
+
+1. Similarly, you can try out the other sample prompts provided in this section to explore how the model detects different types of content. For example, **“Violent content with misspelling”** includes harmful language with spelling errors to test how well the model recognizes unsafe text despite typos. **“Multiple risk categories in one sentence”** combines various forms of risky content in a single input to assess how the model handles complex scenarios. **“Multiple languages in one sentence”** mixes English with another language to evaluate multilingual content detection. Try each of these samples to observe how the system classifies and filters different kinds of content.
+    
+    ![](./media/e5t1p7(1).png)
+
+### Task 1.2: Image Moderation
+
+1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Moderate image content**, under **Filter image content**.
+
+    ![](./media/e5t1p15.png)
+
+1. In this section, you can test how the Azure AI Content Safety, Image Moderation tool evaluates different types of image content. You can either upload your own image or select one of the provided sample images to analyze. The tool detects categories such as violence, self-harm, and sexual content, and you can use the Configure filters panel to adjust sensitivity levels (Low, Medium, or High) for each category. Try running tests with various images and thresholds to observe how moderation results change based on content type and filter configuration.
+
+    ![](./media/e5t1p16.png)
+
+### Task 1.3: Multimodal content analysis
+
+1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Moderate multimodal content**, under **Filter image content**.
+
+    ![](./media/e5t1p17.png)
+
+1. In this section, you can test how the **Azure AI Content Safety, Multimodal Moderation** tool analyzes both **images and text together** to detect harmful or inappropriate content. You can **upload your own image with text** or choose from the provided **sample memes** to see how different combinations are classified. The tool can identify risks such as **violence**, **self-harm**, or **hate**, even when the image or text alone may seem harmless. Use the **Configure filters** panel to adjust the sensitivity for each category (Low, Medium, or High) and observe how the moderation results change with different risk thresholds.
+
+    ![](./media/e5t1p18.png)
+
+
+### Task 1.4: Groundedness detection
+
+1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Groundedness detection**, under **Filter text content**.
+
+    ![](./media/e5t1p19.png)
+
+1. In this section, you can test the **Groundedness Detection** capability, which checks whether AI-generated responses are **factually based on provided source information**. You can choose between **Q&A** or **Summarization** tasks, then either select a sample or enter your own **grounding source**, **prompt**, and **model-generated completion**. The tool compares the completion against the source text to detect if any part of the answer is **ungrounded or incorrect**. You can also enable options to **view reasoning** behind the detection or **see correction suggestions** for improving ungrounded content. This helps ensure that AI responses remain accurate and supported by reliable information.
+
+    ![](./media/e5t1p20.png)
+
+### Task 1.5: Prompt shields
+
+1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Prompt shields**, under **Filter text content**.
+
+    ![](./media/e5t1p21.png)
+
+1. In this section, you can test the **Prompt Shields** feature, which helps detect and prevent **prompt injection or jailbreak attacks** that attempt to manipulate an AI model’s behavior. You can select from the provided samples or enter your own **user prompt** and **document content** to simulate different attack scenarios. Examples include **safe content**, **user prompt attacks**, **document-based attacks**, and **combined prompt and document attacks**. After entering or selecting your test data, you can run the test to see how the model identifies and blocks malicious or manipulative prompts. This tool helps ensure that your AI system remains secure and resistant to indirect or harmful prompt-based exploits.
+
+    ![](./media/e5t1p22.png)
+
+### Task 1.6: Protected material detection
+
+1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Protected material detection**, under **Filter text content**.
+
+    ![](./media/e5t1p23.png)
+
+1. In this section, you can explore the **Protected Material Detection for Text** feature, which helps identify and protect **copyrighted or third-party text** that may appear in AI-generated content. You can choose from the provided samples, such as **Protected lyrics** or **Protected recipes**, or upload your own text to analyze. The tool checks whether the input contains material that may belong to protected sources and flags it accordingly. Use this to ensure your AI outputs remain compliant with copyright and intellectual property guidelines by avoiding the reuse of protected text content.
+
+    ![](./media/e5t1p24.png)
+
+
 https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-azure-ai-content-safety-studio/7-exercise-groundedness-detection
 
 ## Task 2: Specify content filters at request time using headers
@@ -50,11 +152,13 @@ In this task, you will configure and validate the Content Safety policy in the A
 
 1. Scroll down to **Initialize notebook variables** cell and enter the following details:
 
-   - **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - **apim-<inject key="DeploymentID" enableCopy="false"/>**
+   - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
+
+   >**Note:** Ensure that the correct name is entered in the respective section section.
 
 1. Run the cell **Initialize notebook variables**. This cell imports necessary Python utilities and environment setup scripts. Configures resource names using your Azure subscription ID. Sets region, AI Foundry configuration, model details, and deployment parameters.
 
