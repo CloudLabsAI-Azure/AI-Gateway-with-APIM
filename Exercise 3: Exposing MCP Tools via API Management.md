@@ -64,9 +64,43 @@ In this task, you’ll deploy and test the Model Context Protocol (MCP) architec
 
 1. Next, scroll down to **Test MCP Endpoints** and **Run** the cell. This test sends requests to each deployed MCP service to verify connectivity and correct responses.
 
-1. Scroll to **Test OAuth Credential Management** and **Run** the cell. This step confirms that the APIM Credential Manager securely handles OAuth tokens for the MCP servers.
+    ![](./media/test-e3t1.png)
 
-1. Finally, scroll down to **Verify AI Agent Tool Integration** and **Run** the cell. This demonstrates how Azure API Management and the MCP servers enable LLM-based agents to dynamically discover and use external tools. The AI Agent connects to APIM, authenticates using tokens managed by the Credential Manager, and executes MCP tool calls (like checking GitHub issues or fetching weather details).
+1. Now, **Run** the next cell in row.
+
+    ![](./media/test-e3t1(1).png)
+
+    ![](./media/test-e3t1(2).png)
+
+1. Scroll to **Run an OpenAI compeletion with MCP tools** cell and click on **Run**.
+
+    ![](./media/run-e3t1.png)
+
+    ![](./media/run-e3t1(1).png)
+
+1. Scroll down to **Execute an Agent Framework Agent using MCP Tools via Azure API Management** cell and click on **Run**.
+
+    ![](./media/execute-e3t1.png)
+
+    ![](./media/execute-e3t1(1).png)
+
+1. Scroll down to **Execute an Azure Al Foundry Agent using MCP Tools via Azure API Management** cell and click on **Run**.
+
+    ![](./media/execvia-e3t1.png)
+
+    ![](./media/execvia-e3t1(1).png)
+
+1. Scroll down to **Execute a Semantic Kernel Agent using MCP Tools via Azure API Management** cell and click on **Run**.
+
+    ![](./media/semantic-e3t1.png)
+
+    ![](./media/semantic-e3t1(1).png)
+
+1. **Run** the cell **Execute an AutoGen Agent using MCP Tools via Azure API Management**.
+
+    ![](./media/autogen-e3t1.png)
+
+    ![](./media/autogen-e3t1(1).png)
 
 ## Task 2: Publish REST APIs as MCP tools in API Management
 
