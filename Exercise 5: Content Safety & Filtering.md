@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-Objective: Implement content safety measures to screen user inputs and AI outputs, ensuring compliance and safe interactions. 
+In this exercise, you’ll implement content safety and moderation controls within the Azure AI Gateway to ensure that all user inputs and AI-generated outputs adhere to organizational safety standards. You’ll explore Azure AI Foundry’s Guardrails and Controls, including text, image, multimodal moderation, groundedness detection, prompt shields, and protected material detection. You will then specify real-time content filtering rules using request headers and test how these filters affect API responses. Finally, you will apply content safety enforcement policies through Azure API Management (APIM), deploy the required infrastructure using Bicep templates, configure gateway-level safety rules, and validate how unsafe requests are blocked before reaching the underlying model. By the end, you'll gain hands-on experience applying safety controls across multiple layers model, request, and gateway, to ensure secure and compliant AI interactions.
 
 ## Lab Objectives
 
@@ -131,89 +131,53 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
     ![](./media/e5t1p24.png)
 
-
-https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-azure-ai-content-safety-studio/7-exercise-groundedness-detection
-
 ## Task 2: Specify content filters at request time using headers
 
-1. In the AI Foundry portal, under My Assets, select **Model + endpoint**.
+1. Open the Azure Portal in the browser and sign in with the credentials provided in the **Environment** tab.
+
+1. Click on the **Resource groups** from the homepage.
+
+   ![](./media/e2t1-rg(1).png)
+
+1. Under the **Resource groups** blade, select **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**.
+
+   ![](./media/rg-(1).png)
+
+1. Select the **foundry1-<inject key="DeploymentID" enableCopy="false"/>**.
+
+    ![](./media/e5t1p1.png)
+
+1. Now click on the **Go to Azure AI Foundry portal**.
+
+    ![](./media/e5t1p2.png)
+
+1. In the AI Foundry portal, from the left navigation pane, under **My Assets**, select **Model + endpoints**.
 
    ![](./media/API-gateway-image62.png)
 
-2. Click on **+ Deploy Model (1)**, and from the dropdown, select **Deploy Base Model (2)**.
+1. Select the deployed model **gpt-4o-mini**.
 
-    ![](./media/API-gateway-image64.png)
+    ![](./media/gpt4o-e5t2.png)
 
-3. Search for and select **GPT-35-Turbo**, then click **Confirm**.
+6. Copy the **Target URI (1)** and **Key (2)** and store them in a Notepad file, as they will be required in the next step.
 
-   ![](./media/API-gateway-image63.png)
+    ![](./media/gpt4o-e5t2(1).png)
 
-4. On **Deploy** **GPT-35-Turbo** page,   click on **customize**.
+7. Open VS Code, navigate to the **labs (1)** folder, select **ai_request (2)**, and then open the **ai_request.py (3)** file.
 
-    ![](./media/API-gateway-image65.png)
+     ![](./media/ai_request-e5t2.png)
 
-5. Reduce the Tokens per Minute rate limit to **5K**, then click **Deploy**.
+9. Kindly paste the **URL (1)** and **API key** with the values you copied in the earlier step.
 
-   ![](./media/API-gateway-image66.png)
-
-6. Once deployment is completed kindly copy the **target URL** and **Key**.
-
-    ![](./media/API-gateway-image67.png)
-
-7. Open the VS code  from the top menu select **File > New file**.
-
-     ![](./media/API-gateway-image68.png)
-
-8. Paste the below code :
-
-   ```
-   import requests
-   import json
-    
-   # 1️⃣ Set your model endpoint (correct path)
-   url = <URL>
-    
-   # 2️⃣ Add your API key
-   api_key = <api_key>
-    
-   # 3️⃣ Set headers for authentication and content safety
-   headers = {
-       "Content-Type": "application/json",
-       "api-key": api_key,
-       "X-Content-Safety-Level": "high",
-       "X-Block-Unsafe": "true",
-       "X-Content-Categories": "violence,hate,sensitive"
-   }
-    
-   # 4️⃣ Create a test prompt
-   data = {
-       "model": "gpt-35-turbo",
-       "messages": [
-           {"role": "system", "content": "You are a helpful assistant."},
-           {"role": "user", "content": "Write a story about a dragon."}
-       ]
-   }
-    
-   # 5️⃣ Send POST request
-   response = requests.post(url, headers=headers, json=data)
-    
-   # 6️⃣ Print response
-   try:
-       result = response.json()
-       print(json.dumps(result, indent=2))
-   except json.JSONDecodeError:
-       print("Error decoding response:", response.text)
-   ```
-
-9. Kindly replace the URL and API key with the values you copied in the earlier step.
+    ![](./media/ai_request-e5t2(1).png)
 
 10. Please review the code and pay attention to how we add the headers. These headers (X-Content-Safety-Level, X-Block-Unsafe, and X-Content-Categories) are used to specify content filters at the request time
 
-11. Now press **Ctrl + S** to save the file, and navigate to **C:/labfiles/AI-Gateway/lab** to save the file as **ai_request** under the **labs** folder.
+12. In VS Code, right-click on the **ai_request (1)** folder and select **Open in Integrated Terminal (2)**.
 
-12. Back in VS Code, select the **ai_request.py** file, right-click, and select **Open Integrated Terminal**.
+    ![](./media/ai_request-e5t2(2).png)
 
-13. Install the requests library (needed to make HTTP requests to the Azure OpenAI endpoint). Run these commands one by one:
+13. Install the requests library (needed to make HTTP requests to the Azure OpenAI endpoint). Run these commands one by one inside the terminal:
 
     ```
     pip install requests
@@ -223,8 +187,9 @@ https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-
 
     ```
 
-    **>Note:** The first three commands try different ways of installing the library depending on your Python environment.
-    **>Note:** The last command (pip show requests) confirms that the library is installed.
+    >**Note:** The first three commands try different ways of installing the library depending on your Python environment.
+
+    >**Note:** The last command (pip show requests) confirms that the library is installed.
     
 14. Run the script to test the request:
 
@@ -234,10 +199,12 @@ https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-
 
 15. Check the results printed in the console.
 
+    ![](./media/ai_request-e5t2(3).png)
+
 16. Understand the content filtering headers
 
     - In the script, the following headers are added:
-
+        ```
         headers = {
             "Content-Type": "application/json",
             "api-key": api_key,
@@ -245,7 +212,7 @@ https://learn.microsoft.com/en-us/training/modules/moderate-content-detect-harm-
             "X-Block-Unsafe": "true",
             "X-Content-Categories": "violence,hate,sensitive"
         }
-
+        ```
 
    - X-Content-Safety-Level → Controls how strict content safety checks are.
 
@@ -308,8 +275,7 @@ In this task, you will configure and validate the Content Safety policy in the A
 
 ## Summary
 
+In this exercise, you learned how Azure AI Content Safety protects AI systems from producing or accepting harmful content. You explored moderation tools in Azure AI Foundry that detect unsafe text, images, and multimodal inputs, as well as features like groundedness detection, prompt shields, and protected material identification. You then applied real-time content filtering using custom request headers to control which categories of risk such as hate, violence, or sensitive content should be blocked or monitored. Finally, you enforced organization-wide safety policies through Azure API Management, validating how APIM intercepts unsafe prompts and prevents them from reaching the model by returning error responses like 403 Forbidden.
+Through this hands-on implementation, you gained practical insight into building safer AI applications by enforcing guardrails across every layer of the system. These techniques help maintain compliance, reduce risk, prevent misuse, and ensure that both user inputs and AI outputs remain aligned with responsible and safe AI practices.
 
-### Conclusion
-
-
-### You have successfully completed the Hands-on lab.
+### You have successfully completed the Hands-on lab!

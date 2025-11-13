@@ -34,11 +34,11 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
    ![](./media/API-gateway-image2.png)
 
-4. From the top menu, click the **Ellipsis (…) (1)**  button, then select **Terminal (2) → New Terminal (3)**.
+4. Right-click on the **AI-Gateway-main (1)** folder, and select **Open in Integrated Terminal (2)**.
 
-    ![](./media/API-gateway-image4.png)
+    ![](./media/term-e1t1.png)
 
-8. Run the following command in the terminal to Install Lab Dependencies.
+8. Run the following command in the terminal to install Lab Dependencies.
 
    ```
    pip install -r requirements.txt
@@ -279,3 +279,5 @@ In this task, you’ll deploy and validate a multi-region Azure setup using Bice
 In this exercise, you successfully configured load balancing, model routing, and session affinity for Azure OpenAI endpoints using Azure API Management. You deployed multiple AI backends across regions, verified that APIM evenly distributed traffic among available endpoints, and confirmed that routing rules correctly directed requests to specific models. Finally, you enabled session affinity to maintain conversation context by ensuring that requests from the same client were consistently routed to the same backend. By completing this lab, you gained hands-on experience in designing a scalable, reliable, and context-aware AI Gateway, capable of handling large-scale workloads while maintaining high availability and consistent AI interactions.
 
 ### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
+
+![](./media/nextpage-api.png)

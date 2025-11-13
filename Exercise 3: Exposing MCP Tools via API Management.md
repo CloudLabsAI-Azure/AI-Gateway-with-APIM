@@ -198,3 +198,5 @@ In this exercise, you implemented a complete workflow for managing and securing 
 By completing this exercise, you demonstrated how APIM can act as a secure, centralized hub for exposing MCP tools and managing AI-to-system communication. You now have the foundational knowledge to build secure, scalable, and compliant AI solutions that leverage MCP for connecting large language models with enterprise systems.
 
 ### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
+
+![](./media/nextpage-api.png)

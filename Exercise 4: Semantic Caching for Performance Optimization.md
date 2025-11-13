@@ -144,3 +144,5 @@ In this exercise, you explored how semantic caching improves the efficiency and 
 Through this hands-on implementation, you gained practical insights into how semantic caching supports faster, more scalable, and more cost-efficient AI applications, a key optimization strategy for production-grade Azure OpenAI deployments.
 
 ### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
+
+![](./media/nextpage-api.png)
