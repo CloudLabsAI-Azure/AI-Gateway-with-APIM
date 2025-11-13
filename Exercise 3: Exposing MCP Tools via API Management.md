@@ -180,9 +180,9 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
     ![](./media/update-e3t3.png)
 
-1. After successfully deploying your MCP servers, scroll down to **Test the MCP Authorization Flow** and **Run** the cell. This step demonstrates the complete OAuth 2.0 authorization flow between Microsoft Entra ID, API Management, and the MCP client. The process begins with APIM acting as an OAuth client to request an authorization code from Entra ID. That code is then exchanged for an access token, which is subsequently used to access the MCP endpoint via APIM. If everything is configured correctly, you will observe a successful response from the MCP API, confirming that the client authorization flow works as expected and that tokens are being correctly validated.
+1. After successfully deploying your MCP servers, scroll down to **Test the MCP Authorization Flow** and **Run** the cell.
 
-    ![](./media/test-e3t3.png)
+    ![](./media/test-e3t3(1).png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
