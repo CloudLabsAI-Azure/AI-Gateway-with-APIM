@@ -23,8 +23,7 @@ This lab introduces participants to semantic caching to improve AI response time
 
 ## Prerequisites
 
-Participants should have: Basic knowledge and understanding of
-the following
+Participants should have basic knowledge and understanding of the following:
  
  - Azure Portal
  - AI foundary portal 
@@ -66,7 +65,7 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
 
 ## Virtual Machine & Lab Guide
 
-Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+Your virtual machine is your workhorse throughout the workshop. The lab **Guide** is your roadmap to success.
 
 ## Exploring Your Lab Resources
 
