@@ -58,11 +58,11 @@ In this task, you’ll deploy and test the Model Context Protocol (MCP) architec
 
     ![](./media/outputs-e3t1(1).png)
 
-1. Next, scroll down to **Build and deploy the MCP Servers** and **Run** the cell. This step compiles and publishes multiple MCP servers (for example, Weather, Oncall, GitHub Issues, and ServiceNow Incidents) using your Azure Container Registry.
+1. Next, scroll down to **Build and deploy the MCP Servers** and **Run** the cell. This step compiles and publishes multiple MCP servers (for example, Weather, Oncall, and GitHub Issues) using your Azure Container Registry.
 
     ![](./media/build-e3t1.png)
 
-1. Next, scroll down to **Test MCP Endpoints** and **Run** the cell. This test sends requests to each deployed MCP service to verify connectivity and correct responses.
+1. Next, scroll down to **Test the connection to the MCP servers and List Tools** and **Run** the cell.
 
     ![](./media/test-e3t1.png)
 
@@ -101,6 +101,14 @@ In this task, you’ll deploy and test the Model Context Protocol (MCP) architec
     ![](./media/autogen-e3t1.png)
 
     ![](./media/autogen-e3t1(1).png)
+
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="4b7af6d6-842d-472b-9f39-0ec7dca00a2a" />
 
 ## Task 2: Publish REST APIs as MCP tools in API Management
 
@@ -154,7 +162,7 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
     ![](./media/notoken-e3t2.png)
 
-1. Next, scroll down to **Test the Product Catalog MCP Authorization WITH a valid token** and **Run** the cell.This test sends a request to the same Product Catalog MCP endpoint, but this time includes a valid authorization token in the request headers. The request should succeed, returning a valid response from the backend service (e.g., product information). This demonstrates that the authorization policy is functioning correctly, allowing only authenticated users to access MCP-protected APIs.
+1. Next, scroll down to **Test the Product Catalog MCP Authorization WITH a valid token** and **Run** the cell. This test sends a request to the same Product Catalog MCP endpoint, but this time includes a valid authorization token in the request headers. The request should succeed, returning a valid response from the backend service (e.g., product information). This demonstrates that the authorization policy is functioning correctly, allowing only authenticated users to access MCP-protected APIs.
 
     ![](./media/product-e3t2.png)
 
@@ -196,7 +204,7 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
     ![](./media/ver-e3t3.png)
 
-1. Next, scroll down to **Create the App Registration in Microsoft Entra ID** and **run** the cell to automatically create an app registration. This process provisions a new application in Microsoft Entra ID, which serves as the OAuth 2.0 client in your MCP authorization flow. The script first checks whether an app registration with the specified name already exists. If it does, it retrieves the existing application; otherwise, it creates a new one. After the app registration is created or found, the script retrieves and displays the Client ID, Tenant ID, and Client Secret values that will later be used by APIM for authentication. This ensures that the MCP client can securely request and obtain tokens from Entra ID during authorization.
+1. Next, scroll down to **Create the App Registration in Microsoft Entra ID** and **run** the cell to automatically create an app registration.
 
     ![](./media/appreg-e3t3.png)
 
@@ -204,7 +212,7 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
     ![](./media/deploy-e3t3.png)
 
-1. Once the deployment is complete, scroll down to **Get the deployment outputs** and **run** the cell. This step retrieves all important configuration details from your Bicep deployment, including the APIM Gateway URL, Client Authorization Endpoint, Log Analytics Workspace ID, and any relevant identifiers or secrets. Review the displayed outputs carefully, as you will use them in subsequent steps to test the OAuth and MCP client authorization flow.
+1. Once the deployment is complete, scroll down to **Get the deployment outputs** and **run** the cell. This step retrieves all important configuration details from your Bicep deployment, including the APIM Gateway URL, Client Authorization Endpoint, Log Analytics Workspace ID, and any relevant identifiers or secrets.
 
     ![](./media/outputs-e3t3.png)
 
@@ -230,8 +238,6 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 ## Summary
 
 In this exercise, you implemented a complete workflow for managing and securing Model Context Protocol (MCP) integrations using Azure API Management (APIM). You began by deploying MCP servers and testing their connectivity through APIM, gaining insight into how AI agents can interact with backend systems such as GitHub, ServiceNow, and weather APIs. Next, you published REST APIs as MCP tools, enabling LLMs to discover and invoke them through the standardized MCP interface. Finally, you configured client authorization using Microsoft Entra ID (Azure AD) to ensure that only authenticated clients could access protected MCP endpoints. Throughout the lab, you validated your setup using real API calls, OAuth flows, and rate-limiting policies.
-
-By completing this exercise, you demonstrated how APIM can act as a secure, centralized hub for exposing MCP tools and managing AI-to-system communication. You now have the foundational knowledge to build secure, scalable, and compliant AI solutions that leverage MCP for connecting large language models with enterprise systems.
 
 ### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
 
