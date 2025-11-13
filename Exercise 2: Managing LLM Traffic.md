@@ -8,11 +8,11 @@ In this exercise, you’ll manage and optimize Large Language Model (LLM) traffi
 
 ## Lab Objectives
 
-- Task 1: Capture token usage metrics from AI Gateway traffic. 
+- Task 1: Capture token usage metrics from AI Gateway traffic 
 
-- Task 2: Apply rate limiting policies to control token consumption.
+- Task 2: Apply rate limiting policies to control token consumption
 
-## Task 1: Capture token usage metrics from AI Gateway traffic. 
+## Task 1: Capture token usage metrics from AI Gateway traffic 
 
 In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models and subscriptions, and prepare the environment for testing. You will then capture, analyze, and visualize token usage metrics to monitor API consumption patterns.
 
@@ -94,18 +94,18 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
 1. Enter the following values in the respective fields:
 
-   - Metric Namespace: **openai (1)**
+   - Metric Namespace: **Log-based metrics(1)**
    - Metric: **Total Tokens (2)**
    - Aggregation: **Sum (3)**
    - Click on **Apply splitting (4)**.
    
-      ![](./media/e2t1-appin(2).png)
+      ![](./media/appin-e2t1.png)
 
    - Values: **Subscription ID (5)**
 
       ![](./media/e2t1-appin(3).png)
 
-## Task 2: Apply rate limiting policies to control token consumption. 
+## Task 2: Apply rate limiting policies to control token consumption
 
 In this task, you will deploy APIM, AI Foundry endpoints, and model subscriptions, and configure token rate limiting policies. You will test API requests, monitor token usage, and verify that the rate limiting enforces consumption limits correctly.
 
@@ -158,3 +158,5 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 In this exercise, you learned how to monitor and control LLM traffic through Azure API Management. You deployed APIM and AI Foundry endpoints, captured token usage metrics, and visualized consumption patterns in Application Insights. You then configured and tested token rate limiting policies to ensure that excessive requests were throttled and token quotas were enforced consistently. By the end of the lab, you verified that token metrics were accurately tracked across multiple subscriptions and that APIM effectively regulated model access, ensuring predictable usage, improved cost management, and stable performance for Azure OpenAI workloads.
 
 ### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
+
+![](./media/nextpage-api.png)

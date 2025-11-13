@@ -23,8 +23,7 @@ This lab introduces participants to semantic caching to improve AI response time
 
 ## Prerequisites
 
-Participants should have: Basic knowledge and understanding of
-the following
+Participants should have basic knowledge and understanding of the following:
  
  - Azure Portal
  - AI foundary portal 
@@ -62,35 +61,35 @@ Welcome to your Operationalize and Save Cost with AI Gateway Capabilities in Azu
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![](./media//mp-01.png)
+![](./media/guidetab.png)
 
 ## Virtual Machine & Lab Guide
 
-Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+Your virtual machine is your workhorse throughout the workshop. The lab **Guide** is your roadmap to success.
 
 ## Exploring Your Lab Resources
 
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
- ![](./media/develop-ai-overview-3.png)
+ ![](./media/envtab.png)
 
 ## Utilizing the Split Window Feature
 
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
- ![](./media/develop-ai-overview-4.png)
+ ![](./media/splittab.png)
 
 ## Managing Your Virtual Machine
 
 Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
 
-   ![Manage Your Virtual Machine](./media/develop-ai-overview-5.png)
+   ![Manage Your Virtual Machine](./media/restab.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-![Zoom In/Zoom Out](./media/develop-ai-overview-2.png)  
+![Zoom In/Zoom Out](./media/zoominout.png)  
 
 ## Lab Validation
 
@@ -109,5 +108,7 @@ The CloudLabs support team is available 24/7, 365 days a year, via email and liv
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
+![](./media/nextpage-api.png)
 
 ### Happy Learning!!
+
