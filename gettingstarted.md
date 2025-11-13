@@ -4,11 +4,11 @@
 
 ## Overview
 
-This hands-on workshop focuses on leveraging Azure API Management (APIM) as the central control plane to operationalize and manage AI services in a scalable, cost-efficient, and secure manner. The lab is designed for participants who want to integrate Large Language Models (LLMs) and Model Context Protocol (MCP) servers into production-grade solutions while optimizing for performance and cost.
+In this hands-on lab, you will build an integrated AI management environment using Azure API Management (APIM), Azure OpenAI, Azure AI Foundry, and the AI Gateway. You will configure multi-region traffic routing, enforce token consumption limits, expose MCP tools for secure agent integration, enable semantic caching to improve performance, and apply advanced content safety controls to protect AI interactions.
 
 ## Objective 
 
-This lab is designed to provide participants with hands-on experience in classifying, protecting, monitoring, and investigating organizational data using Microsoft Purview. By completing this lab series, participants will gain practical skills in data classification, DLP policies, insider risk management, and security awareness simulations.
+This lab is designed to equip participants with hands-on experience in managing large-scale AI workloads through Azure API Management and the AI Gateway, configuring multi-region routing, monitoring and governing token usage, integrating MCP-based tools, accelerating responses with semantic caching, and enforcing comprehensive content safety controls. Participants will deploy Azure OpenAI and Foundry resources, analyze telemetry with Application Insights, validate traffic flows using SDK-driven tests, and apply APIM policies to optimize, secure, and operationalize AI applications in an enterprise environment.
 
 - **Load Balancing and Model Routing:** This lab guides participants through distributing LLM requests efficiently across multiple AI resources. Participants will learn to configure load balancing across AOAI resource pools, set up model routing to direct requests to specific models, and implement session affinity to maintain consistent AI agent interactions. 
 
@@ -32,6 +32,9 @@ Participants should have basic knowledge and understanding of the following:
 
 This architecture flow demonstrates the end-to-end lifecycle of operationalizing, securing, and optimizing AI services using Azure API Management. It begins with exposing Large Language Models (LLMs) and Model Context Protocol (MCP) servers through a centralized API gateway. Requests are routed efficiently using load balancing and model routing, while session affinity ensures consistent responses for agent interactions. Semantic caching reduces repeated AI requests, improving performance and lowering token consumption. Content safety and filtering policies enforce responsible AI interactions. Monitoring and telemetry track usage, token consumption, and performance metrics, while rate limiting and quotas optimize costs. Finally, secure API exposure and client authorization ensure that AI services are safely consumed, providing a scalable, cost-efficient, and compliant AI solution.
 
+## Architecture Diagram
+
+![](./media/archdiagram.png)
 
 ## Explanation of Components
 
