@@ -29,7 +29,6 @@ In this exercise, you’ll implement content safety and moderation controls with
 
 These AI-powered features help organizations detect risks, prevent the spread of harmful or misleading content, and maintain a safe, trustworthy, and inclusive environment for their users.
 
-
 1. Open the Azure Portal in the browser and sign in with the credentials provided in the **Environment** tab.
 
 1. Click on the **Resource groups** from the homepage.
@@ -132,6 +131,8 @@ These AI-powered features help organizations detect risks, prevent the spread of
     ![](./media/e5t1p24.png)
 
 ## Task 2: Specify content filters at request time using headers
+
+In this task, you will retrieve your model’s endpoint and key from Azure AI Foundry, update a Python script in VS Code with these values, and run it to test how content safety headers filter or block unsafe prompts at request time.
 
 1. Open the Azure Portal in the browser and sign in with the credentials provided in the **Environment** tab.
 

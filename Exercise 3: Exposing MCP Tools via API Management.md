@@ -8,9 +8,11 @@ In this exercise, you will learn how to expose Model Context Protocol (MCP) tool
 
 ## Lab Objectives
 
-- Task 1: Expose existing MCP Servers in API Management (In progress)
+- Task 1: Expose existing MCP Servers in API Management
+
 - Task 2: Publish REST APIs as MCP tools in API Management
-- Task 3: Implement client authorization and secure access for MCP servers (In progress)
+
+- Task 3: Implement client authorization and secure access for MCP servers
 
 ## Task 1: Expose existing MCP Servers in API Management
 
@@ -109,6 +111,8 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
     ![](./media/execute-e3t2.png)
 
     ![](./media/execute-e3t2(1).png)
+
+    >**Note:** If you encounter an error, move on to the next cell and continue with the rest of the notebook.
 
 1. Next, scroll down to **Test the rate limit on Microsoft Learn MCP pass-through** and **Run** the cell to verify that rate-limiting policies applied in API Management are functioning correctly. This test sends multiple requests through the APIM-managed MCP endpoint to ensure that requests exceeding the defined threshold are properly throttled. You’ll notice that after a certain number of requests, the API Management service returns a `429` "Too Many Requests response", confirming that the rate-limit policy is working as expected.
 

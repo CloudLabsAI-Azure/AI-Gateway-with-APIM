@@ -8,11 +8,11 @@ In this exercise, you’ll manage and optimize Large Language Model (LLM) traffi
 
 ## Lab Objectives
 
-- Task 1: Capture token usage metrics from AI Gateway traffic. 
+- Task 1: Capture token usage metrics from AI Gateway traffic 
 
-- Task 2: Apply rate limiting policies to control token consumption.
+- Task 2: Apply rate limiting policies to control token consumption
 
-## Task 1: Capture token usage metrics from AI Gateway traffic. 
+## Task 1: Capture token usage metrics from AI Gateway traffic 
 
 In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models and subscriptions, and prepare the environment for testing. You will then capture, analyze, and visualize token usage metrics to monitor API consumption patterns.
 
@@ -105,7 +105,7 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
       ![](./media/e2t1-appin(3).png)
 
-## Task 2: Apply rate limiting policies to control token consumption. 
+## Task 2: Apply rate limiting policies to control token consumption
 
 In this task, you will deploy APIM, AI Foundry endpoints, and model subscriptions, and configure token rate limiting policies. You will test API requests, monitor token usage, and verify that the rate limiting enforces consumption limits correctly.
 

@@ -146,7 +146,7 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
 ## Task 2: Set up model routing for directing requests to different models
 
-This task focuses on directing requests to specific AI models based on parameters such as model type or workload. You will configure APIM to route each request to the correct backend AI model and test the responses, gaining an understanding of how model routing can optimize performance, resource usage, and cost efficiency.
+In this task, you will configure APIM to route incoming requests to the appropriate Azure OpenAI model based on predefined model mappings. You’ll initialize model and service configurations, deploy routing rules using Bicep, and test the setup to verify that each request is correctly directed to its designated backend model.
 
 1. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand **model-routing (2)** click on **model-routing.ipynb (3)**.
 
@@ -211,8 +211,6 @@ At the end, all resource identifiers and API keys are available for testing the 
    ![](./media/resp-e1t2.png)
 
 ## Task 3: Implement session affinity to keep responses consistent for agent interactions
-
-> Session Affinity, also known as sticky sessions, is a technique used in load-balanced systems to ensure that all requests from a specific user or session are consistently routed to the same backend server or model instance.
 
 In this task, you’ll deploy and validate a multi-region Azure setup using Bicep and API Management. You’ll initialize configuration variables, verify your Azure CLI connection, deploy AI Foundry instances and an API Management gateway, and then test how session affinity affects conversation continuity across backends. By the end, you’ll see how enabling cookie-based affinity ensures requests from the same client maintain consistent state across sessions.
 
