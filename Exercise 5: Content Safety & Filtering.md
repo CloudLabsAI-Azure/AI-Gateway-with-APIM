@@ -52,7 +52,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
     ![](./media/e5t1p3.png)
 
-1. Click on **Try it out** under Guardrailsand controls.
+1. Click on **Try it out** under Guardrails and controls.
 
     ![](./media/e5t1p4.png)
 
@@ -298,6 +298,13 @@ In this task, you will configure and validate the Content Safety policy in the A
 1. Next, scroll to **Test the Content Safety** section and **Run** the cell to send test prompts through API Management. This verifies how the Content Safety policy filters unsafe input before sending it to the backend model. You will observe that safe prompts return responses successfully, while unsafe prompts are blocked with a 403 Forbidden status code.
 
     ![](./media/content-e5t3.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="c80fb84e-7bf3-4feb-9ca5-b8d966501e60" />
 
 ## Summary
 

@@ -86,10 +86,6 @@ In this task, you will configure and test semantic caching within the AI Gateway
 
 1. Once you’re in the **semantic-caching.ipynb** file, take a moment to review each session and read its description.
 
-1. Go to **Initialize notebook variables** and click on **Run**. This step sets up environment variables for the deployment, including the resource group name, region, AI Foundry configuration, OpenAI model details, Redis cache SKU, and API Management parameters. These variables ensure consistent and automated deployments across regions and subscriptions.
-
-    ![](./media/API-gateway-image49.png)
-
 8. Scroll down to **Initialize notebook variables**. 
 Enter the following details:
 
@@ -101,7 +97,7 @@ Enter the following details:
 
       >**Note:** Ensure that the correct name is entered in the respective section section.
 
-1. Once you execute the cell **Initialize notebook variables**, you should see the output displayed as shown in the screenshot.
+1. **Run** the cell **Initialize notebook variables**. This step sets up environment variables for the deployment, including the resource group name, region, AI Foundry configuration, OpenAI model details, Redis cache SKU, and API Management parameters. These variables ensure consistent and automated deployments across regions and subscriptions.
 
     ![](./media/initvar-e4t1.png)
 
@@ -134,6 +130,13 @@ Enter the following details:
     ![](./media/redis-e4t1.png)
 
     ![](./media/redis-e4t1(1).png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="ed8cba73-817c-4ca0-8de9-f237b92cd785" />
 
 ## Summary 
 

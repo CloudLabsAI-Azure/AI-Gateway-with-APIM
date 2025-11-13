@@ -136,6 +136,14 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
     ![](./media/e1t1p21.png)
 
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="ee707a97-4889-4783-8244-f43776d0e345" />
+
 ## Task 2: Set up model routing for directing requests to different models
 
 This task focuses on directing requests to specific AI models based on parameters such as model type or workload. You will configure APIM to route each request to the correct backend AI model and test the responses, gaining an understanding of how model routing can optimize performance, resource usage, and cost efficiency.
@@ -257,6 +265,14 @@ In this task, you’ll deploy and validate a multi-region Azure setup using Bice
 1. Run the **Test Session Affinity** cell to verify that session affinity is working. With affinity enabled, both API requests should be routed to the same backend, preserving the conversation state. The logs will confirm consistent backend region and successful session continuity.
 
    ![](./media/test-e1t3.png)
+
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="749d86a4-d16a-4261-b711-59898051100c" />
 
 ## Summary
 
