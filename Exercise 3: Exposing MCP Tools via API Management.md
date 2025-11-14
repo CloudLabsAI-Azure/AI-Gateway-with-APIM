@@ -8,7 +8,7 @@ In this exercise, you will learn how to expose Model Context Protocol (MCP) tool
 
 ## Lab Objectives
 
-- Task 1: Expose existing MCP Servers in API Management
+- Task 1: Expose existing MCP Servers in API Management (Read-only)
 
 - Task 2: Publish REST APIs as MCP tools in API Management
 
@@ -234,6 +234,7 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 <validation step="854a01ef-200d-4ac7-a683-3af83e3d6e3b" />
+
 
 ## Summary
 
