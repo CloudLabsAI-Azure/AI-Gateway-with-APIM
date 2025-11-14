@@ -215,15 +215,15 @@ In this task, you will retrieve your model’s endpoint and key from Azure AI Fo
         }
         ```
 
-   - X-Content-Safety-Level → Controls how strict content safety checks are.
+    - X-Content-Safety-Level → Controls how strict content safety checks are.
 
-   - X-Block-Unsafe → Blocks any unsafe outputs automatically.
+    - X-Block-Unsafe → Blocks any unsafe outputs automatically.
 
-   - X-Content-Categories → Specifies which types of content to filter (e.g., violence, hate, sensitive).
+    - X-Content-Categories → Specifies which types of content to filter (e.g., violence, hate, sensitive).
 
-   - These headers apply content filters at the request time, ensuring any output from the AI is checked for safety before it’s returned.
+    - These headers apply content filters at the request time, ensuring any output from the AI is checked for safety before it’s returned.
 
-   - You can modify the test prompt or settings in the script if you want to try different inputs or content safety filters.
+    - You can modify the test prompt or settings in the script if you want to try different inputs or content safety filters.
 
 ## Task 3: Apply content safety enforcement rules in API Management
 
@@ -266,6 +266,9 @@ In this task, you will configure and validate the Content Safety policy in the A
 1. Next, scroll to **Test the Content Safety** section and **Run** the cell to send test prompts through API Management. This verifies how the Content Safety policy filters unsafe input before sending it to the backend model. You will observe that safe prompts return responses successfully, while unsafe prompts are blocked with a 403 Forbidden status code.
 
     ![](./media/content-e5t3.png)
+
+    >**Note:** Feel free to try a variety of safe and unsafe prompts in this cell. This will help you clearly observe how the Content Safety policy evaluates inputs, allowing or blocking them based on the configured thresholds.
+
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
