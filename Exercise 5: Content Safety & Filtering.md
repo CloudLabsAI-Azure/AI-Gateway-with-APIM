@@ -168,7 +168,7 @@ In this task, you will retrieve your model’s endpoint and key from Azure AI Fo
 
      ![](./media/ai_request-e5t2.png)
 
-9. Kindly paste the **URL (1)** and **API key** with the values you copied in the earlier step.
+9. Kindly paste the **URL (1)** and **API key** with the values you copied in the earlier step and then press **Ctrl + S** to save the changes.
 
     ![](./media/ai_request-e5t2(1).png)
 
