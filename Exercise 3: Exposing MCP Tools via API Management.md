@@ -58,6 +58,10 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
     ![](./media/execute-e3t2(1).png)
 
+    >**Note:** If you encounter an error, go to the **mcp-from-api (1)** folder, right-click on the **params.json (2)** file created in the **Delete (3)** and **Restart (4)** the kernel.
+
+     ![](./media/error-resolve-e3t2.png)
+
 1. Next, scroll down to **Test the rate limit on Microsoft Learn MCP pass-through** and **Run** the cell to verify that rate-limiting policies applied in API Management are functioning correctly. This test sends multiple requests through the APIM-managed MCP endpoint to ensure that requests exceeding the defined threshold are properly throttled. You’ll notice that after a certain number of requests, the API Management service returns a `429` "Too Many Requests response", confirming that the rate-limit policy is working as expected.
 
     ![](./media/rate-e3t2.png)
