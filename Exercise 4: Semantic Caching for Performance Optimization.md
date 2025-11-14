@@ -109,7 +109,7 @@ Enter the following details:
 
     ![](./media/deploy-e4t1.png)
 
-    >**Note:** The deployment process typically takes about 10 to 20 minutes to complete.
+    >**Note:** The deployment process usually takes around 15 to 30 minutes. You can move on to Exercise 5 in the meantime and return once the deployment is complete.
 
 1. Run **Get the deployment outputs**. After deployment, the script retrieves and displays key outputs such as the APIM Gateway URL, subscription keys, and Redis connection information. These details are required for connecting to the API endpoint and managing cache operations in the next steps.
     
