@@ -94,7 +94,7 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
 1. Enter the following values in the respective fields:
 
-   - Metric Namespace: **Log-based metrics(1)**
+   - Metric Namespace: **openai (1)**
    - Metric: **Total Tokens (2)**
    - Aggregation: **Sum (3)**
    - Click on **Apply splitting (4)**.
@@ -103,7 +103,7 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
    - Values: **Subscription ID (5)**
 
-      ![](./media/e2t1-appin(3).png)
+      ![](./media/appin-e2t1(1).png)
 
 ## Task 2: Apply rate limiting policies to control token consumption
 
