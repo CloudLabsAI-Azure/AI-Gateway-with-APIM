@@ -95,7 +95,7 @@ Enter the following details:
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-      >**Note:** Ensure that the correct name is entered in the respective section section.
+      >**Note:** Ensure that the correct name is entered in the respective section.
 
 1. **Run** the cell **Initialize notebook variables**. This step sets up environment variables for the deployment, including the resource group name, region, AI Foundry configuration, OpenAI model details, Redis cache SKU, and API Management parameters. These variables ensure consistent and automated deployments across regions and subscriptions.
 
@@ -109,7 +109,7 @@ Enter the following details:
 
     ![](./media/deploy-e4t1.png)
 
-    >**Note:** The deployment process usually takes around 15 to 30 minutes. You can move on to Exercise 5 in the meantime and return once the deployment is complete.
+    >**Note:** The deployment usually takes about 15-30 minutes. You can proceed to Exercise 5 while it runs, and then return to finish this exercise once the deployment is complete.
 
 1. Run **Get the deployment outputs**. After deployment, the script retrieves and displays key outputs such as the APIM Gateway URL, subscription keys, and Redis connection information. These details are required for connecting to the API endpoint and managing cache operations in the next steps.
     

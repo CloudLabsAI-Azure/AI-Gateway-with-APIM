@@ -32,7 +32,7 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-        >**Note:** Ensure that the correct name is entered in the respective section section.
+        >**Note:** Ensure that the correct name is entered in the respective section.
 
 1. **Run** the cell **Initialize notebook variables** to set up environment variables. This step defines your resource names, Azure region, and other configuration details required for consistent and automated deployment across subscriptions.
 
@@ -102,7 +102,7 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-        >**Note:** Ensure that the correct name is entered in the respective section section.
+        >**Note:** Ensure that the correct name is entered in the respective section.
 
 1. **Run** the cell **Initialize notebook variables**. This step initializes the core environment variables for your deployment, including the resource group name, deployment identifiers, subscription details, and Azure region configuration.
 
@@ -161,7 +161,7 @@ In this task, you’ll deploy and test the Model Context Protocol (MCP) architec
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-        >**Note:** Ensure that the correct name is entered in the respective section section.
+        >**Note:** Ensure that the correct name is entered in the respective section.
 
 1. **Run** the cell **Initialize notebook variables**. This step initializes environment variables used for the entire deployment. It defines resource group names, Azure region, container registry, deployment identifiers, AI Foundry configuration, and APIM settings.
 

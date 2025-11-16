@@ -243,7 +243,7 @@ In this task, you will configure and validate the Content Safety policy in the A
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-   >**Note:** Ensure that the correct name is entered in the respective section section.
+   >**Note:** Ensure that the correct name is entered in the respective section.
 
 1. Run the cell **Initialize notebook variables**. This cell imports necessary Python utilities and environment setup scripts. Configures resource names using your Azure subscription ID. Sets region, AI Foundry configuration, model details, and deployment parameters.
 
