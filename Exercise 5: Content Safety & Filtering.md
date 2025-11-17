@@ -269,14 +269,6 @@ In this task, you will configure and validate the Content Safety policy in the A
 
     >**Note:** Feel free to try a variety of safe and unsafe prompts in this cell. This will help you clearly observe how the Content Safety policy evaluates inputs, allowing or blocking them based on the configured thresholds.
 
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-<validation step="c80fb84e-7bf3-4feb-9ca5-b8d966501e60" />
-
 ## Summary
 
 In this exercise, you learned how Azure AI Content Safety protects AI systems from producing or accepting harmful content. You explored moderation tools in Azure AI Foundry that detect unsafe text, images, and multimodal inputs, as well as features like groundedness detection, prompt shields, and protected material identification. You then applied real-time content filtering using custom request headers to control which categories of risk such as hate, violence, or sensitive content should be blocked or monitored. Finally, you enforced organization-wide safety policies through Azure API Management, validating how APIM intercepts unsafe prompts and prevents them from reaching the model by returning error responses like 403 Forbidden.
