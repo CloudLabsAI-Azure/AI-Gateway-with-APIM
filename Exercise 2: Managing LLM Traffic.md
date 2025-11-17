@@ -105,6 +105,8 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
       ![](./media/appin-e2t1(1).png)
 
+      >**Note:** If the **openai** Metric Namespace isn’t visible, select **Log-based metrics** instead.
+
 ## Task 2: Apply rate limiting policies to control token consumption
 
 In this task, you will deploy APIM, AI Foundry endpoints, and model subscriptions, and configure token rate limiting policies. You will test API requests, monitor token usage, and verify that the rate limiting enforces consumption limits correctly.
