@@ -58,7 +58,7 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
     ![](./media/execute-e3t2(1).png)
 
-    >**Note:** If you encounter an error, go to the **mcp-from-api (1)** folder, right-click on the **params.json (2)** file created in the **Delete (3)** and **Restart (4)** the kernel and start executing the notebook from the beginning again.
+    >**Note:** If you run into an error, open the **mcp-from-api (1)** folder, right-click the generated **params.json (2)** file and click on **Delete (3)**. Then click on **Restart (4)** and rerun the notebook from the beginning.
 
      ![](./media/error-resolve-e3t2.png)
 
