@@ -28,7 +28,7 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-      >**Note:** Ensure that the correct name is entered in the respective section section.
+      >**Note:** Ensure that the correct name is entered in the respective section.
 
 1. Run the cell **Initialize notebook variables**. Prepare the environment, define resources, models, and subscriptions so everything is ready for deployment.
 
@@ -121,7 +121,7 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-      >**Note:** Ensure that the correct name is entered in the respective section section.
+      >**Note:** Ensure that the correct name is entered in the respective section.
 
 1. Run the cell **Initialize Notebook Variables**. This set up all lab variables, including resource group, location, AI services, models, APIM SKU, subscriptions, API paths, and utility functions. Prepares the environment for deployment.
 
