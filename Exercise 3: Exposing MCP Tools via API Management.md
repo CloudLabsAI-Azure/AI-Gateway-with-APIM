@@ -223,7 +223,7 @@ In this task, you’ll deploy and test the Model Context Protocol (MCP) architec
 
     ![](./media/semantic-e3t1.png)
 
-    ![](./media/semantic-e3t1(1).png)
+    ![](./media/semantic-e3t1(2).png)
 
 1. **Run** the cell **Execute an AutoGen Agent using MCP Tools via Azure API Management**.
 
