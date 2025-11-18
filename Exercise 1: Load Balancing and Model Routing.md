@@ -4,9 +4,10 @@
 
 ## Lab Overview
 
-In this exercise, you’ll learn how to efficiently distribute and manage AI traffic across multiple Azure OpenAI backends using Azure API Management (APIM). You’ll configure load balancing to route requests between multiple AI endpoints for improved performance and resilience, set up model routing to direct user requests to specific AI models based on task requirements, and implement session affinity to ensure consistent responses across multi-turn conversations. Using Visual Studio Code and Bicep templates, you’ll deploy multi-region Azure resources, configure APIM for intelligent traffic management, and validate that requests are properly balanced, routed, and maintained across sessions.
+In this exercise, you will learn how to efficiently distribute and manage AI traffic across multiple Azure OpenAI backends using Azure API Management (APIM). You will configure load balancing to route requests between multiple AI endpoints for improved performance and resilience, set up model routing to direct user requests to specific AI models based on task requirements, and implement session affinity to ensure consistent responses across multi-turn conversations. Using Visual Studio Code and Bicep templates, you’ll deploy multi-region Azure resources, configure APIM for intelligent traffic management, and validate that requests are properly balanced, routed, and maintained across sessions.
 
 ## Lab Objectives
+In this exercise, you will be performing the following tasks:
 
 - Task 1: Configure load balancing across AOAI resource pools
 
@@ -30,7 +31,7 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
    ![](./media/e1t1p3.png)
 
-4. If you receive a Do you trust the authors of the files in folder warning, select the **checkbox (1)** and click **Yes, I trust the authors (2)**.
+4. If you receive a Do you trust the authors of the files in the folder warning, select the **checkbox (1)** and click **Yes, I trust the authors (2)**.
 
    ![](./media/API-gateway-image2.png)
 
@@ -212,7 +213,7 @@ At the end, all resource identifiers and API keys are available for testing the 
 
 ## Task 3: Implement session affinity to keep responses consistent for agent interactions
 
-In this task, you’ll deploy and validate a multi-region Azure setup using Bicep and API Management. You’ll initialize configuration variables, verify your Azure CLI connection, deploy AI Foundry instances and an API Management gateway, and then test how session affinity affects conversation continuity across backends. By the end, you’ll see how enabling cookie-based affinity ensures requests from the same client maintain consistent state across sessions.
+In this task, you will deploy and validate a multi-region Azure setup using Bicep and API Management. You will initialize configuration variables, verify your Azure CLI connection, deploy AI Foundry instances and an API Management gateway, and then test how session affinity affects conversation continuity across backends. By the end, you will see how enabling cookie-based affinity ensures requests from the same client maintain a consistent state across sessions.
 
 1. In Visual Studio Code, under **labs (1)** folder, expand **session-awareness (1)** and then click on **session-awareness.ipynb (2)**.
 
@@ -260,7 +261,7 @@ In this task, you’ll deploy and validate a multi-region Azure setup using Bice
 
    ![](./media/enb-e1t3(1).png)
 
-1. Run the **Test Session Affinity** cell to verify that session affinity is working. With affinity enabled, both API requests should be routed to the same backend, preserving the conversation state. The logs will confirm consistent backend region and successful session continuity.
+1. Run the **Test Session Affinity** cell to verify that session affinity is working. With affinity enabled, both API requests should be routed to the same backend, preserving the conversation state. The logs will confirm a consistent backend region and successful session continuity.
 
    ![](./media/test-e1t3.png)
 
@@ -274,7 +275,7 @@ In this task, you’ll deploy and validate a multi-region Azure setup using Bice
 
 ## Summary
 
-In this exercise, you successfully configured load balancing, model routing, and session affinity for Azure OpenAI endpoints using Azure API Management. You deployed multiple AI backends across regions, verified that APIM evenly distributed traffic among available endpoints, and confirmed that routing rules correctly directed requests to specific models. Finally, you enabled session affinity to maintain conversation context by ensuring that requests from the same client were consistently routed to the same backend. By completing this lab, you gained hands-on experience in designing a scalable, reliable, and context-aware AI Gateway, capable of handling large-scale workloads while maintaining high availability and consistent AI interactions.
+In this exercise, you successfully configured load balancing, model routing, and session affinity for Azure OpenAI endpoints using Azure API Management. You deployed multiple AI backends across regions, verified that APIM evenly distributed traffic among available endpoints, and confirmed that routing rules correctly directed requests to specific models. Finally, you enabled session affinity to maintain conversation context by ensuring that requests from the same client were consistently routed to the same backend. By completing this lab, you gained hands-on experience in designing a scalable, reliable, and context-aware AI Gateway capable of handling large-scale workloads while maintaining high availability and consistent AI interactions.
 
 ### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
 

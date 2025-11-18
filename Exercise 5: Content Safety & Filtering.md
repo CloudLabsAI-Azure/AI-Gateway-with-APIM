@@ -4,9 +4,11 @@
 
 ## Lab Overview
 
-In this exercise, you’ll implement content safety and moderation controls within the Azure AI Gateway to ensure that all user inputs and AI-generated outputs adhere to organizational safety standards. You’ll explore Azure AI Foundry’s Guardrails and Controls, including text, image, multimodal moderation, groundedness detection, prompt shields, and protected material detection. You will then specify real-time content filtering rules using request headers and test how these filters affect API responses. Finally, you will apply content safety enforcement policies through Azure API Management (APIM), deploy the required infrastructure using Bicep templates, configure gateway-level safety rules, and validate how unsafe requests are blocked before reaching the underlying model. By the end, you'll gain hands-on experience applying safety controls across multiple layers model, request, and gateway, to ensure secure and compliant AI interactions.
+In this exercise, you will implement content safety and moderation controls within the Azure AI Gateway to ensure that all user inputs and AI-generated outputs adhere to organizational safety standards. You will explore Azure AI Foundry’s Guardrails and Controls, including text, image, multimodal moderation, groundedness detection, prompt shields, and protected material detection. You will then specify real-time content filtering rules using request headers and test how these filters affect API responses. Finally, you will apply content safety enforcement policies through Azure API Management (APIM), deploy the required infrastructure using Bicep templates, configure gateway-level safety rules, and validate how unsafe requests are blocked before reaching the underlying model. By the end, you will gain hands-on experience applying safety controls across multiple layers model, request, and gateway, to ensure secure and compliant AI interactions.
 
 ## Lab Objectives
+
+In this exercise, you will be performing the following tasks:
 
 - Task 1: Review content safety capabilities and configuration in AI Foundry
 
@@ -15,6 +17,10 @@ In this exercise, you’ll implement content safety and moderation controls with
 - Task 3: Apply content safety enforcement rules in API Management 
 
 ## Task 1: Review content safety capabilities and configuration in AI Foundry
+
+In this task, you will explore and test the various content safety capabilities available in Azure AI Foundry, including text, image, and multimodal moderation, groundedness detection, prompt shields, and protected material detection.
+
+### Introduction
 
 **Azure AI Content Safety** helps detect and prevent harmful user-generated and AI-generated content in applications and services. Its features ensure that text, images, and other media align with your organization’s content safety guidelines.
 
@@ -57,7 +63,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 ### Task 1.1: Text Moderation
 
-1. Click **Try it out** in the **Moderate text content** tool, located under the **Filter text content** section.
+1. Click **Try it out** in the **Moderate text content** tool under the **Filter text content** section, which analyzes text for harmful or unsafe language.
 
     ![](./media/e5t1p5.png)
 
@@ -81,7 +87,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 ### Task 1.2: Image Moderation
 
-1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Moderate image content**, under **Filter image content**.
+1. Go back to the **Guardrails + controls** blade, open the **Try it out** tab, and select **Moderate image content** under **Filter image content**, which evaluates images for unsafe or inappropriate visual content.
 
     ![](./media/e5t1p15.png)
 
@@ -91,7 +97,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 ### Task 1.3: Multimodal content analysis
 
-1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Moderate multimodal content**, under **Filter image content**.
+1. Go back to the **Guardrails + controls** blade, open the **Try it out** tab, and select **Moderate multimodal content** under **Filter image content**, which analyzes combined text and image inputs for harmful or unsafe content.
 
     ![](./media/e5t1p17.png)
 
@@ -99,10 +105,9 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
     ![](./media/e5t1p18.png)
 
-
 ### Task 1.4: Groundedness detection
 
-1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Groundedness detection**, under **Filter text content**.
+1. Go back to the **Guardrails + controls** blade, open the **Try it out** tab, and select **Groundedness detection** under **Filter text content**, which checks whether AI-generated responses are supported by the provided source information.
 
     ![](./media/e5t1p19.png)
 
@@ -112,7 +117,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 ### Task 1.5: Prompt shields
 
-1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Prompt shields**, under **Filter text content**.
+1. Go back to the **Guardrails + controls** blade, open the **Try it out** tab, and select **Prompt shields** under **Filter text content**, which detects and mitigates prompt injection or jailbreak attempts.
 
     ![](./media/e5t1p21.png)
 
@@ -122,7 +127,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 ### Task 1.6: Protected material detection
 
-1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Protected material detection**, under **Filter text content**.
+1. Go back to the **Guardrails + controls** blade, open the **Try it out** tab, and select **Protected material detection** under **Filter text content**, which identifies copyrighted or third-party protected text in content.
 
     ![](./media/e5t1p23.png)
 
@@ -251,7 +256,7 @@ In this task, you will configure and validate the Content Safety policy in the A
 
     >**Note:** Ensure that the correct name is entered in each respective section.
 
-1. Next, scroll down to **Verify the Azure CLI and the connected Azure subscription** section. **Run** the cell to validate Azure CLI installation. This confirms that you are signed into the correct Azure account, display details like User Email, Tenant ID, and Subscription ID and ensures the deployment will occur in the intended Azure environment.
+1. Next, scroll down to **Verify the Azure CLI and the connected Azure subscription** section. **Run** the cell to validate Azure CLI installation. This confirms that you are signed into the correct Azure account, display details like User Email, Tenant ID, and Subscription ID, and ensures the deployment will occur in the intended Azure environment.
 
     ![](./media/ver-e5t3.png)
 
@@ -271,7 +276,7 @@ In this task, you will configure and validate the Content Safety policy in the A
 
 ## Summary
 
-In this exercise, you learned how Azure AI Content Safety protects AI systems from producing or accepting harmful content. You explored moderation tools in Azure AI Foundry that detect unsafe text, images, and multimodal inputs, as well as features like groundedness detection, prompt shields, and protected material identification. You then applied real-time content filtering using custom request headers to control which categories of risk such as hate, violence, or sensitive content should be blocked or monitored. Finally, you enforced organization-wide safety policies through Azure API Management, validating how APIM intercepts unsafe prompts and prevents them from reaching the model by returning error responses like 403 Forbidden.
+In this exercise, you learned how Azure AI Content Safety protects AI systems from producing or accepting harmful content. You explored moderation tools in Azure AI Foundry that detect unsafe text, images, and multimodal inputs, as well as features like groundedness detection, prompt shields, and protected material identification. You then applied real-time content filtering using custom request headers to control which categories of risk, such as hate, violence, or sensitive content, should be blocked or monitored. Finally, you enforced organization-wide safety policies through Azure API Management, validating how APIM intercepts unsafe prompts and prevents them from reaching the model by returning error responses like 403 Forbidden.
 Through this hands-on implementation, you gained practical insight into building safer AI applications by enforcing guardrails across every layer of the system. These techniques help maintain compliance, reduce risk, prevent misuse, and ensure that both user inputs and AI outputs remain aligned with responsible and safe AI practices.
 
 ### You have successfully completed the Hands-on lab!

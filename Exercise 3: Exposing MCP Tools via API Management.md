@@ -4,9 +4,11 @@
 
 ## Lab Overview
 
-In this exercise, you will learn how to expose Model Context Protocol (MCP) tools and servers through Azure API Management (APIM) to securely integrate AI agents with backend services. MCP allows large language models (LLMs) to interact with external tools and data sources in a structured, governed way. Through this lab, you’ll explore how to configure API Management as a central gateway for MCP-based communication, enabling features such as rate limiting, OAuth-based authentication, and secure token handling. You’ll also learn how to publish REST APIs as MCP tools, connect AI agents to MCP endpoints, and test end-to-end authorization flows with Microsoft Entra ID. By the end of this exercise, you’ll understand how to expose, secure, and manage MCP servers and REST APIs using Azure’s enterprise-grade management and security capabilities.
+In this exercise, you will learn how to expose Model Context Protocol (MCP) tools and servers through Azure API Management (APIM) to securely integrate AI agents with backend services. MCP allows large language models (LLMs) to interact with external tools and data sources in a structured, governed way. Through this lab, you will explore how to configure API Management as a central gateway for MCP-based communication, enabling features such as rate limiting, OAuth-based authentication, and secure token handling. You’ll also learn how to publish REST APIs as MCP tools, connect AI agents to MCP endpoints, and test end-to-end authorization flows with Microsoft Entra ID. By the end of this exercise, you will understand how to expose, secure, and manage MCP servers and REST APIs using Azure’s enterprise-grade management and security capabilities.
 
 ## Lab Objectives
+
+In this exercise, you will be performing the following tasks:
 
 - Task 1: Expose existing MCP Servers in API Management
 
@@ -17,7 +19,7 @@ In this exercise, you will learn how to expose Model Context Protocol (MCP) tool
 
 ## Task 1: Expose existing MCP Servers in API Management
 
-In this task, you’ll deploy and test the Model Context Protocol (MCP) architecture using Azure API Management (APIM). You’ll learn how to connect AI agents with various backend tools (like GitHub Issues, ServiceNow incidents, or weather APIs) through a unified API gateway, using OAuth 2.0 credential management and token validation policies to ensure secure communication.
+In this task, you will deploy and test the Model Context Protocol (MCP) architecture using Azure API Management (APIM). You will learn how to connect AI agents with various backend tools (like GitHub Issues, ServiceNow incidents, or weather APIs) through a unified API gateway, using OAuth 2.0 credential management and token validation policies to ensure secure communication.
 
 1. In Visual Studio Code, open the **lab (1)** folder, expand the **model-context-protocol (2)** folder, and click **model-context-protocol.ipynb (3)**.
 
@@ -143,7 +145,7 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
     ![](./media/outputs-e3t2.png)
 
-1. Next, scroll to **Test the connection to the MCP servers and List Tools** section and **Run** the cell to test your MCP setup. This command initiates a connection to the deployed MCP servers, validates network communication, and retrieves a list of available tools that your MCP service exposes. If the connection test is successful, the output will display the list of MCP tools, confirming that the API Management instance has been successfully transformed into an MCP-compatible service endpoint.
+1. Next, scroll to the **Test the connection to the MCP servers and List Tools** section and **Run** the cell to test your MCP setup. This command initiates a connection to the deployed MCP servers, validates network communication, and retrieves a list of available tools that your MCP service exposes. If the connection test is successful, the output will display the list of MCP tools, confirming that the API Management instance has been successfully transformed into an MCP-compatible service endpoint.
 
     ![](./media/test-e3t2.png)
 
