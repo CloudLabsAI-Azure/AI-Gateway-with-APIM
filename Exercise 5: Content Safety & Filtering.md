@@ -63,7 +63,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 ### Task 1.1: Text Moderation
 
-1. Click **Try it out** in the **Moderate text content** tool, located under the **Filter text content** section.
+1. Click **Try it out** in the **Moderate text content** tool under the **Filter text content** section, which analyzes text for harmful or unsafe language.
 
     ![](./media/e5t1p5.png)
 
@@ -87,7 +87,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 ### Task 1.2: Image Moderation
 
-1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Moderate image content**, under **Filter image content**.
+1. Go back to the **Guardrails + controls** blade, open the **Try it out** tab, and select **Moderate image content** under **Filter image content**, which evaluates images for unsafe or inappropriate visual content.
 
     ![](./media/e5t1p15.png)
 
@@ -97,7 +97,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 ### Task 1.3: Multimodal content analysis
 
-1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Moderate multimodal content**, under **Filter image content**.
+1. Go back to the **Guardrails + controls** blade, open the **Try it out** tab, and select **Moderate multimodal content** under **Filter image content**, which analyzes combined text and image inputs for harmful or unsafe content.
 
     ![](./media/e5t1p17.png)
 
@@ -107,7 +107,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 ### Task 1.4: Groundedness detection
 
-1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Groundedness detection**, under **Filter text content**.
+1. Go back to the **Guardrails + controls** blade, open the **Try it out** tab, and select **Groundedness detection** under **Filter text content**, which checks whether AI-generated responses are supported by the provided source information.
 
     ![](./media/e5t1p19.png)
 
@@ -117,7 +117,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 ### Task 1.5: Prompt shields
 
-1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Prompt shields**, under **Filter text content**.
+1. Go back to the **Guardrails + controls** blade, open the **Try it out** tab, and select **Prompt shields** under **Filter text content**, which detects and mitigates prompt injection or jailbreak attempts.
 
     ![](./media/e5t1p21.png)
 
@@ -127,7 +127,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 ### Task 1.6: Protected material detection
 
-1. Go back to the **Guardrails + controls**, blade and then to the **Try it out** tab. Select **Protected material detection**, under **Filter text content**.
+1. Go back to the **Guardrails + controls** blade, open the **Try it out** tab, and select **Protected material detection** under **Filter text content**, which identifies copyrighted or third-party protected text in content.
 
     ![](./media/e5t1p23.png)
 
