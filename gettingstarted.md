@@ -98,7 +98,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-![](./media/Purview-hol-image77.png)
+![](./media/validationtab.png)
 
 ## Support Contact
 
