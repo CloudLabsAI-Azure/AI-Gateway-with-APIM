@@ -58,13 +58,13 @@ This architecture flow demonstrates the end-to-end lifecycle of operationalizing
 
 ## Getting Started with the Lab
  
-Welcome to your Operationalize and Save Cost with AI Gateway Capabilities in Azure API Management workshop! We've prepared a hands-on environment for you to explore and understand how Azure API Management can be leveraged to manage, secure, and optimize AI services including Large Language Models (LLMs) and Model Context Protocol (MCP) servers.
+Welcome to your Azure AI Gateway: API Management for Intelligent Services workshop! We've prepared a hands-on environment for you to explore and understand how Azure API Management can be leveraged to manage, secure, and optimize AI services including Large Language Models (LLMs) and Model Context Protocol (MCP) servers.
 
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![](./media/guidetab.png)
+![](./media/guidetab(1).png)
 
 ## Virtual Machine & Lab Guide
 
