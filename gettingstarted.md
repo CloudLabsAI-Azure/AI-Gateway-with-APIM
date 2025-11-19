@@ -1,4 +1,4 @@
-# Operationalize and Save Cost with AI Gateway Capabilities in Azure API Management
+# Azure AI Gateway: API Management for Intelligent Services
 
 ### Overall Estimated Duration: 4 Hours
 
