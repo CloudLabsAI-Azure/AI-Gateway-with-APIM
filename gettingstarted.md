@@ -1,6 +1,6 @@
 # Azure AI Gateway: API Management for Intelligent Services
 
-### Overall Estimated Duration: 4 Hours
+### Overall Estimated Duration: 8 Hours
 
 ## Overview
 
