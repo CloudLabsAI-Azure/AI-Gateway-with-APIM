@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this hands-on lab, you will build an integrated AI management environment using Azure API Management (APIM), Azure OpenAI, Azure AI Foundry, and the AI Gateway. You will configure multi-region traffic routing, enforce token consumption limits, expose MCP tools for secure agent integration, enable semantic caching to improve performance, and apply advanced content safety controls to protect AI interactions.
+In this hands-on lab, you will build an “AI Gateway”, an integrated AI management environment using Azure API Management (APIM) to interact with Azure OpenAI and other features in Azure AI Foundry. You will configure multi-region traffic routing, enforce token consumption limits, expose MCP tools for secure agent integration, enable semantic caching to improve performance, and apply advanced content safety controls to protect AI interactions.
 
 ## Objective 
 
