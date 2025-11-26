@@ -1,6 +1,6 @@
 # Exercise 1: Load Balancing and Model Routing 
 
-### Estimated Duration: 60 Minutes
+### Estimated Duration: 120 Minutes
 
 ## Lab Overview
 
@@ -19,9 +19,15 @@ In this exercise, you will be performing the following tasks:
 
 In this task, you will learn how to distribute incoming AI requests across multiple Azure OpenAI (AOAI) endpoints deployed in different regions. You will configure Azure API Management (APIM) to intelligently route traffic, ensuring high availability, efficient utilization of resources, and seamless failover when one endpoint reaches capacity or becomes unavailable.
 
+### Architecture Diagram
+
+Here’s the architecture diagram to help you better understand the scenario.
+
+![](./media/ex1-archdiagram.png)
+
 1. Open **Visual Studio Code** using the desktop shortcut in the labvm.
 
-   ![](./media/e1t1p1.png)
+   ![](./media/ex1-t1p1.png)
 
 2. Click on **File (1)** and select **Open Folder (2)**.
 
@@ -35,9 +41,9 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
    ![](./media/API-gateway-image2.png)
 
-4. Right-click on the **AI-Gateway-main (1)** folder, and select **Open in Integrated Terminal (2)**.
+4. Scroll down in the Explorer pane and right-click on the **requirements.txt (1)** file, and select **Open in Integrated Terminal (2)**.
 
-    ![](./media/term-e1t1.png)
+    ![](./media/ex1-t1p2.png)
 
 8. Run the following command in the terminal to install Lab Dependencies.
 
@@ -45,11 +51,53 @@ In this task, you will learn how to distribute incoming AI requests across multi
    pip install -r requirements.txt
    ```
 
-9. In Visual Studio Code, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **backend-pool-load-balancing (3)**, and finally click on **backend-pool-load-balancing.ipynb (4)**.
+1. While the packages are being installed, click the **+** icon to open a new terminal.
+
+   ![](./media/ex1-t1p3.png)
+
+1. Now, on the new terminal, run the following command to sign in to Azure from the terminal:
+
+   ```
+   az login
+   ```
+
+   ![](./media/ex1-t1p3(1).png)
+
+   >**Note:** Minimize VS Code to access the Sign-in window.
+
+1. In the **Sign in** pop-up window, under **Let's get you signed in** select **Work or school account (1)** and then click **Continue (2)**.
+
+   ![](./media/e1t1p7.png)
+
+1. Enter the **email address (1)** shown below, then select **Next (2)**.
+
+   - **Email:** <inject key="AzureAdUserEmail"></inject>
+
+      ![](./media/e1t1p7(1).png)
+
+1. Enter the **Temporary Access Pass (1)** provided below, then click **Sign in (2)**.
+
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+      ![](./media/e1t1p7(2).png)
+
+1. In the **Sign in to all apps, websites, and services on this device?** pop-up, click on **Yes**.
+
+   ![](./media/ex1-t1p4.png)
+
+1. On the **Account added to this device** pop-up, click **Done**.
+
+   ![](./media/ex1-t1p5.png)
+
+1. Go back to the VS Code terminal and press **Enter** to choose the default subscription.
+
+   ![](./media/ex1-t1p6.png)
+
+9. Once the required packages are installed, from the left navigation pane, select **Explorer (1)**, then expand the **lab (2)** folder and **backend-pool-load-balancing (3)**, and finally click on **backend-pool-load-balancing.ipynb (4)**.
 
    ![](./media/API-gateway-image3.png)
 
-6. Once you’re in the **backend-pool-load-balancing.ipynb** file, take a moment to review each session and read its description. You will see how we deploy multiple AI endpoints, configure API Management for intelligent routing, and test load balancing and failover, giving you a clear understanding of how APIM manages AI traffic across regions.
+6. Once you’re in the **backend-pool-load-balancing.ipynb** file, take a moment to review each section and read its description. You will see how we deploy multiple AI endpoints, configure API Management for intelligent routing, and test load balancing and failover, giving you a clear understanding of how APIM manages AI traffic across regions.
 
 7. Now, you will run each cell in the notebook one by one, following the instructions and observing the outputs for each step.
 
@@ -71,69 +119,55 @@ In this task, you will learn how to distribute incoming AI requests across multi
 
       >**Note:** Ensure that the correct name is entered in the respective section.
 
-1. Click on **Run** in this session, we set up all the necessary variables and configurations, including resource names, regions, AI endpoints, and APIM details. This prepares the notebook for deploying resources and running the lab steps.
+1. Click on **Run** in this section, we set up all the necessary variables and configurations, including resource names, regions, AI endpoints, and APIM details. This prepares the notebook for deploying resources and running the lab steps.
 
    ![](./media/initvar-e1t1.png)
 
-1. Now, run the following command to sign in to Azure from the terminal:
-
-   ```
-   az login
-   ```
-
-   >**Note:** Minimize VS Code to access the Sign-in window.
-
-1. In the **Sign in** pop-up window, under **Let's get you signed in** select **Work or school account (1)** and then click **Continue (2)**.
-
-   ![](./media/e1t1p7.png)
-
-1. Enter the **email address (1)** shown below, then select **Next (2)**.
-
-   - **Email:** <inject key="AzureAdUserEmail"></inject>
-
-      ![](./media/e1t1p7(1).png)
-
-1. Enter the **Temporary Access Pass (1)** provided below, then click **Sign in (2)**.
-
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
-
-      ![](./media/e1t1p7(2).png)
-
-1. In the **Automatically sign in to all desktop apps and websites on this device?** pop-up, click on **Yes, all apps**.
-
-   ![](./media/e1t1p7(3).png)
-
-1. On the **Account added to this device** pop-up, click **Done**.
-
-   ![](./media/e1t1p7(3.1).png)
-
-1. Go back to the VS Code terminal and press **Enter** to choose the default subscription.
-
-   ![](./media/e1t1p7(4).png)
-
-9. Go to **Verify the Azure CLI and the connected Azure subscription**. Click on **Run**, in this session, we check that the Azure CLI is installed, up-to-date, and connected to your subscription. This ensures we can deploy and manage resources in your Azure account. Review the output.
+9. Go to **Verify the Azure CLI and the connected Azure subscription**. Click on **Run**, in this section, we check that the Azure CLI is installed, up-to-date, and connected to your subscription. This ensures we can deploy and manage resources in your Azure account. Review the output.
 
     ![](./media/API-gateway-image6.png)
 
 10. Run the **Create deployment using 🦾 Bicep** cell. Here, we use Bicep to define and deploy all necessary Azure resources, including the AI endpoints and APIM service. Running this sets up the infrastructure needed for the lab.
 
      ![](./media/deploy-e1t1.png)
+
+1. Open the Azure portal from the desktop. 
+
+   ![](./media/ex1-azport.png)
+
+   >**Note:** If you see the dialog stating **We are now syncing your browsing data across all your devices**, select **Got it** to continue.
+
+   ![](./media/ex1-azport(1).png)
+
+1. On the Azure portal home page, scroll down to the **Navigate** section and click on **Resource groups**.
+
+   ![](./media/ex1-azport(2).png)
+
+1. Select the **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>** resource group from the list.
+
+   ![](./media/ex1-azport(3).png)
+
+1. In the **Overview** section, you can view the resources that were deployed when the **Create deployment using Bicep** cell was executed.
+
+   ![](./media/ex1-azport(4).png)
     
-12. Run the cell **Get the deployment outputs**. This session retrieves key information from the deployment, such as API URLs, subscription keys, and resource IDs. We use these outputs to connect and test the AI endpoints in later steps.
+12. Now, go back to the VS Code and run the cell **Get the deployment outputs**. This section retrieves key information from the deployment, such as API URLs, subscription keys, and resource IDs. We use these outputs to connect and test the AI endpoints in later steps.
 
     ![](./media/outputs-e1t1.png)
     
-14. Run the cell **Test the API using the Azure OpenAI Python SDK**. Finally, we test the deployed AI endpoints using the Python SDK to send requests, check responses, and observe which backend region served each request. This demonstrates load balancing and routing in action.
+14. Run the **Test the API using a direct HTTP call** cell to send multiple requests to the APIM endpoint. Observe the response headers, specifically x-ms-region to verify which Azure AI Foundry backend region handles each request. This demonstrates APIM's load-balanced pool behavior in action.
 
-      ![](./media/e1t1p18.png)
+      ![](./media/ex1-t1p7.png)
 
-15. Run the cell **Analyze Load Balancing results**. In this session, we analyze the load balancing results to see how traffic is distributed across the AI endpoints. The priority 1 backend handles requests first, and once it reaches its limit, traffic is shared between the two priority 2 backends.
+      ![](./media/ex1-t1p7(1).png)
+
+15. Run the cell **Analyze Load Balancing results**. In this section, we analyze the load balancing results to see how traffic is distributed across the AI endpoints. The priority 1 backend handles requests first, and once it reaches its limit, traffic is shared between the two priority 2 backends.
 
       ![](./media/e1t1p17.png)
 
       >**Note:** The results you see may differ from the screenshot shown above.
 
-16. Run the cell **Test the API using the Azure OpenAI Python SDK**. In this session, we test the deployed AI endpoints using the Azure OpenAI Python SDK. This ensures that the API requests work correctly and responses are received, regardless of which backend region handles them.
+16. Run the cell **Test the API using the Azure OpenAI Python SDK**. In this section, we test the deployed AI endpoints using the Azure OpenAI Python SDK. This ensures that the API requests work correctly and responses are received, regardless of which backend region handles them.
 
     ![](./media/e1t1p21.png)
 

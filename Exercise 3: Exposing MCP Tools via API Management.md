@@ -1,6 +1,6 @@
 # Exercise 3: Exposing MCP Tools via API Management 
 
-### Estimated Duration: 60 Minutes
+### Estimated Duration: 120 Minutes
 
 ## Lab Overview
 
@@ -55,6 +55,8 @@ In this task, you will deploy and test the Model Context Protocol (MCP) architec
 
     ![](./media/deploy-e3t1.png)
 
+    >**Note:** If the deployment does not succeed, please rerun the cell.
+
 1. After the Bicep deployment completes, scroll down to **Get the deployment outputs** and **Run** the cell.
 
     ![](./media/outputs-e3t1.png)
@@ -71,11 +73,59 @@ In this task, you will deploy and test the Model Context Protocol (MCP) architec
 
 1. Now, **Run** the next cell in row.
 
-    ![](./media/test-e3t1(1).png)
+    ![](./media/ex3-t1p1.png)
 
     ![](./media/test-e3t1(2).png)
 
-1. Scroll to **Run an OpenAI compeletion with MCP tools** cell and click on **Run**.
+1. Now we will try to Use the MCP Inspector for testing and debugging the MCP Servers. 
+
+    ![](./media/ex3-t1p2(1).png)
+
+1. From the start search bar, search for **PowerShell (1)** and right click on the **Windows PowerShell (2)** and select **Run as administrator (3)**.
+
+    ![](./media/ex3-t1p2.png)
+
+1. Run the command below **(1)** in PowerShell. When prompted to install the required package, type `y` **(2)** and press **Enter** to proceed.
+
+    ```
+    npx @modelcontextprotocol/inspector
+    ```
+
+    ![](./media/ex3-t1p3.png)
+
+1. A new browser tab will automatically open, directing you to the **MCP Inspector**.
+
+    ![](./media/ex3-t1p4.png)
+
+1. Now, go to resource group **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>** and then select the resource **apim-<inject key="DeploymentID" enableCopy="false"/>**.
+
+    ![](./media/ex3-mcpserver1(1).png)
+
+1. Within the API Management resource, select **MCP Servers (preview) (1)** from the left navigation pane under **APIs**, and then use the **Copy to clipboard (2)** icon to copy the Server URL of **weather-mcp-tools**.
+
+    ![](./media/ex3-mcpserver1.png)
+
+1. Go back to the MCP Inspector tab, and enter the following information:
+
+    - Transport Type: **Streamable HTTP (1)**
+    - URL: Paste the **Server URL (2)** you copied in the previous step.
+    - Click on **Connect (3)**.
+
+        ![](./media/ex3-t1p5.png)
+
+1. Once connected, click on the **Tools (1)** tab, and then click on **List Tools (2)**. 
+
+    ![](./media/ex3-t1p6.png)
+
+1. Select the **get_weather (1)** tool, in the city field enter **London (2)**.
+
+    ![](./media/ex3-t1p7.png)
+
+1. Scroll down, click **Run Tool (1)**, and review the resulting output **(2)**.
+
+    ![](./media/ex3-t1p8.png)
+
+1. Now, go back to the VS Code and scroll to **Run an OpenAI compeletion with MCP tools** cell and click on **Run**.
 
     ![](./media/run-e3t1.png)
 
@@ -177,7 +227,6 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
     ![](./media/place-e3t2.png)
 
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
@@ -223,13 +272,9 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
     ![](./media/outputs-e3t3.png)
 
-1. Next, locate and run the cell labeled **Build and deploy the MCP Servers**. This section builds and publishes the MCP server components defined in your environment. Once executed, it deploys the MCP endpoints through API Management and ensures that these endpoints are correctly registered and accessible. By the end of this step, your MCP services should be fully deployed and ready to handle authorization requests.
-
-    ![](./media/build-e3t3.png)
-
 1. Next, scroll down to **Update the App Registration with the Redirect URI from APIM** and **Run** the cell to apply the required changes to the Microsoft Entra (Azure AD) app you created earlier.
 
-    ![](./media/update-e3t3.png)
+    ![](./media/ex3-t3p1.png)
 
 1. After successfully deploying your MCP servers, scroll down to **Test the MCP Authorization Flow** and **Run** the cell.
 

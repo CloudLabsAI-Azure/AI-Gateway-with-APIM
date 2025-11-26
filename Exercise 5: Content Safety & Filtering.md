@@ -1,10 +1,10 @@
 # Exercise 5: Content Safety & Filtering 
 
-### Estimated Duration: 60 Minutes
+### Estimated Duration: 90 Minutes
 
 ## Lab Overview
 
-In this exercise, you will implement content safety and moderation controls within the Azure AI Gateway to ensure that all user inputs and AI-generated outputs adhere to organizational safety standards. You will explore Azure AI Foundry’s Guardrails and Controls, including text, image, multimodal moderation, groundedness detection, prompt shields, and protected material detection. You will then specify real-time content filtering rules using request headers and test how these filters affect API responses. Finally, you will apply content safety enforcement policies through Azure API Management (APIM), deploy the required infrastructure using Bicep templates, configure gateway-level safety rules, and validate how unsafe requests are blocked before reaching the underlying model. By the end, you will gain hands-on experience applying safety controls across multiple layers model, request, and gateway, to ensure secure and compliant AI interactions.
+In this exercise, you will implement content safety and moderation controls within the Azure AI Gateway to ensure that all user inputs and AI-generated outputs adhere to organizational safety standards. You will explore Microsoft Foundry’s Guardrails and Controls, including text, image, multimodal moderation, groundedness detection, prompt shields, and protected material detection. You will then specify real-time content filtering rules using request headers and test how these filters affect API responses. Finally, you will apply content safety enforcement policies through Azure API Management (APIM), deploy the required infrastructure using Bicep templates, configure gateway-level safety rules, and validate how unsafe requests are blocked before reaching the underlying model. By the end, you will gain hands-on experience applying safety controls across multiple layers model, request, and gateway, to ensure secure and compliant AI interactions.
 
 ## Lab Objectives
 
@@ -18,7 +18,7 @@ In this exercise, you will be performing the following tasks:
 
 ## Task 1: Review content safety capabilities and configuration in AI Foundry
 
-In this task, you will explore and test the various content safety capabilities available in Azure AI Foundry, including text, image, and multimodal moderation, groundedness detection, prompt shields, and protected material detection.
+In this task, you will explore and test the various content safety capabilities available in Microsoft Foundry, including text, image, and multimodal moderation, groundedness detection, prompt shields, and protected material detection.
 
 ### Introduction
 
@@ -39,7 +39,7 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 1. Click on the **Resource groups** from the homepage.
 
-   ![](./media/e2t1-rg(1).png)
+   ![](./media/ex5-t1p1(1).png)
 
 1. Under the **Resource groups** blade, select **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**.
 
@@ -47,15 +47,15 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 1. Select the **foundry1-<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](./media/e5t1p1.png)
+    ![](./media/ex5-t1p1.png)
 
-1. Now click on the **Go to Azure AI Foundry portal**.
+1. Now click on the **Go to Microsoft Foundry portal**.
 
-    ![](./media/e5t1p2.png)
+    ![](./media/ex5-t1p2.png)
 
-1. From the left navigation pane on the Azure AI Foundry portal, select **Guardrails+controls**.
+1. From the left navigation pane on the Microsoft Foundry portal, select **Guardrails + controls**.
 
-    ![](./media/e5t1p3.png)
+    ![](./media/ex5-t1p3.png)
 
 1. Click on **Try it out** under Guardrails and controls.
 
@@ -137,13 +137,13 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
 ## Task 2: Specify content filters at request time using headers
 
-In this task, you will retrieve your model’s endpoint and key from Azure AI Foundry, update a Python script in VS Code with these values, and run it to test how content safety headers filter or block unsafe prompts at request time.
+In this task, you will create and apply a custom content filter to the GPT-4o-mini model in Microsoft Foundry, then use a Python script to send safe and unsafe prompts to the model. This will allow you to observe how the enforced content safety policy either blocks harmful requests or causes the model to provide safe alternative responses.
 
 1. Open the Azure Portal in the browser and sign in with the credentials provided in the **Environment** tab.
 
 1. Click on the **Resource groups** from the homepage.
 
-   ![](./media/e2t1-rg(1).png)
+   ![](./media/ex5-t1p1(1).png)
 
 1. Under the **Resource groups** blade, select **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**.
 
@@ -151,13 +151,41 @@ In this task, you will retrieve your model’s endpoint and key from Azure AI Fo
 
 1. Select the **foundry1-<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](./media/e5t1p1.png)
+    ![](./media/ex5-t1p1.png)
 
-1. Now click on the **Go to Azure AI Foundry portal**.
+1. Now click on the **Go to Foundry portal**.
 
-    ![](./media/e5t1p2.png)
+    ![](./media/ex5-t1p2.png)
 
-1. In the AI Foundry portal, from the left navigation pane, under **My Assets**, select **Model + endpoints**.
+1. From the left navigation pane, go to the **Guardrails + controls (1)** and then select the **Content filters (2)** tab and then click on **+ Create content filter (3)**.
+
+    ![](./media/ex5-t2content1.png)
+
+1. On the **Create filters to allow or block specific types of content** window, under Add basic information, provide the name as **content<inject key="DeploymentID" enableCopy="false"/> (1)** and then click on **Next (2)**.
+
+    ![](./media/ex5-t2content2.png)
+
+1. In the **Input filter** section, set all the Blocking threshold level to **Highest blocking (1)** for Violence, Hate, Sexual and Self-harm and then click on **Next (2)**.
+
+    ![](./media/ex5-t2content3.png)
+
+1. On the Output filter section, leave everything as default and click on **Next**.
+
+    ![](./media/ex5-t2content4.png)
+
+1. On the **Connection** section, select the model **gpt-4o-mini (1)** and click on **Next (2)**.
+
+    ![](./media/ex5-t2content5.png)
+
+1. On the **Replacing existing content filter** pop-up dialog, click on **Replace**.
+
+    ![](./media/ex5-t2content6.png)
+
+1. On the **Review** section, click on **Create filter**.
+
+    ![](./media/ex5-t2content7.png)
+
+1. Now, in the Microsoft Foundry portal, from the left navigation pane, under **My Assets**, select **Model + endpoints**.
 
    ![](./media/API-gateway-image62.png)
 
@@ -175,27 +203,11 @@ In this task, you will retrieve your model’s endpoint and key from Azure AI Fo
 
 9. Kindly paste the **URL (1)** and **API key** with the values you copied in the earlier step and then press **Ctrl + S** to save the changes.
 
-    ![](./media/ai_request-e5t2(1).png)
-
-10. Please review the code and pay attention to how we add the headers. These headers (X-Content-Safety-Level, X-Block-Unsafe, and X-Content-Categories) are used to specify content filters at the request time
+    ![](./media/ex5-t2content8(1).png)
 
 12. In VS Code, right-click on the **ai_request (1)** folder and select **Open in Integrated Terminal (2)**.
 
     ![](./media/ai_request-e5t2(2).png)
-
-13. Install the requests library (needed to make HTTP requests to the Azure OpenAI endpoint). Run these commands one by one inside the terminal:
-
-    ```
-    pip install requests
-    python -m pip install requests
-    py -m pip install requests
-    pip show requests
-
-    ```
-
-    >**Note:** The first three commands try different ways of installing the library depending on your Python environment.
-
-    >**Note:** The last command (pip show requests) confirms that the library is installed.
     
 14. Run the script to test the request:
 
@@ -205,30 +217,7 @@ In this task, you will retrieve your model’s endpoint and key from Azure AI Fo
 
 15. Check the results printed in the console.
 
-    ![](./media/ai_request-e5t2(3).png)
-
-16. Understand the content filtering headers
-
-    - In the script, the following headers are added:
-        ```
-        headers = {
-            "Content-Type": "application/json",
-            "api-key": api_key,
-            "X-Content-Safety-Level": "high",
-            "X-Block-Unsafe": "true",
-            "X-Content-Categories": "violence,hate,sensitive"
-        }
-        ```
-
-    - X-Content-Safety-Level → Controls how strict content safety checks are.
-
-    - X-Block-Unsafe → Blocks any unsafe outputs automatically.
-
-    - X-Content-Categories → Specifies which types of content to filter (e.g., violence, hate, sensitive).
-
-    - These headers apply content filters at the request time, ensuring any output from the AI is checked for safety before it’s returned.
-
-    - You can modify the test prompt or settings in the script if you want to try different inputs or content safety filters.
+    ![](./media/ex5-t2content8.png)
 
 ## Task 3: Apply content safety enforcement rules in API Management
 
@@ -248,7 +237,7 @@ In this task, you will configure and validate the Content Safety policy in the A
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-   >**Note:** Ensure that the correct name is entered in the respective section.
+        >**Note:** Ensure that the correct name is entered in the respective section.
 
 1. Run the cell **Initialize notebook variables**. This cell imports necessary Python utilities and environment setup scripts. Configures resource names using your Azure subscription ID. Sets region, AI Foundry configuration, model details, and deployment parameters.
 
@@ -270,14 +259,13 @@ In this task, you will configure and validate the Content Safety policy in the A
 
 1. Next, scroll to **Test the Content Safety** section and **Run** the cell to send test prompts through API Management. This verifies how the Content Safety policy filters unsafe input before sending it to the backend model. You will observe that safe prompts return responses successfully, while unsafe prompts are blocked with a 403 Forbidden status code.
 
-    ![](./media/content-e5t3.png)
+    ![](./media/ex5-t3p1.png)
 
     >**Note:** Feel free to try a variety of safe and unsafe prompts in this cell. This will help you clearly observe how the Content Safety policy evaluates inputs, allowing or blocking them based on the configured thresholds.
 
 ## Summary
 
-In this exercise, you learned how Azure AI Content Safety protects AI systems from producing or accepting harmful content. You explored moderation tools in Azure AI Foundry that detect unsafe text, images, and multimodal inputs, as well as features like groundedness detection, prompt shields, and protected material identification. You then applied real-time content filtering using custom request headers to control which categories of risk, such as hate, violence, or sensitive content, should be blocked or monitored. Finally, you enforced organization-wide safety policies through Azure API Management, validating how APIM intercepts unsafe prompts and prevents them from reaching the model by returning error responses like 403 Forbidden.
-Through this hands-on implementation, you gained practical insight into building safer AI applications by enforcing guardrails across every layer of the system. These techniques help maintain compliance, reduce risk, prevent misuse, and ensure that both user inputs and AI outputs remain aligned with responsible and safe AI practices.
+In this exercise, you learned how Azure AI Content Safety protects both user inputs and AI-generated outputs by enforcing safety policies across multiple layers of an AI system. You explored Microsoft Foundry’s moderation capabilities for text, images, and multimodal content, along with groundedness detection, prompt shields, and protected material identification. You then created a custom content filter and applied it to a deployed GPT-4o-mini model, followed by testing safe and unsafe prompts using a Python script to observe how harmful requests are either blocked with a structured content filtering error or result in a safe refusal response from the model. Finally, you enabled policy enforcement through Azure API Management to validate that unsafe prompts are intercepted before reaching the underlying AI model. Through this hands-on experience, you gained practical knowledge of implementing responsible AI controls, reducing risk, aligning with compliance standards, and ensuring safe behavior for real-world AI applications.
 
 ### Conclusion
 
