@@ -85,6 +85,10 @@ Here’s the architecture diagram to help you better understand the scenario.
 
    ![](./media/ex1-t1p4.png)
 
+   >**Note:** If **Allow your organization to manage your device?** pop-up window appears, click on **Yes**.
+
+   ![](./media/ex1-t1p1(10).png)
+
 1. On the **Account added to this device** pop-up, click **Done**.
 
    ![](./media/ex1-t1p5.png)

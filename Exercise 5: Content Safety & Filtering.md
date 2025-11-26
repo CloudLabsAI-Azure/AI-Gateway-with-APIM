@@ -161,7 +161,7 @@ In this task, you will create and apply a custom content filter to the GPT-4o-mi
 
     ![](./media/ex5-t2content1.png)
 
-1. On the **Create filters to allow or block specific types of content** window, under Add basic information, provide the name as **content<inject key="DeploymentID" enableCopy="false"/> (1)** and then click on **Next (2)**.
+1. On the **Create filters to allow or block specific types of content** window, under Add basic information, provide the name as **contentfilter<inject key="DeploymentID" enableCopy="false"/> (1)** and then click on **Next (2)**.
 
     ![](./media/ex5-t2content2.png)
 
