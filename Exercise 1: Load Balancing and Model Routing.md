@@ -55,7 +55,7 @@ Here’s the architecture diagram to help you better understand the scenario.
 
    ![](./media/ex1-t1p3.png)
 
-1. Now, on the new terminal, run the following command to sign in to Azure from the terminal:
+1. Now, in the new terminal, run the following command to sign in to Azure from the terminal:
 
    ```
    az login
@@ -135,7 +135,7 @@ Here’s the architecture diagram to help you better understand the scenario.
 
      ![](./media/deploy-e1t1.png)
 
-1. Open the Azure portal from the desktop. 
+1. Open the **Azure portal** from the desktop. 
 
    ![](./media/ex1-azport.png)
 

@@ -19,7 +19,7 @@ In this exercise, you will be performing the following tasks:
 
 ## Task 1: Expose existing MCP Servers in API Management
 
-In this task, you will deploy and test the Model Context Protocol (MCP) architecture using Azure API Management (APIM). You will learn how to connect AI agents with various backend tools (like GitHub Issues, ServiceNow incidents, or weather APIs) through a unified API gateway, using OAuth 2.0 credential management and token validation policies to ensure secure communication.
+In this task, you will expose existing MCP (Model Context Protocol) servers through Azure API Management (APIM). You’ll learn how to deploy and validate the full MCP architecture, securely connect AI agents with backend services (such as ServiceNow, GitHub Issues, and Weather APIs), and test the integration using tools like MCP Inspector. You will also execute multiple AI agents via APIM to confirm secure and unified communication using OAuth 2.0 and token validation policies.
 
 1. In Visual Studio Code, open the **lab (1)** folder, expand the **model-context-protocol (2)** folder, and click **model-context-protocol.ipynb (3)**.
 
@@ -77,11 +77,11 @@ In this task, you will deploy and test the Model Context Protocol (MCP) architec
 
     ![](./media/test-e3t1(2).png)
 
-1. Now we will try to Use the MCP Inspector for testing and debugging the MCP Servers. 
+1. Now we will try to Use the **MCP Inspector** for testing and debugging the MCP Servers. 
 
     ![](./media/ex3-t1p2(1).png)
 
-1. From the start search bar, search for **PowerShell (1)** and right click on the **Windows PowerShell (2)** and select **Run as administrator (3)**.
+1. From the Start menu search bar, search for **PowerShell (1)**, then right-click on **Windows PowerShell (2)** and select **Run as administrator (3)**.
 
     ![](./media/ex3-t1p2.png)
 

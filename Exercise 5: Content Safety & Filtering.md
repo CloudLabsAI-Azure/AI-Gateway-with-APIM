@@ -165,7 +165,7 @@ In this task, you will create and apply a custom content filter to the GPT-4o-mi
 
     ![](./media/ex5-t2content2.png)
 
-1. In the **Input filter** section, set all the Blocking threshold level to **Highest blocking (1)** for Violence, Hate, Sexual and Self-harm and then click on **Next (2)**.
+1. In the **Input filter** section, set the Blocking threshold level for Violence, Hate, Sexual, and Self-harm to **Highest blocking (1)**, and then click **Next (2)**.
 
     ![](./media/ex5-t2content3.png)
 
