@@ -26,7 +26,7 @@ This lab introduces participants to semantic caching to improve AI response time
 Participants should have basic knowledge and understanding of the following:
  
  - Azure Portal
- - AI foundary portal 
+ - Microsoft Foundry Portal 
 
 ## Architecture
 
@@ -62,13 +62,13 @@ Welcome to your Azure AI Gateway: API Management for Intelligent Services worksh
 
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-![](./media/guidetab(1).png)
+![](./media/gs-guidetab.png)
 
 ## Virtual Machine & Lab Guide
 
-Your virtual machine is your workhorse throughout the workshop. The lab **Guide** is your roadmap to success.
+Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
 
 ## Exploring Your Lab Resources
 
@@ -92,7 +92,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-![Zoom In/Zoom Out](./media/zoominout.png)  
+![Zoom In/Zoom Out](./media/gs-zoomintab.png)  
 
 ## Lab Validation
 

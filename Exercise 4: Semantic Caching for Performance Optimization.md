@@ -1,6 +1,6 @@
 # Exercise 4: Semantic Caching for Performance Optimization 
 
-### Estimated Duration: 60 Minutes
+### Estimated Duration: 90 Minutes
 
 ## Lab Overview 
 
@@ -111,6 +111,8 @@ Enter the following details:
     ![](./media/deploy-e4t1.png)
 
     >**Note:** The deployment usually takes about 15-30 minutes. You can proceed to Exercise 5 while it runs, and then return to finish this exercise once the deployment is complete.
+
+    >**Note:** If the deployment does not succeed, please rerun the cell.
 
 1. Run **Get the deployment outputs**. After deployment, the script retrieves and displays key outputs such as the APIM Gateway URL, subscription keys, and Redis connection information. These details are required for connecting to the API endpoint and managing cache operations in the next steps.
     
