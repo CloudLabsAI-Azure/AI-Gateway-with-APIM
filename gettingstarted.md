@@ -26,7 +26,7 @@ This lab introduces participants to semantic caching to improve AI response time
 Participants should have basic knowledge and understanding of the following:
  
  - Azure Portal
- - AI foundary portal 
+ - Microsoft Foundry Portal 
 
 ## Architecture
 
