@@ -199,8 +199,6 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
     ![](./media/test-e3t2.png)
 
-1. **(Optional) Use the MCP Inspector for Testing and Debugging**. This step is optional and helps you visualize and debug your MCP setup using a browser-based interface.
-
 1. Next, scroll down to **Execute an Azure AI Foundry Agent using MCP Tools** and **Run** the cell to demonstrate how an Azure AI Agent can use MCP tools published via API Management. This step sets up an asynchronous connection between Azure OpenAI, MCPServerStreamableHttp, and the deployed MCP endpoints, allowing the AI Agent to invoke tools exposed through APIM. You can observe the agent interacting with MCP tools, retrieving data, or performing operations through the configured MCP service.
 
     ![](./media/execute-e3t2.png)
