@@ -29,31 +29,21 @@ Here’s the architecture diagram to help you better understand the scenario.
 
    ![](./media/ex1-t1p1.png)
 
-2. Click on **File (1)** and select **Open Folder (2)**.
+1. Click on **File (1)** and select **Open Folder (2)**.
 
    ![](./media/API-gateway-image1.png)
 
-3. Navigate to **`C:\LabFiles` (1)**, select the **AI-Gateway-main (2)** folder, and click **Select Folder (3)**.
+1. Navigate to **`C:\LabFiles` (1)**, select the **AI-Gateway-main (2)** folder, and click **Select Folder (3)**.
 
    ![](./media/e1t1p3.png)
 
-4. If you receive a Do you trust the authors of the files in the folder warning, select the **checkbox (1)** and click **Yes, I trust the authors (2)**.
+1. If you receive a Do you trust the authors of the files in the folder warning, select the **checkbox (1)** and click **Yes, I trust the authors (2)**.
 
    ![](./media/API-gateway-image2.png)
 
-4. Scroll down in the Explorer pane and right-click on the **requirements.txt (1)** file, and select **Open in Integrated Terminal (2)**.
+1. From the top menu, select the **(…) (1)** ellipsis, then choose **Terminal (2) > New Terminal (3)**.
 
-    ![](./media/ex1-t1p2.png)
-
-8. Run the following command in the terminal to install Lab Dependencies.
-
-   ```
-   pip install -r requirements.txt
-   ```
-
-1. While the packages are being installed, click the **+** icon to open a new terminal.
-
-   ![](./media/ex1-t1p3.png)
+    ![](./media/soc-image245.png)
 
 1. Now, in the new terminal, run the following command to sign in to Azure from the terminal:
 
