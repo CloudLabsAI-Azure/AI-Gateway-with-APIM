@@ -274,7 +274,7 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
     ![](./media/ex3-t3p1.png)
 
-1. After successfully deploying your MCP servers, scroll down to **Test the MCP Authorization Flow** and **Run** the cell.
+1. Now, scroll down to **Test the authorization WITHOUT a valid token** and **Run** the cell.
 
     ![](./media/test-e3t3(1).png)
 
