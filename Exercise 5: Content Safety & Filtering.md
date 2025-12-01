@@ -1,6 +1,6 @@
 # Exercise 5: Content Safety & Filtering 
 
-### Estimated Duration: 90 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Lab Overview
 
