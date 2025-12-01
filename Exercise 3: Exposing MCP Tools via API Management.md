@@ -248,7 +248,7 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - app_registration name: **mcp-app-registration-<inject key="DeploymentID" enableCopy="false"/>**
+   - app_registration_name: **mcp-app-registration-<inject key="DeploymentID" enableCopy="false"/>**
 
         >**Note:** Ensure that the correct name is entered in the respective section.
 
