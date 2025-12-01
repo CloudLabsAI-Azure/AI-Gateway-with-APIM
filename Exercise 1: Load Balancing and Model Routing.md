@@ -1,6 +1,6 @@
 # Exercise 1: Load Balancing and Model Routing 
 
-### Estimated Duration: 120 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Lab Overview
 
