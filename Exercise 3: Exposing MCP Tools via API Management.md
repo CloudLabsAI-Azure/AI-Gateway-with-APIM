@@ -1,6 +1,6 @@
 # Exercise 3: Exposing MCP Tools via API Management 
 
-### Estimated Duration: 120 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Lab Overview
 
