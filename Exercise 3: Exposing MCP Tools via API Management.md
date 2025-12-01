@@ -248,11 +248,13 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
+   - app_registration name: **mcp-app-registration-<inject key="DeploymentID" enableCopy="false"/>**
+
         >**Note:** Ensure that the correct name is entered in the respective section.
 
 1. **Run** the cell **Initialize notebook variables**. This step initializes the core environment variables for your deployment, including the resource group name, deployment identifiers, subscription details, and Azure region configuration.
 
-    ![](./media/initvar-e3t3.png)
+    ![](./media/ex3-t3p1(1).png)
 
 1. After initializing the variables, scroll to **Verify the Azure CLI and the connected Azure subscription** and **Run** the cell. This cell ensures that the Azure CLI is installed and that you are signed into the correct subscription. It retrieves and displays your current user account, tenant ID, and subscription ID to verify that you are working within the intended Azure environment. Seeing these values confirms that your local setup is correctly authenticated and ready for the deployment phase.
 
