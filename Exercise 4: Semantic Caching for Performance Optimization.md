@@ -1,6 +1,6 @@
 # Exercise 4: Semantic Caching for Performance Optimization 
 
-### Estimated Duration: 90 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Lab Overview 
 
