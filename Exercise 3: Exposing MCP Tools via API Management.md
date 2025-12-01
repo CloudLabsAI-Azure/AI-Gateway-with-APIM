@@ -262,7 +262,7 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
 1. Next, scroll down to **Create the App Registration in Microsoft Entra ID** and **run** the cell to automatically create an app registration.
 
-    ![](./media/appreg-e3t3.png)
+    ![](./media/ex3-t3p1(2).png)
 
 1. Next, scroll to **Create deployment using 🦾 Bicep** and click **Run**. This command triggers the deployment of the infrastructure defined in your main.bicep template. During this step, a new resource group will be created if one does not already exist. The script then defines all required parameters dynamically and deploys key Azure services such as Azure API Management, Log Analytics, and supporting resources required for the MCP client authorization lab. Wait for this cell to complete before proceeding, as this deployment forms the foundation of your environment.
 
