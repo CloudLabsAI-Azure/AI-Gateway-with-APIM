@@ -149,7 +149,7 @@ Here’s the architecture diagram to help you better understand the scenario.
 
     ![](./media/outputs-e1t1.png)
     
-14. Run the **Test the API using a direct HTTP call** cell to send multiple requests to the APIM endpoint. Observe the response headers, specifically x-ms-region to verify which Azure AI Foundry backend region handles each request. This demonstrates APIM's load-balanced pool behavior in action.
+14. Run the **Test the API using a direct HTTP call** cell to send multiple requests to the APIM endpoint. Observe the response headers, specifically x-ms-region, to verify which Microsoft Foundry backend region handles each request. This demonstrates APIM's load-balanced pool behavior in action.
 
       ![](./media/ex1-t1p7.png)
 
