@@ -4,15 +4,15 @@
 
 ## Overview
 
-In this hands-on lab, you will build an “AI Gateway”, an integrated AI management environment using Azure API Management (APIM) to interact with Azure OpenAI and other features in Azure AI Foundry. You will configure multi-region traffic routing, enforce token consumption limits, expose MCP tools for secure agent integration, enable semantic caching to improve performance, and apply advanced content safety controls to protect AI interactions.
+In this hands-on lab, you will build an “AI Gateway”, an integrated AI management environment using Azure API Management (APIM) to interact with Azure OpenAI and other features in Microsoft Foundry. You will configure multi-region traffic routing, enforce token consumption limits, expose MCP tools for secure agent integration, enable semantic caching to improve performance, and apply advanced content safety controls to protect AI interactions.
 
 ## Objective 
 
-This lab is designed to equip participants with hands-on experience in managing large-scale AI workloads through Azure API Management and the AI Gateway, configuring multi-region routing, monitoring and governing token usage, integrating MCP-based tools, accelerating responses with semantic caching, and enforcing comprehensive content safety controls. Participants will deploy Azure OpenAI and Foundry resources, analyze telemetry with Application Insights, validate traffic flows using SDK-driven tests, and apply APIM policies to optimize, secure, and operationalize AI applications in an enterprise environment.
+This lab is designed to equip participants with hands-on experience in managing large-scale AI workloads through Azure API Management and the AI Gateway, configuring multi-region routing, monitoring, and governing token usage, integrating MCP-based tools, accelerating responses with semantic caching, and enforcing comprehensive content safety controls. Participants will deploy Azure OpenAI and Foundry resources, analyze telemetry with Application Insights, validate traffic flows using SDK-driven tests, and apply APIM policies to optimize, secure, and operationalize AI applications in an enterprise environment.
 
 - **Load Balancing and Model Routing:** This lab guides participants through distributing LLM requests efficiently across multiple AI resources. Participants will learn to configure load balancing across AOAI resource pools, set up model routing to direct requests to specific models, and implement session affinity to maintain consistent AI agent interactions. 
 
-- **Managing LLM Traffic**: This lab provides practical experience in monitoring and controlling LLM usage to optimize performance and reduce costs. Participants will capture token usage metrics, apply rate limiting policies, and monitor consumption patterns to prevent overuse. 
+- **Managing LLM Traffic**: This lab provides practical experience in monitoring and controlling LLM usage to optimize performance and reduce costs. Participants will capture token usage metrics, apply rate-limiting policies, and monitor consumption patterns to prevent overuse. 
 
 - **Exposing MCP Tools via API Management**: Participants will explore securely exposing MCP servers and REST APIs through Azure API Management. This exercise focuses on centralized control, authentication, and secure API exposure. 
 
@@ -58,7 +58,7 @@ This architecture flow demonstrates the end-to-end lifecycle of operationalizing
 
 ## Getting Started with the Lab
  
-Welcome to your Azure AI Gateway: API Management for Intelligent Services workshop! We've prepared a hands-on environment for you to explore and understand how Azure API Management can be leveraged to manage, secure, and optimize AI services including Large Language Models (LLMs) and Model Context Protocol (MCP) servers.
+Welcome to your Azure AI Gateway: API Management for Intelligent Services workshop! We've prepared a hands-on environment for you to explore and understand how Azure API Management can be leveraged to manage, secure, and optimize AI services, including Large Language Models (LLMs) and Model Context Protocol (MCP) servers.
 
 ## Accessing Your Lab Environment
  

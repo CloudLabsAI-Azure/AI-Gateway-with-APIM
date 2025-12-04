@@ -4,7 +4,7 @@
 
 ## Lab Overview
 
-In this exercise, you will manage and optimize Large Language Model (LLM) traffic using Azure API Management (APIM) and Azure AI Foundry. You will first capture and analyze token usage metrics from API requests to monitor consumption trends and identify spikes in activity. Then, you will apply token rate-limiting policies using APIM to control traffic and prevent overuse of Azure OpenAI resources. Using Visual Studio Code and Bicep templates, you will deploy the required infrastructure, run tests with Python SDKs, and visualize token data in Application Insights. Confirm that token usage metrics are emitted correctly and that rate-limiting policies enforce consumption limits effectively.
+In this exercise, you will manage and optimize Large Language Model (LLM) traffic using Azure API Management (APIM) and Microsoft Foundry. You will first capture and analyze token usage metrics from API requests to monitor consumption trends and identify spikes in activity. Then, you will apply token rate-limiting policies using APIM to control traffic and prevent overuse of Azure OpenAI resources. Using Visual Studio Code and Bicep templates, you will deploy the required infrastructure, run tests with Python SDKs, and visualize token data in Application Insights. Confirm that token usage metrics are emitted correctly and that rate-limiting policies enforce consumption limits effectively.
 
 ## Lab Objectives
 
@@ -16,7 +16,7 @@ In this exercise, you will be performing the following tasks:
 
 ## Task 1: Capture token usage metrics from AI Gateway traffic 
 
-In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models and subscriptions, and prepare the environment for testing. You will then capture, analyze, and visualize token usage metrics to monitor API consumption patterns.
+In this task, you will deploy APIM and Microsoft Foundry endpoints, set up models and subscriptions, and prepare the environment for testing. You will then capture, analyze, and visualize token usage metrics to monitor API consumption patterns.
 
 1. In Visual Studio Code, expand the **labs (1)** folder and then select **token-metrics-emitting (2)**, and finally click on **token-metrics-emitting.ipynb (3)**.
 
@@ -36,11 +36,11 @@ In this task, you will deploy APIM and Azure AI Foundry endpoints, set up models
 
    ![](./media/initvar-e2t1.png)
 
-2. Next, go to **Verify the Azure CLI and the connected Azure subscription** and click on Run. This ensure the commands will run in the correct Azure subscription and that we have permissions to create resources.
+2. Next, go to **Verify the Azure CLI and the connected Azure subscription** and click on Run. This ensures the commands will run in the correct Azure subscription and that we have permissions to create resources.
 
    ![](./media/ver-e2t1.png)
    
-3. Run the cell **Create deployment using 🦾 Bicep**. This cell Automate the creation of APIM, AI Foundry endpoints, and model deployments so that the environment is consistent and reproducible.
+3. Run the cell **Create deployment using 🦾 Bicep**. This cell automates the creation of APIM, AI Foundry endpoints, and model deployments so that the environment is consistent and reproducible.
 
    ![](./media/deploy-e2t1.png)
 
