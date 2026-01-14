@@ -44,6 +44,8 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
 
    ![](./media/deploy-e2t1.png)
 
+   >**Note:** If you encounter any errors, wait a few minutes and then re-execute the cell.
+
 4. Run the cell **Get the deployment outputs**. This retrieves URLs, keys, and Application Insights names that are needed to interact with the deployed AI endpoints.
 
    ![](./media/outputs-e2t1.png)
@@ -64,7 +66,7 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
 
     ![](./media/analyze-e2t1.png)
 
-    >**Note:** If you get an error or the table doesn’t appear, wait a few minutes and run the cell again.
+    >**Note:** If you get an error or the table doesn’t appear, wait for few minutes and execute the cell again.
 
 8. Run the cell **Plot the custom metrics results**, this visualizes token usage over time to see trends, spikes, or anomalies.
 
@@ -90,7 +92,7 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
 
    ![](./media/rg-(2).png)
 
-1. In the left navigation pane, go to **Monitoring (1)** and then select **Metrics (2)**.
+1. From the left navigation pane, expand **Monitoring (1)** and then select **Metrics (2)**.
 
    ![](./media/e2t1-appin(1).png)
 
@@ -139,6 +141,8 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 
    ![](./media/deploy-e2t2.png)
 
+   >**Note:** If you encounter any errors, wait a few minutes and then re-execute the cell.
+
 3. Run the cell **Get Deployment Outputs**. Retrieve APIM Service ID, API Gateway URL, subscription keys, and other deployment outputs. These values are required for testing and API calls.
   
    ![](./media/outputs-e2t2.png)
@@ -161,6 +165,6 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 
 In this exercise, you learned how to monitor and control LLM traffic through Azure API Management. You deployed APIM and AI Foundry endpoints, captured token usage metrics, and visualized consumption patterns in Application Insights. You then configured and tested token rate-limiting policies to ensure that excessive requests were throttled and token quotas were enforced consistently. By the end of the lab, you verified that token metrics were accurately tracked across multiple subscriptions and that APIM effectively regulated model access, ensuring predictable usage, improved cost management, and stable performance for Azure OpenAI workloads.
 
-### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
 
 ![](./media/nextpage-api.png)

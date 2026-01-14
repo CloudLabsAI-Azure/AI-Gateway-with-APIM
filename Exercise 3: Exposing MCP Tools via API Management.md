@@ -91,7 +91,7 @@ In this task, you will expose existing MCP (Model Context Protocol) servers thro
     npx @modelcontextprotocol/inspector
     ```
 
-    ![](./media/ex3-t1p3.png)
+    ![](./media/1.png)
 
 1. A new browser tab will automatically open, directing you to the **MCP Inspector**.
 
@@ -101,9 +101,9 @@ In this task, you will expose existing MCP (Model Context Protocol) servers thro
 
     ![](./media/ex3-mcpserver1(1).png)
 
-1. Within the API Management resource, select **MCP Servers (preview) (1)** from the left navigation pane under **APIs**, and then use the **Copy to clipboard (2)** icon to copy the Server URL of **weather-mcp-tools**.
+1. From the left navigation pane, expand **APIs (1)**, select **MCP Servers (2)**, and then click the **Copy to clipboard (3)** icon to copy the Server URL for **weather-mcp-tools**.
 
-    ![](./media/ex3-mcpserver1.png)
+    ![](./media/2.png)
 
 1. Go back to the MCP Inspector tab, and enter the following information:
 
@@ -120,6 +120,8 @@ In this task, you will expose existing MCP (Model Context Protocol) servers thro
 1. Select the **get_weather (1)** tool, in the city field enter **London (2)**.
 
     ![](./media/ex3-t1p7.png)
+
+    >**Note:** If you are unable to see *get_weather*, scroll down in the Tools section.
 
 1. Scroll down, click **Run Tool (1)**, and review the resulting output **(2)**.
 
@@ -142,6 +144,8 @@ In this task, you will expose existing MCP (Model Context Protocol) servers thro
     ![](./media/execvia-e3t1.png)
 
     ![](./media/execvia-e3t1(1).png)
+
+    >**Note:** If the face any error, wait for few minutes and execute the cell again.
 
 1. Scroll down to **Execute a Semantic Kernel Agent using MCP Tools via Azure API Management** cell and click on **Run**.
 
@@ -190,6 +194,8 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 1. Next, scroll down to **Create deployment using 🦾 Bicep** and **Run** the cell to deploy all required Azure resources. The Bicep template provisions services like Azure API Management, Azure OpenAI, and related components needed for the MCP setup. Wait for the deployment process to complete successfully. The cell output will show status messages confirming that the resource group, API Management instance, and supporting components were created.
 
     ![](./media/deploy-e3t2.png)
+
+    >**Note:** If you encounter any errors, wait a few minutes and then re-execute the cell.
 
 1. Next, scroll to **Get the deployment outputs** and **Run** the cell to retrieve key configuration details such as the Log Analytics Workspace ID, APIM URL, and MCP endpoint. These outputs will be used later to connect and test your MCP-enabled service.
 
@@ -268,6 +274,8 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
     ![](./media/deploy-e3t3.png)
 
+    >**Note:** If you encounter any errors, wait a few minutes and then re-execute the cell.
+
 1. Once the deployment is complete, scroll down to **Get the deployment outputs** and **run** the cell. This step retrieves all important configuration details from your Bicep deployment, including the APIM Gateway URL, Client Authorization Endpoint, Log Analytics Workspace ID, and any relevant identifiers or secrets.
 
     ![](./media/outputs-e3t3.png)
@@ -291,6 +299,6 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
 In this exercise, you implemented a complete workflow for managing and securing Model Context Protocol (MCP) integrations using Azure API Management (APIM). You began by deploying MCP servers and testing their connectivity through APIM, gaining insight into how AI agents can interact with backend systems such as GitHub, ServiceNow, and weather APIs. Next, you published REST APIs as MCP tools, enabling LLMs to discover and invoke them through the standardized MCP interface. Finally, you configured client authorization using Microsoft Entra ID (Azure AD) to ensure that only authenticated clients could access protected MCP endpoints. Throughout the lab, you validated your setup using real API calls, OAuth flows, and rate-limiting policies.
 
-### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
 
 ![](./media/nextpage-api.png)

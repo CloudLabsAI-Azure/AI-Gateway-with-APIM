@@ -223,7 +223,9 @@ At the end, you know the deployment will run in the correct subscription.
 At the end, APIM, AI services, and model routing are provisioned.
 
    ![](./media/deploy-e1t2.png)
-   
+
+   >**Note**: If you encounter any errors, wait a few minutes and then re-execute the cell.
+
 6. Run the cell **Get Deployment Outputs**. Fetches outputs like APIM URLs, subscription keys, and workspace IDs from the deployment.
 At the end, all resource identifiers and API keys are available for testing the deployed services.
 
@@ -273,6 +275,8 @@ In this task, you will deploy and validate a multi-region Azure setup using Bice
 
    ![](./media/deploy-e1t3.png)
 
+   >**Note**: If you encounter any errors, wait a few minutes and then re-execute the cell.
+
 1. Run the **Get the deployment outputs** cell to retrieve details from the completed Bicep deployment. This cell fetches key outputs such as the API Management gateway URL, service name, subscription keys, and deployed AI Foundry instances. It verifies that all resources were successfully created and confirms readiness for testing session affinity in later steps.
 
    ![](./media/outputs-e1t3.png)
@@ -305,6 +309,6 @@ In this task, you will deploy and validate a multi-region Azure setup using Bice
 
 In this exercise, you successfully configured load balancing, model routing, and session affinity for Azure OpenAI endpoints using Azure API Management. You deployed multiple AI backends across regions, verified that APIM evenly distributed traffic among available endpoints, and confirmed that routing rules correctly directed requests to specific models. Finally, you enabled session affinity to maintain conversation context by ensuring that requests from the same client were consistently routed to the same backend. By completing this lab, you gained hands-on experience in designing a scalable, reliable, and context-aware AI Gateway capable of handling large-scale workloads while maintaining high availability and consistent AI interactions.
 
-### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
 
 ![](./media/nextpage-api.png)
