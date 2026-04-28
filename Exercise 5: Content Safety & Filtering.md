@@ -261,7 +261,7 @@ In this task, you will configure and validate the Content Safety policy in the A
 
 1. Next, scroll to **Test the Content Safety** section and **Run** the cell to send test prompts through API Management. This verifies how the Content Safety policy filters unsafe input before sending it to the backend model. You will observe that safe prompts return responses successfully, while unsafe prompts are blocked with a 403 Forbidden status code.
 
-    ![](./media/ex5-t3p1(1).png)
+    ![](./media/E5T3P8.png)
 
     >**Note:** Feel free to try a variety of safe and unsafe prompts in this cell. This will help you clearly observe how the Content Safety policy evaluates inputs, allowing or blocking them based on the configured thresholds.
 

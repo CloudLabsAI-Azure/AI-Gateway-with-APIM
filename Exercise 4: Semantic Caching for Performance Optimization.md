@@ -112,7 +112,21 @@ Enter the following details:
 
     >**Note:** The deployment usually takes about 15-30 minutes. You can proceed to Exercise 5 while it runs, and then return to finish this exercise once the deployment is complete.
 
-    >**Note:** If the deployment does not succeed, please rerun the cell.
+    >**Note:** If the deployment does not succeed, from the left navigation pane,  expand **lab (1)** folder and **semantic-caching (2)**, right click on **params.json (3)** and **delete(4)** it 
+
+    ![](./media/E4T4P4.png)
+
+    >then go back to the cell **Initialize notebook variables** and add wus after all the values:
+    
+    >- resource_group_name:    **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>(1)**
+
+   >- aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>(2)**
+
+   >- apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>(3)**
+      
+   >and enter the location as **"westus"(4)** and then  re run all the cells.
+   
+    ![](./media/E4T4P41.png)
 
 1. Run **Get the deployment outputs**. After deployment, the script retrieves and displays key outputs such as the APIM Gateway URL, subscription keys, and Redis connection information. These details are required for connecting to the API endpoint and managing cache operations in the next steps.
     
