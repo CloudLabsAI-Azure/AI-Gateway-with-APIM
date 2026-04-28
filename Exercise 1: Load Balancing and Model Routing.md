@@ -117,6 +117,11 @@ Here’s the architecture diagram to help you better understand the scenario.
 
    ![](./media/initvar-e1t1.png)
 
+   >**Note:**: If prompted to select kernel , select Python Environment and then select Python 3.12.1 whenever prompted to select python kernel
+
+   ![](./media/E1T1P17.png)
+   ![](./media/E1T1P171.png)
+
 9. Go to **Verify the Azure CLI and the connected Azure subscription**. Click on **Run**, in this section, we check that the Azure CLI is installed, up-to-date, and connected to your subscription. This ensures we can deploy and manage resources in your Azure account. Review the output.
 
     ![](./media/API-gateway-image6.png)
