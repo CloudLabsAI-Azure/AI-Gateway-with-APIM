@@ -133,12 +133,6 @@ In this task, you will expose existing MCP (Model Context Protocol) servers thro
 
     ![](./media/run-e3t1(1).png)
 
-1. Scroll down to **Execute an Agent Framework Agent using MCP Tools via Azure API Management** cell and click on **Run**.
-
-    ![](./media/execute-e3t1.png)
-
-    ![](./media/execute-e3t1(1).png)
-
 1. Scroll down to **Execute an Azure Al Foundry Agent using MCP Tools via Azure API Management** cell and click on **Run**.
 
     ![](./media/execvia-e3t1.png)
