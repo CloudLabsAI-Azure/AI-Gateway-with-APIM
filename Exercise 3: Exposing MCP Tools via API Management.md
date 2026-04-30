@@ -43,9 +43,9 @@ In this task, you will expose existing MCP (Model Context Protocol) servers thro
 
     ![](./media/initvar-e3t1(1).png)
 
-1. Next, **run** the cell that installs or updates the Azure AI Projects package and the Agent Framework library.
-
-    ![](./media/install-e3t1.png)
+    >**Note:** Select the **Python 3.12.1** kernel from the top bar.
+   >
+   >![](./media/apim-p2t1p2-new.png)
 
 1. Scroll down to **Verify the Azure CLI and the connected Azure subscription** and **Run** the cell. This command verifies that the Azure CLI is installed and authenticated to the correct subscription. It retrieves your User Email, Tenant ID, and Subscription ID to confirm that you’re working in the intended Azure environment.
 
@@ -185,6 +185,10 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
     ![](./media/initvar-e3t2.png)
 
+    >**Note:** Select the **Python 3.12.1** kernel from the top bar.
+    >
+    >![](./media/apim-p2t1p2-new.png)
+
 1. Next, scroll down to **Create deployment using 🦾 Bicep** and **Run** the cell to deploy all required Azure resources. The Bicep template provisions services like Azure API Management, Azure OpenAI, and related components needed for the MCP setup. Wait for the deployment process to complete successfully. The cell output will show status messages confirming that the resource group, API Management instance, and supporting components were created.
 
     ![](./media/deploy-e3t2.png)
@@ -255,6 +259,10 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 1. **Run** the cell **Initialize notebook variables**. This step initializes the core environment variables for your deployment, including the resource group name, deployment identifiers, subscription details, and Azure region configuration.
 
     ![](./media/ex3-t3p1(1).png)
+
+    >**Note:** Select the **Python 3.12.1** kernel from the top bar.
+    >
+    >![](./media/apim-p2t1p2-new.png)
 
 1. After initializing the variables, scroll to **Verify the Azure CLI and the connected Azure subscription** and **Run** the cell. This cell ensures that the Azure CLI is installed and that you are signed into the correct subscription. It retrieves and displays your current user account, tenant ID, and subscription ID to verify that you are working within the intended Azure environment. Seeing these values confirms that your local setup is correctly authenticated and ready for the deployment phase.
 

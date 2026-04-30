@@ -36,6 +36,10 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
 
    ![](./media/initvar-e2t1.png)
 
+   >**Note:** Select the **Python 3.12.1** kernel from the top bar.
+   >
+   >![](./media/apim-p2t1p2-new.png)
+
 2. Next, go to **Verify the Azure CLI and the connected Azure subscription** and click on Run. This ensures the commands will run in the correct Azure subscription and that we have permissions to create resources.
 
    ![](./media/ver-e2t1.png)
@@ -132,6 +136,10 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 1. Run the cell **Initialize Notebook Variables**. This set up all lab variables, including resource group, location, AI services, models, APIM SKU, subscriptions, API paths, and utility functions. Prepares the environment for deployment.
 
    ![](./media/initvar-e2t2.png)
+
+   >**Note:** Select the **Python 3.12.1** kernel from the top bar.
+   >
+   >![](./media/apim-p2t1p2-new.png)
    
 1. Run **Verify Azure CLI and Subscription**. Check that Azure CLI is installed and connected. Retrieve and display the current user, tenant ID, and subscription ID to confirm correct access.
    

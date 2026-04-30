@@ -224,6 +224,10 @@ In this task, you will configure APIM to route incoming requests to the appropri
 
    ![](./media/initvar-e1t2.png)
 
+   >**Note:** <span style="color:maroon;"> Select the **Python 3.12.1** kernel from the top bar.
+   >
+   >![](./media/apim-p2t1p2-new.png)
+
 2. Run the cell **Verify Azure CLI and Subscription**. Checks that Azure CLI is connected and retrieves current user, tenant, and subscription info.
 At the end, you know the deployment will run in the correct subscription.
 
@@ -276,6 +280,10 @@ In this task, you will deploy and validate a multi-region Azure setup using Bice
 1. Run the cell **Initialize notebook variables**. By running this cell, you’ll initialize key environment variables used throughout the lab. These include the resource group name and region, AI service configurations, model versions, and API Management settings. Running this cell ensures all necessary parameters are defined before deploying Azure resources and executing the following steps in the notebook.
 
    ![](./media/initvar-e1t3.png)
+
+   >**Note:** <span style="color:maroon;"> Select the **Python 3.12.1** kernel from the top bar.
+   >
+   >![](./media/apim-p2t1p2-new.png)
 
 1. Run the **Verify the Azure CLI and the connected Azure subscription** cell to confirm the Azure CLI is connected and authenticated. It displays your current user, tenant ID, and subscription ID.
 

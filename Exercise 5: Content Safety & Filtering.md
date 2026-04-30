@@ -245,6 +245,10 @@ In this task, you will configure and validate the Content Safety policy in the A
 
     >**Note:** Ensure that the correct name is entered in each respective section.
 
+    >**Note:** Select the **Python 3.12.1** kernel from the top bar.
+    >
+    >![](./media/apim-p2t1p2-new.png)
+
 1. Next, scroll down to **Verify the Azure CLI and the connected Azure subscription** section. **Run** the cell to validate Azure CLI installation. This confirms that you are signed into the correct Azure account, display details like User Email, Tenant ID, and Subscription ID, and ensures the deployment will occur in the intended Azure environment.
 
     ![](./media/ver-e5t3.png)

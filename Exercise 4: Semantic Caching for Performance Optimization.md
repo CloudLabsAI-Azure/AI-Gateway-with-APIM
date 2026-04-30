@@ -112,9 +112,11 @@ Enter the following details:
 
     >**Note:** The deployment usually takes about 15-30 minutes. You can proceed to Exercise 5 while it runs, and then return to finish this exercise once the deployment is complete.
 
-    >**Note:** <span style="color:maroon;"> If the deployment does not succeed, from the left navigation pane,  expand **lab (1)** folder and then **semantic-caching (2)**, right click on **params.json (3)** and **delete (4)** it. Then go back to the cell **Initialize notebook variables** and add **`wus`** after all the values: 
+    >**Note:** <span style="color:maroon;"> If the deployment does not succeed, from the left navigation pane,  expand **lab (1)** folder and then **semantic-caching (2)**, right click on **params.json (3)** and **delete (4)** it.  
    >
     >![](./media/E4T4P4.png)
+   >
+   > <span style="color:maroon;"> Then go back to the cell **Initialize notebook variables** and add **`wus`** after the following values:
    >
    >- resource_group_name:    **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/> (1)**
    >
@@ -122,9 +124,9 @@ Enter the following details:
    >
    >- apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/> (3)**
    >    
-   >and enter the location as **"westus"(4)** and then re run the cells.
+   >- and enter the location as **"westus", "westus2" or "centralus" (4)** and then re-run the cells.
    >
-   > ![](./media/E4T4P41.png)
+   >     ![](./media/E4T4P41.png)
 
 1. Run **Get the deployment outputs**. After deployment, the script retrieves and displays key outputs such as the APIM Gateway URL, subscription keys, and Redis connection information. These details are required for connecting to the API endpoint and managing cache operations in the next steps.
     
