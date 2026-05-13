@@ -106,7 +106,7 @@ Here’s the architecture diagram to help you better understand the scenario.
       - `westus2`
       - `centralus`
 
-         >### **Note:** <span style="color:maroon;"> Make a note of the region you select here, as the same region must be used throughout the remaining exercises and tasks in this lab.
+         >### **Note:** <span style="color:maroon;"> Select a region from the list above, make a note of the selected region, and use the same region for all subsequent exercises and tasks throughout this lab. Using a different region later may lead to deployment or configuration issues.
 
    - aiservices_config:
 
@@ -211,7 +211,7 @@ In this task, you will configure APIM to route incoming requests to the appropri
       - `westus2`
       - `centralus`
 
-         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+         >### **Note:** <span style="color:maroon;"> Use the exact same region that was selected in **Exercise 1 -> Task 1** for all subsequent exercises and tasks in this lab. Using a different region may result in deployment or configuration failures.
 
    - aiservices_config: 
       - **foundry1-<inject key="DeploymentID" enableCopy="false"/>-e1t2**
@@ -292,7 +292,7 @@ In this task, you will deploy and validate a multi-region Azure setup using Bice
       - `westus2`
       - `centralus`
 
-         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+         >### **Note:** <span style="color:maroon;"> Use the exact same region that was selected in **Exercise 1 -> Task 1** for all subsequent exercises and tasks in this lab. Using a different region may result in deployment or configuration failures.
 
    - aiservices_config: 
    

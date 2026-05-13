@@ -99,7 +99,7 @@ Enter the following details:
       - `westus2`
       - `centralus`
 
-         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+         >### **Note:** <span style="color:maroon;"> Use the exact same region that was selected in **Exercise 1 -> Task 1** for all subsequent exercises and tasks in this lab. Using a different region may result in deployment or configuration failures.
 
    - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>-e4t2**
 

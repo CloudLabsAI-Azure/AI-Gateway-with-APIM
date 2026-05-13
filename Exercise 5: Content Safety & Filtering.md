@@ -45,13 +45,13 @@ These AI-powered features help organizations detect risks, prevent the spread of
 
    ![](./media/rg-(1).png)
 
-1. Select the **foundry1-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Select the **foundry1-<inject key="DeploymentID" enableCopy="false"/>-e1t1**.
 
-    ![](./media/ex5-t1p1.png)
+    ![](./media/apim-may26-e5t2p1(1).png)
 
 1. Now click on the **Go to Microsoft Foundry portal**.
 
-    ![](./media/ex5-t1p2.png)
+    ![](./media/apim-may26-e5t2p1(2).png)
 
 1. From the left navigation pane on the Microsoft Foundry portal, select **Guardrails + controls**.
 
@@ -240,7 +240,7 @@ In this task, you will configure and validate the Content Safety policy in the A
       - `westus2`
       - `centralus`
 
-         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+         >### **Note:** <span style="color:maroon;"> Use the exact same region that was selected in **Exercise 1 -> Task 1** for all subsequent exercises and tasks in this lab. Using a different region may result in deployment or configuration failures.
 
    - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>-e5t3**
 
