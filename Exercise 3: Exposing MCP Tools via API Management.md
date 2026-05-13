@@ -31,7 +31,16 @@ In this task, you will expose existing MCP (Model Context Protocol) servers thro
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-    - aiservices_config: **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_location: *Use the same region selected in* **Exercise 1 -> Task 1**.
+
+      - `eastus2`
+      - `westus` 
+      - `westus2`
+      - `centralus`
+
+         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+
+    - aiservices_config: **foundry1-<inject key="DeploymentID" enableCopy="false"/>-e3t1**
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -39,9 +48,7 @@ In this task, you will expose existing MCP (Model Context Protocol) servers thro
 
 1. **Run** the cell **Initialize notebook variables**. This step initializes environment variables used for the entire deployment. It defines resource group names, Azure region, container registry, deployment identifiers, AI Foundry configuration, and APIM settings.
 
-    ![](./media/initvar-e3t1.png)
-
-    ![](./media/initvar-e3t1(1).png)
+    ![](./media/apim-may26-e3t1p1.png)
 
     >**Note:** Select the **Python 3.12.1** kernel from the top bar.
    >
@@ -175,7 +182,16 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_location: *Use the same region selected in* **Exercise 1 -> Task 1**.
+
+      - `eastus2`
+      - `westus` 
+      - `westus2`
+      - `centralus`
+
+         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+
+   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>-e3t2**
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -183,7 +199,7 @@ In this task, you will deploy and test the Model Context Protocol (MCP) using Az
 
 1. **Run** the cell **Initialize notebook variables** to set up environment variables. This step defines your resource names, Azure region, and other configuration details required for consistent and automated deployment across subscriptions.
 
-    ![](./media/initvar-e3t2.png)
+    ![](./media/apim-may26-e3t2p1.png)
 
     >**Note:** Select the **Python 3.12.1** kernel from the top bar.
     >
@@ -250,6 +266,15 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
+   - resource_group_location: *Use the same region selected in* **Exercise 1 -> Task 1**.
+
+      - `eastus2`
+      - `westus` 
+      - `westus2`
+      - `centralus`
+
+         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
    - app_registration_name: **mcp-app-registration-<inject key="DeploymentID" enableCopy="false"/>**
@@ -258,7 +283,7 @@ In this lab, you will configure and test the Model Context Protocol (MCP) client
 
 1. **Run** the cell **Initialize notebook variables**. This step initializes the core environment variables for your deployment, including the resource group name, deployment identifiers, subscription details, and Azure region configuration.
 
-    ![](./media/ex3-t3p1(1).png)
+    ![](./media/apim-may26-e3t3p1.png)
 
     >**Note:** Select the **Python 3.12.1** kernel from the top bar.
     >

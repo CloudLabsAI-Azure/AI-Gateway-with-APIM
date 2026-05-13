@@ -99,15 +99,24 @@ Here’s the architecture diagram to help you better understand the scenario.
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
+   - resource_group_location: *Use any one of the following regions:*
+   
+      - `eastus2`
+      - `westus` 
+      - `westus2`
+      - `centralus`
+
+         >### **Note:** <span style="color:maroon;"> Make a note of the region you select here, as the same region must be used throughout the remaining exercises and tasks in this lab.
+
    - aiservices_config:
 
-      - **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry1-<inject key="DeploymentID" enableCopy="false"/>-e1t1**
 
-      - **foundry2-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry2-<inject key="DeploymentID" enableCopy="false"/>-e1t1**
 
-      - **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry3-<inject key="DeploymentID" enableCopy="false"/>-e1t1**
 
-      - **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry4-<inject key="DeploymentID" enableCopy="false"/>-e1t1**
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -115,7 +124,7 @@ Here’s the architecture diagram to help you better understand the scenario.
 
 1. Click on **Run** in this section, we set up all the necessary variables and configurations, including resource names, regions, AI endpoints, and APIM details. This prepares the notebook for deploying resources and running the lab steps.
 
-   ![](./media/initvar-e1t1.png)
+   ![](./media/apim-may26-e1t1p1.png)
 
    >**Note:**: If prompted to select kernel , select Python Environment and then select Python 3.12.1 whenever prompted to select python kernel
 
@@ -195,26 +204,35 @@ In this task, you will configure APIM to route incoming requests to the appropri
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
+   - resource_group_location: *Use the same region selected in* **Exercise 1 -> Task 1**.
+
+      - `eastus2`
+      - `westus` 
+      - `westus2`
+      - `centralus`
+
+         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+
    - aiservices_config: 
-      - **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry1-<inject key="DeploymentID" enableCopy="false"/>-e1t2**
 
-      - **foundry2-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry2-<inject key="DeploymentID" enableCopy="false"/>-e1t2**
 
-      - **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry3-<inject key="DeploymentID" enableCopy="false"/>-e1t2**
 
    - models_config: 
 
-      - gpt-4.1: **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+      - gpt-4.1: **foundry1-<inject key="DeploymentID" enableCopy="false"/>-e1t2**
 
-      - gpt-4.1-mini: **foundry2-<inject key="DeploymentID" enableCopy="false"/>**
+      - gpt-4.1-mini: **foundry2-<inject key="DeploymentID" enableCopy="false"/>-e1t2**
 
-      - gpt-4.1-nano: **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+      - gpt-4.1-nano: **foundry3-<inject key="DeploymentID" enableCopy="false"/>-e1t2**
 
-      - model-router: **foundry2-<inject key="DeploymentID" enableCopy="false"/>**
+      - model-router: **foundry2-<inject key="DeploymentID" enableCopy="false"/>-e1t2**
 
-      - o4-mini: **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+      - o4-mini: **foundry3-<inject key="DeploymentID" enableCopy="false"/>-e1t2**
 
-      - DeepSeek-R1: **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+      - DeepSeek-R1: **foundry3-<inject key="DeploymentID" enableCopy="false"/>-e1t2**
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -222,7 +240,7 @@ In this task, you will configure APIM to route incoming requests to the appropri
 
 1. Now **Run** the cell **Initialize Notebook Variables**. Sets up all deployment variables, model configs, APIM settings, and inference API info. At the end, all parameters are ready in memory, no resources are created yet.
 
-   ![](./media/initvar-e1t2.png)
+   ![](./media/apim-may26-e1t2p2.png)
 
    >**Note:** <span style="color:maroon;"> Select the **Python 3.12.1** kernel from the top bar.
    >
@@ -267,11 +285,20 @@ In this task, you will deploy and validate a multi-region Azure setup using Bice
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
+   - resource_group_location: *Use the same region selected in* **Exercise 1 -> Task 1**.
+
+      - `eastus2`
+      - `westus` 
+      - `westus2`
+      - `centralus`
+
+         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+
    - aiservices_config: 
    
-      - **foundry1-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry1-<inject key="DeploymentID" enableCopy="false"/>-e1t3**
 
-      - **foundry3-<inject key="DeploymentID" enableCopy="false"/>**
+      - **foundry3-<inject key="DeploymentID" enableCopy="false"/>-e1t3**
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -279,7 +306,7 @@ In this task, you will deploy and validate a multi-region Azure setup using Bice
 
 1. Run the cell **Initialize notebook variables**. By running this cell, you’ll initialize key environment variables used throughout the lab. These include the resource group name and region, AI service configurations, model versions, and API Management settings. Running this cell ensures all necessary parameters are defined before deploying Azure resources and executing the following steps in the notebook.
 
-   ![](./media/initvar-e1t3.png)
+   ![](./media/apim-may26-e1t3p3.png)
 
    >**Note:** <span style="color:maroon;"> Select the **Python 3.12.1** kernel from the top bar.
    >

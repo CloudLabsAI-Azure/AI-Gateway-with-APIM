@@ -92,7 +92,16 @@ Enter the following details:
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_location: *Use the same region selected in* **Exercise 1 -> Task 1**.
+
+      - `eastus2`
+      - `westus` 
+      - `westus2`
+      - `centralus`
+
+         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+
+   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>-e4t2**
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -100,7 +109,7 @@ Enter the following details:
 
 1. **Run** the cell **Initialize notebook variables**. This step sets up environment variables for the deployment, including the resource group name, region, AI Foundry configuration, OpenAI model details, Redis cache SKU, and API Management parameters. These variables ensure consistent and automated deployments across regions and subscriptions.
 
-    ![](./media/initvar-e4t1.png)
+    ![](./media/apim-may26-e4t2p1.png)
 
 1. Next, run **Verify the Azure CLI and the connected Azure subscription**. This cell checks that the Azure CLI is properly installed and signed in to your Azure subscription. It retrieves details like the current user, tenant ID, and subscription ID to confirm the correct environment before proceeding with resource creation.
 

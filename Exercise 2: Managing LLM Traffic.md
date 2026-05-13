@@ -26,7 +26,16 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_location: *Use the same region selected in* **Exercise 1 -> Task 1**.
+
+      - `eastus2`
+      - `westus` 
+      - `westus2`
+      - `centralus`
+
+         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+
+   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>-e2t1**
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -34,7 +43,7 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
 
 1. Run the cell **Initialize notebook variables**. Prepare the environment, define resources, models, and subscriptions so everything is ready for deployment.
 
-   ![](./media/initvar-e2t1.png)
+   ![](./media/apim-may26-e2t1p1.png)
 
    >**Note:** Select the **Python 3.12.1** kernel from the top bar.
    >
@@ -68,13 +77,13 @@ In this task, you will deploy APIM and Microsoft Foundry endpoints, set up model
 
 7. Run the cell **Analyze Application Insights custom metrics with a KQL query**, this Query and extract token usage data to monitor consumption and identify patterns.
 
-    ![](./media/analyze-e2t1.png)
+    ![](./media/apim-may26-e2t2p2.png)
 
     >**Note:** If you get an error or the table doesn’t appear, wait for few minutes and execute the cell again.
 
 8. Run the cell **Plot the custom metrics results**, this visualizes token usage over time to see trends, spikes, or anomalies.
 
-    ![](./media/plot-e2t1.png)
+    ![](./media/apim-may26-e2t2p3.png)
 
     >**Note:** The results you see may vary from the screenshot shown above.
 
@@ -127,7 +136,16 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_location: *Use the same region selected in* **Exercise 1 -> Task 1**.
+
+      - `eastus2`
+      - `westus` 
+      - `westus2`
+      - `centralus`
+
+         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+
+   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>-e2t2**
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -135,7 +153,7 @@ In this task, you will deploy APIM, AI Foundry endpoints, and model subscription
 
 1. Run the cell **Initialize Notebook Variables**. This set up all lab variables, including resource group, location, AI services, models, APIM SKU, subscriptions, API paths, and utility functions. Prepares the environment for deployment.
 
-   ![](./media/initvar-e2t2.png)
+   ![](./media/apim-may26-e2t2p1.png)
 
    >**Note:** Select the **Python 3.12.1** kernel from the top bar.
    >

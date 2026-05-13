@@ -149,13 +149,13 @@ In this task, you will create and apply a custom content filter to the GPT-4o-mi
 
    ![](./media/rg-(1).png)
 
-1. Select the **foundry1-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Select the **foundry1-<inject key="DeploymentID" enableCopy="false"/>-e1t1**.
 
-    ![](./media/ex5-t1p1.png)
+    ![](./media/apim-may26-e5t2p1(1).png)
 
 1. Now click on the **Go to Foundry portal**.
 
-    ![](./media/ex5-t1p2.png)
+    ![](./media/apim-may26-e5t2p1(2).png)
 
 1. From the left navigation pane, go to the **Guardrails + controls (1)** and then select the **Content filters (2)** tab and then click on **+ Create content filter (3)**.
 
@@ -175,7 +175,7 @@ In this task, you will create and apply a custom content filter to the GPT-4o-mi
 
 1. On the **Connection** section, select the model **gpt-4o-mini (1)** and click on **Next (2)**.
 
-    ![](./media/ex5-t2content5.png)
+    ![](./media/apim-may26-e5t2p1.png)
 
 1. On the **Replacing existing content filter** pop-up dialog, click on **Replace**.
 
@@ -191,7 +191,7 @@ In this task, you will create and apply a custom content filter to the GPT-4o-mi
 
 1. Select the deployed model **gpt-4o-mini**.
 
-    ![](./media/gpt4o-e5t2.png)
+    ![](./media/apim-may26-e5t2p2.png)
 
 6. Copy the **Target URI (1)** and **Key (2)** and store them in a Notepad file, as they will be required in the next step.
 
@@ -233,7 +233,16 @@ In this task, you will configure and validate the Content Safety policy in the A
 
    - resource_group_name: **Q2a-APIM-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
-   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>**
+   - resource_group_location: *Use the same region selected in* **Exercise 1 -> Task 1**.
+
+      - `eastus2`
+      - `westus` 
+      - `westus2`
+      - `centralus`
+
+         >### **Note:** <span style="color:maroon;"> Make a note of the region, as the same region must be used throughout the remaining exercises and tasks in this lab.
+
+   - aiservices_config: **foundry4-<inject key="DeploymentID" enableCopy="false"/>-e5t3**
 
    - apim_name: **apim-<inject key="DeploymentID" enableCopy="false"/>**
 
@@ -241,7 +250,7 @@ In this task, you will configure and validate the Content Safety policy in the A
 
 1. Run the cell **Initialize notebook variables**. This cell imports necessary Python utilities and environment setup scripts. Configures resource names using your Azure subscription ID. Sets region, AI Foundry configuration, model details, and deployment parameters.
 
-    ![](./media/initvar-e5t3.png)
+    ![](./media/apim-may26-e5t3p1.png)
 
     >**Note:** Ensure that the correct name is entered in each respective section.
 
