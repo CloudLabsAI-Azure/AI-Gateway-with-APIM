@@ -29,6 +29,10 @@ Here’s the architecture diagram to help you better understand the scenario.
 
    ![](./media/ex1-t1p1.png)
 
+1. On the **Welcome to VS Code** page, click on **X** to close it.
+
+   ![](./media/github-wlecomepage.png)
+
 1. Click on **File (1)** and select **Open Folder (2)**.
 
    ![](./media/API-gateway-image1.png)
@@ -104,6 +108,7 @@ Here’s the architecture diagram to help you better understand the scenario.
       - `eastus2`
       - `westus` 
       - `westus2`
+      - `westus3`
       - `centralus`
 
          >### **Note:** <span style="color:maroon;"> Select a region from the list above, make a note of the selected region, and use the same region for all subsequent exercises and tasks throughout this lab. Using a different region later may lead to deployment or configuration issues.
@@ -126,15 +131,11 @@ Here’s the architecture diagram to help you better understand the scenario.
 
    ![](./media/apim-may26-e1t1p1.png)
 
-   >**Note:**: If prompted to select kernel , select Python Environment and then select Python 3.12.1 whenever prompted to select python kernel
+   >**Note:** If prompted to select kernel , select Python Environment and then select Python 3.12.1 whenever prompted to select python kernel
 
    ![](./media/E1T1P17.png)
 
    ![](./media/E1T1P171.png)
-
-   >**Note:** If a pop-up appears stating that running cells with Python 3.12.1 requires the ipykernel package, select **Install** to continue.
-
-   ![](./media/apim-p2t1p1-new.png)
 
 9. Go to **Verify the Azure CLI and the connected Azure subscription**. Click on **Run**, in this section, we check that the Azure CLI is installed, up-to-date, and connected to your subscription. This ensures we can deploy and manage resources in your Azure account. Review the output.
 
@@ -143,6 +144,21 @@ Here’s the architecture diagram to help you better understand the scenario.
 10. Run the **Create deployment using 🦾 Bicep** cell. Here, we use Bicep to define and deploy all necessary Azure resources, including the AI endpoints and APIM service. Running this sets up the infrastructure needed for the lab.
 
      ![](./media/deploy-e1t1.png)
+
+     >**Note**: If you encounter any errors, wait a few minutes and then re-execute the cell.
+
+     > **Note:** If the deployment fails with a provisioning or deployment error while creating the Foundry resources, the deployment may still be using values stored in the previously generated **params.json** file. In this case, perform the following steps before retrying the deployment:
+      >
+      > * Open the project folder and locate the generated **params.json** file.
+      > * Delete the existing **params.json** file.
+      > * Delete and purge any partially created Foundry resources from the Azure portal.
+      > * Use a **new resource group name** and a **new Foundry resource name** that is globally unique.
+      > * You can also try using a different Azure region before retrying the deployment.
+      > * Restart the environment/notebook and rerun the steps from the beginning.
+      >
+      > Following these steps ensures that a fresh deployment configuration is created and prevents reuse of the previous failed deployment parameters.
+
+     ![](./media/params-file.png)
 
 1. Open the **Azure portal** from the desktop. 
 
@@ -209,6 +225,7 @@ In this task, you will configure APIM to route incoming requests to the appropri
       - `eastus2`
       - `westus` 
       - `westus2`
+      - `westus3`
       - `centralus`
 
          >### **Note:** <span style="color:maroon;"> Use the exact same region that was selected in **Exercise 1 -> Task 1** for all subsequent exercises and tasks in this lab. Using a different region may result in deployment or configuration failures.
@@ -290,6 +307,7 @@ In this task, you will deploy and validate a multi-region Azure setup using Bice
       - `eastus2`
       - `westus` 
       - `westus2`
+      - `westus3`
       - `centralus`
 
          >### **Note:** <span style="color:maroon;"> Use the exact same region that was selected in **Exercise 1 -> Task 1** for all subsequent exercises and tasks in this lab. Using a different region may result in deployment or configuration failures.

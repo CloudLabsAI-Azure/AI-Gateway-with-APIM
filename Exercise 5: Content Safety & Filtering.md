@@ -238,6 +238,7 @@ In this task, you will configure and validate the Content Safety policy in the A
       - `eastus2`
       - `westus` 
       - `westus2`
+      - `westus3`
       - `centralus`
 
          >### **Note:** <span style="color:maroon;"> Use the exact same region that was selected in **Exercise 1 -> Task 1** for all subsequent exercises and tasks in this lab. Using a different region may result in deployment or configuration failures.
