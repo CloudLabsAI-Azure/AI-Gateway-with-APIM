@@ -152,13 +152,13 @@ Here’s the architecture diagram to help you better understand the scenario.
       > * Open the project folder and locate the generated **params.json** file.
       > * Delete the existing **params.json** file.
       > * Delete and purge any partially created Foundry resources from the Azure portal.
-      > * Use a **new resource group name** and a **new Foundry resource name** that is globally unique.
+      > * Use a **new resource group name**, **new apim name**. 
       > * You can also try using a different Azure region before retrying the deployment.
       > * Restart the environment/notebook and rerun the steps from the beginning.
       >
       > Following these steps ensures that a fresh deployment configuration is created and prevents reuse of the previous failed deployment parameters.
-
-     ![](./media/params-file.png)
+      >
+      >![](./media/params-file.png)
 
 1. Open the **Azure portal** from the desktop. 
 
